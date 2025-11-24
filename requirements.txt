@@ -1,15 +1,17 @@
-# InvDetect Requirements
-# Python 3.11.3
+# InvDetect – FINAL Requirements (Stand 2025)
+# Python 3.11 oder 3.12
 
-# Screenshot und Maus-Steuerung
+# Maus + Screenshot
 pyautogui==0.9.54
-Pillow==10.1.0
-
-# OCR (Tesseract)
-pytesseract==0.3.10
-
-# Hotkey Listener
+Pillow==10.4.0
 keyboard==0.13.5
 
-# Bild-Verarbeitung
-numpy==1.26.2
+# OCR (EasyOCR statt Tesseract!)
+easyocr==1.7.2
+
+# Bildverarbeitung
+opencv-python==4.10.0.84
+numpy==2.1.2
+
+# Namenskorrektur aus deiner inventory.db
+rapidfuzz==3.10.0

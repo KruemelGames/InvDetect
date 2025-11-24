@@ -1,62 +1,74 @@
 # -*- coding: utf-8 -*-
 """
-OCR Scanner – EasyOCR Edition
-Perfekt für Star Citizen Helm-Tooltips (2 Zeilen)
+ocr_scanner.py – finale Version
+EasyOCR + automatische Namenskorrektur über deine inventory.db
 """
 
 import easyocr
 import cv2
 import numpy as np
-from PIL import Image
+from rapidfuzz import fuzz, process
+from database import ITEM_DATABASE   # ← alle Namen aus deiner DB
 
-# EasyOCR einmal starten – Englisch, CPU reicht völlig
-reader = easyocr.Reader(['en'], gpu=False)   # gpu=True falls du NVIDIA hast
+# EasyOCR einmalig starten (CPU reicht völlig aus)
+reader = easyocr.Reader(['en'], gpu=False)
 
-def preprocess_for_easyocr(img):
-    """Optimiert für deine 231×35px Region"""
-    # Graustufen
+def preprocess(img):
+    """Optimiert für deine 231×35px Tooltip-Region"""
     gray = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2GRAY)
-    
-    # 6-fach hochskalieren (winzige Schrift → groß)
     gray = cv2.resize(gray, None, fx=6, fy=6, interpolation=cv2.INTER_CUBIC)
-    
-    # Kontrast extrem boosten
     clahe = cv2.createCLAHE(clipLimit=4.0, tileGridSize=(8,8))
     gray = clahe.apply(gray)
-    
-    # Scharfzeichnen
     kernel = np.array([[0,-1,0], [-1,5,-1], [0,-1,0]])
     gray = cv2.filter2D(gray, -1, kernel)
-    
     return gray
 
+def correct_with_database(text):
+    """Korrigiert OCR-Fehler – kompatibel mit allen rapidfuzz-Versionen"""
+    if not text or len(text) < 4 or not ITEM_DATABASE:
+        return text.strip()
+
+    # Hartkodierte Fixes
+    fixes = {
+        "Olve": "Olive",
+        "Helment": "Helmet",
+        "Hel met": "Helmet",
+        "J-S": "J-5",
+        "Morozov SH": "Morozov-SH",
+        "CBH-3": "CBH-3",
+    }
+    for wrong, right in fixes.items():
+        text = text.replace(wrong, right)
+
+    # Neuer Aufruf ohne limit-Parameter (funktioniert mit 3.x und 4.x)
+    result = process.extractOne(text, ITEM_DATABASE, scorer=fuzz.token_sort_ratio)
+    if result:
+        best_match, score, _ = result
+        if score >= 88:
+            return best_match
+
+    return text.strip()
+
 def scan_image_for_text(image):
+    """Hauptfunktion – wird von inventory_detector aufgerufen"""
     try:
-        # Pre-Processing
-        processed = preprocess_for_easyocr(image)
-        
-        # EasyOCR loslassen
+        processed = preprocess(image)
         results = reader.readtext(processed, detail=0, paragraph=True)
-        
-        # Alles zusammen und nur die erste sinnvolle Zeile nehmen (der Helm-Name)
-        text = " ".join(results).strip()
-        
-        # Alles nach "Volume:" abschneiden → nur Name bleibt
-        if "Volume:" in text:
-            text = text.split("Volume:")[0].strip()
-            
-        # Zusätzlichen Müll rausfiltern
-        trash = ["Item Type:", "Damage Reduction:", "Temp. Rating:", "Radiation", "REM/s"]
-        for t in trash:
-            if t in text:
-                text = text.split(t)[0].strip()
-                
-        # Mindestens 5 Zeichen und keine Zahlen am Anfang
-        if len(text) < 5 or text[0].isdigit():
+        raw_text = " ".join(results).strip()
+
+        # Volume-Zeile und alles danach abschneiden
+        if "Volume:" in raw_text:
+            raw_text = raw_text.split("Volume:")[0].strip()
+
+        # Datenbank-Korrektur anwenden
+        final_text = correct_with_database(raw_text)
+
+        # Nur sinnvolle Ergebnisse zurückgeben
+        if len(final_text) >= 4 and not final_text[0].isdigit():
+            return final_text
+        else:
             return ""
-            
-        return text
-        
+
     except Exception as e:
-        print("EasyOCR Fehler:", e)
+        print(f"[OCR] Fehler: {e}")
         return ""

@@ -1,46 +1,50 @@
 # -*- coding: utf-8 -*-
 import keyboard
 import time
-import sys
 import os
 from inventory_detector import InventoryScanner
 import config
 
-LOG_FILE = "scan_log.txt"
-if os.path.exists(LOG_FILE):
-    try: os.remove(LOG_FILE)
-    except: pass
+# Log-Datei zurücksetzen
+if os.path.exists(config.LOG_FILE):
+    try:
+        os.remove(config.LOG_FILE)
+    except:
+        pass
+if os.path.exists(config.OUTPUT_FILE):
+    try:
+        os.remove(config.OUTPUT_FILE)
+    except:
+        pass
 
 def log_print(*args, **kwargs):
     msg = " ".join(map(str, args))
     print(msg, **kwargs)
     try:
-        with open(LOG_FILE, "a", encoding="utf-8") as f:
-            f.write(msg + "\n")
-    except: pass
+        with open(config.LOG_FILE, "a", encoding="utf-8", buffering=1) as f:
+            from datetime import datetime
+            timestamp = datetime.now().strftime("%H:%M:%S")
+            f.write(f"[{timestamp}] {msg}\n")
+    except:
+        pass
 
 def main():
-    log_print("\nInvDetect – Star Citizen Helm-Scanner FINAL\n")
+    log_print("\n=== InvDetect – Star Citizen Universal Inventory Scanner ===")
     log_print("INSERT → Start | ESC → Sofort stoppen\n")
-
-    try:
-        open(config.OUTPUT_FILE, 'w', encoding='utf-8').close()
-        log_print(f"{config.OUTPUT_FILE} geleert\n")
-    except: pass
-
     log_print("Warte auf INSERT...")
+
     keyboard.wait('insert')
 
-    log_print("\nSCAN GESTARTET – ESC zum Abbrechen!\n")
+    log_print("\nSCAN GESTARTET – jetzt mit 101px Drag-Scroll und Datenbank-Korrektur!\n")
     scanner = InventoryScanner()
 
     try:
         scanner.scan_all_tiles()
-        log_print("\nSCAN FERTIG! Siehe detected_items.txt und scan_log.txt")
+        log_print("\nSCAN FERTIG! Siehe detected_items.txt")
     except KeyboardInterrupt:
-        log_print("\nScan vom User abgebrochen.")
+        log_print("\nScan durch ESC abgebrochen.")
     except Exception as e:
-        log_print(f"\nFehler: {e}")
+        log_print(f"\nUNERWARTETER FEHLER: {e}")
 
     input("\nEnter zum Beenden...")
 

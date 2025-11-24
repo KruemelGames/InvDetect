@@ -1,49 +1,48 @@
+[23:09:59] 
+=== InvDetect – Star Citizen Universal Inventory Scanner ===
+[23:09:59] INSERT → Start | ESC → Sofort stoppen
 
-InvDetect – Star Citizen Helm-Scanner FINAL
+[23:09:59] Warte auf INSERT...
+[23:10:00] 
+SCAN GESTARTET – jetzt mit 101px Drag-Scroll und Datenbank-Korrektur!
 
-INSERT → Start | ESC → Sofort stoppen
+[23:10:00] 
+================================================================================
+[23:10:00] SCAN GESTARTET – Drift pro Block: 16px
+[23:10:00] X-Offset: 53px | Zeilenschritt: 97px
+[23:10:00] ================================================================================
 
-detected_items.txt geleert
-
-Warte auf INSERT...
-
-SCAN GESTARTET – ESC zum Abbrechen!
-
-
-Scan läuft – ESC = sofort stoppen!
-
-  Scanne Kachel (1352, 224)
-  GEFUNDEN → Adp-mk4 Helmet (Modified)
-  Scanne Kachel (1448, 224)
-  GEFUNDEN → Stoneskin Helmet Desert
-  Scanne Kachel (1544, 224)
-  GEFUNDEN → Balor HCH Helmet Orange
-  Scanne Kachel (1640, 224)
-  GEFUNDEN → Horizon Helmet White
-  Scrolle nach unten...
-  Scanne Kachel (1352, 320)
-  GEFUNDEN → ORC-mkX Helmet Nightfire
-  Scanne Kachel (1448, 320)
-  GEFUNDEN → Carrion Helmet Stalker
-  Scanne Kachel (1544, 320)
-  GEFUNDEN → Morningstar Helmet Grey
-  Scanne Kachel (1640, 320)
-  GEFUNDEN → Horizon Helmet White
-  Scrolle nach unten...
-  Scanne Kachel (1352, 416)
-  GEFUNDEN → Horizon Helmet White
-  Scanne Kachel (1448, 416)
-  GEFUNDEN → J-S Helmet
-  Scanne Kachel (1544, 416)
-  GEFUNDEN → Oracle Helmet
-  Scanne Kachel (1640, 416)
-  GEFUNDEN → Morningstar Helmet Base
-  Scrolle nach unten...
-  Scanne Kachel (1352, 512)
-  GEFUNDEN → Zeus Exploration Suit Helmet
-  Scanne Kachel (1448, 512)
-  GEFUNDEN → CBH-3 Helmet Imperial
-
-ESC GEDRÜCKT → Scan sofort abgebrochen!
-
-Scan vom User abgebrochen.
+[23:10:00] Komplett nach oben scrollen...
+[23:10:04] Zurück am Anfang – Drift-Reset
+[23:10:04] 
+=== BLOCK 1 WIRD GESCANNT ===
+[23:10:04]   Block 1 → Y-Korrektur: -0px → erste Reihe bei y=262
+[23:10:05]   → The Butcher Helmet
+[23:10:07]   → Stoneskin Helmet Desert
+[23:10:08]   → Balor HCH Helmet Orange
+[23:10:09]   → Horizon Helmet White
+[23:10:11]   → Argus Helmet Black/Aqua/Silver
+[23:10:12]   → Aril Helmet
+[23:10:13]   → cBH- 3 Helmet Olive
+[23:10:16]   → ORC-mkX Helmet Nightfire
+[23:10:17]   → Carrion Helmet Stalker
+[23:10:19]   → Morningstar Helmet Grey
+[23:10:22]   → Harizon Helmet White
+[23:10:24]   → Balor HCH Helmet Olive
+[23:10:29]   → Oracle Helmet
+[23:10:30]   → Morningstar Helmet Base
+[23:10:34]   → Aril Helmet Hazard
+[23:10:36]   → Zeus Exploration Suit Helmet
+[23:10:39]   → CBH-3 Helmet Imperial
+[23:10:40]   → CBH-3 Helmet Grey
+[23:10:42]   → Strata Helmet Onyx
+[23:10:43]   → Paladin Helmet Black/Gold/Red
+[23:10:44]   → ADP-mk4 Helmet (Modified)
+[23:10:46]   → Artimex Helmet Red Alert
+[23:10:46]   Suche nach Scrollbalken-Farbe und führe Drag-Scroll aus...
+[23:10:46]   Scrollbalken-Farbe gefunden bei Y=482
+[23:10:46]   Starte Drag von X=1795, Y=472 für 0.46s
+[23:10:47]   Gescrollt. Block-Zähler: 1
+[23:10:47] 
+=== BLOCK 2 WIRD GESCANNT ===
+[23:10:47]   Block 2 → Y-Korrektur: -16px → erste Reihe bei y=246
