@@ -1,92 +1,48 @@
 # -*- coding: utf-8 -*-
-"""
-InvDetect - Star Citizen Inventar Scanner
-Hauptprogramm
-
-Drücke EINFÜGEN-Taste im Spiel = Scan startet
-Drücke ESC = Programm beenden
-"""
-
 import keyboard
 import time
 import sys
+import os
 from inventory_detector import InventoryScanner
 import config
 
+LOG_FILE = "scan_log.txt"
+if os.path.exists(LOG_FILE):
+    try: os.remove(LOG_FILE)
+    except: pass
 
-def on_scan_trigger():
-    """
-    Wird aufgerufen wenn EINFÜGEN gedrückt wird
-    """
-    print("\n" + "="*50)
-    print("🎯 EINFÜGEN erkannt - Starte Scan!")
-    print("="*50)
-    
-    # Scanner erstellen
-    scanner = InventoryScanner()
-    
-    # Kurz warten (damit Spiel bereit ist)
-    time.sleep(0.5)
-    
-    # Alle Kacheln scannen
-    items = scanner.scan_all_tiles()
-    
-    # In Datei speichern
-    scanner.save_to_file()
-    
-    print("\n" + "="*50)
-    print(f"✅ FERTIG! {len(items)} Items gefunden")
-    print("="*50 + "\n")
-
+def log_print(*args, **kwargs):
+    msg = " ".join(map(str, args))
+    print(msg, **kwargs)
+    try:
+        with open(LOG_FILE, "a", encoding="utf-8") as f:
+            f.write(msg + "\n")
+    except: pass
 
 def main():
-    """
-    Hauptfunktion - wartet auf Tastendruck
-    """
-    print("\n")
-    print("╔════════════════════════════════════════════╗")
-    print("║   InvDetect - Star Citizen Scanner        ║")
-    print("║   v1.0                                    ║")
-    print("╚════════════════════════════════════════════╝")
-    print("\n")
-    
-    print("⚙️  Einstellungen:")
-    print(f"   • Hotkey: {config.TRIGGER_KEY.upper()}")
-    print(f"   • Tesseract: {config.TESSERACT_PATH}")
-    print(f"   • Output: {config.OUTPUT_FILE}")
-    print("\n")
-    
-    print("📋 Anleitung:")
-    print("   1. Starte Star Citizen")
-    print("   2. Öffne dein Inventar")
-    print("   3. Drücke EINFÜGEN-Taste")
-    print("   4. Programm scannt automatisch")
-    print("\n")
-    
-    print("⌨️  Steuerung:")
-    print(f"   • {config.TRIGGER_KEY.upper()} = Scan starten")
-    print("   • ESC = Programm beenden")
-    print("\n")
-    
-    print("⏳ Warte auf Eingabe...\n")
-    
-    # Hotkey registrieren
-    keyboard.add_hotkey(config.TRIGGER_KEY, on_scan_trigger)
-    
-    # Auf ESC warten zum Beenden
-    try:
-        keyboard.wait('esc')
-    except KeyboardInterrupt:
-        pass
-    
-    print("\n👋 Programm beendet.\n")
-    sys.exit(0)
+    log_print("\nInvDetect – Star Citizen Helm-Scanner FINAL\n")
+    log_print("INSERT → Start | ESC → Sofort stoppen\n")
 
+    try:
+        open(config.OUTPUT_FILE, 'w', encoding='utf-8').close()
+        log_print(f"{config.OUTPUT_FILE} geleert\n")
+    except: pass
+
+    log_print("Warte auf INSERT...")
+    keyboard.wait('insert')
+
+    log_print("\nSCAN GESTARTET – ESC zum Abbrechen!\n")
+    scanner = InventoryScanner()
+
+    try:
+        scanner.scan_all_tiles()
+        log_print("\nSCAN FERTIG! Siehe detected_items.txt und scan_log.txt")
+    except KeyboardInterrupt:
+        log_print("\nScan vom User abgebrochen.")
+    except Exception as e:
+        log_print(f"\nFehler: {e}")
+
+    input("\nEnter zum Beenden...")
 
 if __name__ == "__main__":
-    try:
-        main()
-    except Exception as e:
-        print(f"\n❌ Fehler: {e}\n")
-        input("Drücke Enter zum Beenden...")
-        sys.exit(1)
+    main()

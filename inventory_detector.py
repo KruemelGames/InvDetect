@@ -1,233 +1,115 @@
 # -*- coding: utf-8 -*-
 """
-Inventory Detector für InvDetect
-Findet und scannt alle Items im Inventar
+Inventory Detector – FINAL mit EasyOCR + fester OCR-Region
 """
 
 import pyautogui
-from PIL import Image
 import time
-import numpy as np
 import config
 import ocr_scanner
+import keyboard
 
-# PyAutoGUI Sicherheit ausschalten (sonst Fehler bei Ecken)
+# Logging wie immer
+def log_print(*args, **kwargs):
+    msg = " ".join(map(str, args))
+    print(msg, **kwargs)
+    try:
+        with open("scan_log.txt", "a", encoding="utf-8") as f:
+            f.write(msg + "\n")
+    except:
+        pass
+
 pyautogui.FAILSAFE = False
 
 
 class InventoryScanner:
-    """Scannt das Star Citizen Inventar"""
-    
     def __init__(self):
         self.detected_items = []
-        self.current_row = 0
-        self.current_col = 0
-        
-    def detect_tile_size(self, x, y):
-        """
-        Erkennt ob Kachel 1x1 oder 1x2 ist
-        
-        Args:
-            x, y: Position der Kachel
-            
-        Returns:
-            str: 'small' oder 'large'
-        """
-        # Screenshot der Kachel + etwas drüber/drunter
-        check_height = config.TILE_HEIGHT_LARGE + 20
-        
-        screenshot = pyautogui.screenshot(region=(
-            x, y,
-            config.TILE_WIDTH,
-            check_height
-        ))
-        
-        # Zu Array konvertieren
-        img_array = np.array(screenshot)
-        
-        # Durchschnittliche Helligkeit in verschiedenen Bereichen
-        small_area = img_array[0:config.TILE_HEIGHT_SMALL, :, :]
-        large_area = img_array[config.TILE_HEIGHT_SMALL:config.TILE_HEIGHT_LARGE, :, :]
-        
-        # Helligkeit berechnen
-        small_brightness = np.mean(small_area)
-        large_brightness = np.mean(large_area)
-        
-        # Wenn unterer Bereich deutlich dunkler = nur 1x1
-        # Wenn ähnlich hell = 1x2 Kachel
-        brightness_diff = abs(small_brightness - large_brightness)
-        
-        if brightness_diff > 30:  # Schwellwert für Unterschied
-            return 'small'
-        else:
-            return 'large'
-    
+
+    def check_escape(self):
+        if keyboard.is_pressed('esc'):
+            log_print("\nESC GEDRÜCKT → Scan sofort abgebrochen!")
+            raise KeyboardInterrupt
+
     def get_tile_position(self, row, col):
-        """
-        Berechnet Position einer Kachel
-        
-        Args:
-            row: Reihe (0-basiert)
-            col: Spalte (0-basiert)
-            
-        Returns:
-            tuple: (x, y) Position
-        """
         x = config.START_X + col * (config.TILE_WIDTH + config.TILE_SPACING)
         y = config.START_Y + row * (config.TILE_HEIGHT_SMALL + config.TILE_SPACING)
-        
-        return (x, y)
-    
-    def capture_tile(self, x, y, tile_size):
-        """
-        Macht Screenshot von einer Kachel
-        
-        Args:
-            x, y: Position
-            tile_size: 'small' oder 'large'
-            
-        Returns:
-            PIL Image: Screenshot
-        """
-        if tile_size == 'small':
-            height = config.TILE_HEIGHT_SMALL
-        else:
-            height = config.TILE_HEIGHT_LARGE
-        
-        screenshot = pyautogui.screenshot(region=(
-            x, y,
-            config.TILE_WIDTH,
-            height
-        ))
-        
-        return screenshot
-    
+        return x, y
+
     def scan_tile(self, x, y):
-        """
-        Scannt eine einzelne Kachel
-        
-        Args:
-            x, y: Position der Kachel
-            
-        Returns:
-            str: Erkannter Text oder None
-        """
-        # Maus zur Kachel bewegen (für Mouse-Over Effekt)
-        pyautogui.moveTo(x + config.TILE_WIDTH // 2, 
-                        y + config.TILE_HEIGHT_SMALL // 2,
-                        duration=0.1)
-        time.sleep(0.2)  # Warten auf Tooltip
-        
-        # Kachelgröße erkennen
-        tile_size = self.detect_tile_size(x, y)
-        
-        print(f"  📦 Kachel bei ({x}, {y}) - Größe: {tile_size}")
-        
-        # Screenshot machen
-        screenshot = self.capture_tile(x, y, tile_size)
-        
-        # Bild vorverarbeiten
-        processed = ocr_scanner.preprocess_image(screenshot)
-        
-        # OCR durchführen
-        text = ocr_scanner.scan_image_for_text(processed)
-        
+        self.check_escape()
+
+        # Maus in die Mitte der Kachel → Tooltip erscheint
+        pyautogui.moveTo(x + config.TILE_WIDTH // 2, y + 30, duration=0.1)
+        time.sleep(0.35)   # stabiler Tooltip
+
+        log_print(f"  Scanne Kachel ({x}, {y})")
+
+        # FESTER OCR-BEREICH (wie du gemessen hast)
+        screenshot = pyautogui.screenshot(region=(
+            config.OCR_LEFT,
+            config.OCR_TOP,
+            config.OCR_WIDTH,
+            config.OCR_HEIGHT
+        ))
+
+        # EasyOCR macht das Pre-Processing selbst → kein preprocess_image_helmet mehr nötig
+        text = ocr_scanner.scan_image_for_text(screenshot).strip()
+
+        # Maus weg
+        pyautogui.moveTo(100, 100)
+
         if text:
-            print(f"  ✅ Gefunden: {text}")
+            log_print(f"  GEFUNDEN → {text}")
+            self.detected_items.append(text)
+            self.save_to_file(text)
             return text
         else:
-            print(f"  ⚠️ Kein Text erkannt")
+            log_print(f"  leer / Müll")
             return None
-    
+
     def scroll_inventory(self):
-        """Scrollt das Inventar nach unten"""
-        print("  📜 Scrolle nach unten...")
-        
-        # Maus ins Inventar bewegen
-        center_x = (config.INVENTORY_LEFT + config.INVENTORY_RIGHT) // 2
-        center_y = (config.INVENTORY_TOP + config.INVENTORY_BOTTOM) // 2
-        
-        pyautogui.moveTo(center_x, center_y)
+        self.check_escape()
+        log_print("  Scrolle nach unten...")
+        cx = (config.INVENTORY_LEFT + config.INVENTORY_RIGHT) // 2
+        cy = (config.INVENTORY_TOP + config.INVENTORY_BOTTOM) // 2
+        pyautogui.moveTo(cx, cy)
         time.sleep(0.1)
-        
-        # Scrollen
         pyautogui.scroll(config.SCROLL_AMOUNT)
         time.sleep(config.SCROLL_WAIT)
-    
+
+    def save_to_file(self, item):
+        try:
+            with open(config.OUTPUT_FILE, 'a', encoding='utf-8') as f:
+                f.write(item + '\n')
+        except Exception as e:
+            log_print(f"Save-Fehler: {e}")
+
     def scan_all_tiles(self):
-        """
-        Scannt alle Kacheln im Inventar
-        
-        Returns:
-            list: Alle gefundenen Items
-        """
-        print("\n🚀 Starte Inventar-Scan...\n")
-        
-        self.detected_items = []
+        log_print("\nScan läuft – ESC = sofort stoppen!\n")
         row = 0
-        col = 0
         empty_rows = 0
-        
-        while True:
-            # Zeile scannen
-            row_items = []
-            
+
+        while row < 50:
+            self.check_escape()
+            row_has_item = False
+
             for col in range(config.MAX_COLUMNS):
                 x, y = self.get_tile_position(row, col)
-                
-                # Prüfen ob noch im Inventar
-                if y > config.INVENTORY_BOTTOM - config.TILE_HEIGHT_SMALL:
-                    print(f"⚠️ Zeile {row} außerhalb Inventar - scrolle...")
-                    self.scroll_inventory()
-                    # Position neu berechnen
-                    x, y = self.get_tile_position(row, col)
-                
-                # Kachel scannen
-                item_text = self.scan_tile(x, y)
-                
-                if item_text:
-                    row_items.append(item_text)
-                    self.detected_items.append(item_text)
-            
-            # Wenn Zeile leer = Ende erreicht
-            if not row_items:
+                if self.scan_tile(x, y):
+                    row_has_item = True
+
+            if not row_has_item:
                 empty_rows += 1
-                if empty_rows >= 2:  # 2 leere Zeilen = sicher fertig
-                    print("\n✅ Scan abgeschlossen - keine weiteren Items\n")
+                if empty_rows >= 2:
+                    log_print("\nKeine Items mehr → Scan fertig!")
                     break
             else:
                 empty_rows = 0
-            
-            # Nächste Zeile
+
             row += 1
-            
-            # Sicherheit: Maximal 50 Zeilen
-            if row > 50:
-                print("\n⚠️ Maximum erreicht (50 Zeilen)")
-                break
-        
-        return self.detected_items
-    
-    def save_to_file(self, filename=None):
-        """
-        Speichert Items in Textdatei
-        
-        Args:
-            filename: Dateiname (optional)
-        """
-        if filename is None:
-            filename = config.OUTPUT_FILE
-        
-        if not self.detected_items:
-            print("⚠️ Keine Items zum Speichern!")
-            return
-        
-        try:
-            with open(filename, 'w', encoding='utf-8') as f:
-                for item in self.detected_items:
-                    f.write(item + '\n')
-            
-            print(f"\n💾 {len(self.detected_items)} Items gespeichert in: {filename}")
-            
-        except Exception as e:
-            print(f"❌ Fehler beim Speichern: {e}")
+            if row < 49:
+                self.scroll_inventory()
+            time.sleep(0.12)
+
+        log_print("\nScan beendet.")

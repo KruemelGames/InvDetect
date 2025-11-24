@@ -1,0 +1,49 @@
+
+InvDetect – Star Citizen Helm-Scanner FINAL
+
+INSERT → Start | ESC → Sofort stoppen
+
+detected_items.txt geleert
+
+Warte auf INSERT...
+
+SCAN GESTARTET – ESC zum Abbrechen!
+
+
+Scan läuft – ESC = sofort stoppen!
+
+  Scanne Kachel (1352, 224)
+  GEFUNDEN → Adp-mk4 Helmet (Modified)
+  Scanne Kachel (1448, 224)
+  GEFUNDEN → Stoneskin Helmet Desert
+  Scanne Kachel (1544, 224)
+  GEFUNDEN → Balor HCH Helmet Orange
+  Scanne Kachel (1640, 224)
+  GEFUNDEN → Horizon Helmet White
+  Scrolle nach unten...
+  Scanne Kachel (1352, 320)
+  GEFUNDEN → ORC-mkX Helmet Nightfire
+  Scanne Kachel (1448, 320)
+  GEFUNDEN → Carrion Helmet Stalker
+  Scanne Kachel (1544, 320)
+  GEFUNDEN → Morningstar Helmet Grey
+  Scanne Kachel (1640, 320)
+  GEFUNDEN → Horizon Helmet White
+  Scrolle nach unten...
+  Scanne Kachel (1352, 416)
+  GEFUNDEN → Horizon Helmet White
+  Scanne Kachel (1448, 416)
+  GEFUNDEN → J-S Helmet
+  Scanne Kachel (1544, 416)
+  GEFUNDEN → Oracle Helmet
+  Scanne Kachel (1640, 416)
+  GEFUNDEN → Morningstar Helmet Base
+  Scrolle nach unten...
+  Scanne Kachel (1352, 512)
+  GEFUNDEN → Zeus Exploration Suit Helmet
+  Scanne Kachel (1448, 512)
+  GEFUNDEN → CBH-3 Helmet Imperial
+
+ESC GEDRÜCKT → Scan sofort abgebrochen!
+
+Scan vom User abgebrochen.
