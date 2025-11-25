@@ -1,289 +1,98 @@
-[17:06:37] 
+[22:55:31] 
 === InvDetect – Star Citizen Universal Inventory Scanner ===
-[17:06:37] INSERT → Start Scan | Q → Debug Scroll | ENTF → Stoppen
+[22:55:32] INSERT → Start Scan | Q → Debug Hover (ohne OCR) | ENTF → Stoppen
 
-[17:06:37] 
-Warte auf INSERT (Scan) oder Q (Debug Scroll)...
-[17:06:38] [INFO] Config neu geladen
-[17:06:38] 
-SCAN GESTARTET – jetzt mit 101px Drag-Scroll und Datenbank-Korrektur!
+[22:55:32] 
+Warte auf INSERT (Scan) oder Q (Debug Hover ohne OCR)...
+[22:55:51] 
+=== DEBUG MODE: Hover + Scroll (KEIN OCR) ===
+[22:55:51] Geht alle Kacheln ab, hovert und scrollt - ohne OCR-Scan
 
-[17:06:38] 
-================================================================================
-[17:06:38] SCAN GESTARTET – Drift pro Block: 0px
-[17:06:38] X-Offset: 53px | Zeilenschritt: 97px
-[17:06:38] ================================================================================
-
-[17:06:38] Komplett nach oben scrollen...
-[17:06:41] Zurück am Anfang – Drift-Reset
-[17:06:41] 
-=== BLOCK 1 WIRD GESCANNT ===
-[17:06:41]   [DEBUG] Block 1:
-[17:06:41]     START_Y=224, FIRST_ROW_Y_OFFSET=38
-[17:06:41]     Erwartete Y-Position (ohne Drift): 262
-[17:06:41]     Drift-Korrektur: -0px (block_counter=0, drift_val=0)
-[17:06:41]     Finale base_y: 262
-[17:06:41]     Differenz zum Soll: 0px
-[17:06:43]   → The Butcher Helmet
-[17:06:44]   → Stoneskin Helmet Desert
-[17:06:45]   → Balor HCH Helmet Orange
-[17:06:47]   → Harizon Helmet White
-[17:06:48] 
-[ABBRUCH] ENTF gedrückt bei scan_8_rows_block:225
-[17:06:48] Maus gestoppt und in Ruheposition bewegt.
-[17:06:48] 
-SCAN FERTIG! Siehe detected_items.txt
-[17:06:48] Insgesamt 4 unterschiedliche Items gefunden.
-[17:06:48] 
-Drücke ENTER für einen weiteren Scan oder schließe das Fenster zum Beenden.
-[17:06:52] 
-Drücke INSERT (Scan) oder Q (Debug Scroll) zum Fortfahren...
-[17:06:54] 
-=== DEBUG SCROLL ===
-[17:06:54] [DEBUG] SCROLL_PIXELS_UP = 273
-[17:06:54] [DEBUG] DRIFT_COMPENSATION_PER_BLOCK = 0
-[17:06:54] Komplett nach oben scrollen...
-[17:06:57] Zurück am Anfang – Drift-Reset
-[17:06:57] 
-[DEBUG] Führe einen Scroll durch...
-[17:06:57]   Suche nach größter Scrollbalken-Fläche...
-[17:06:57]   Scrollbalken gefunden: Y=352, Höhe=266px
-[17:06:57]   Starte Drag von X=1795, Y=352, Distanz=273px
-[17:06:58]   Gescrollt. Block-Zähler: 1
-[17:06:58] [DEBUG] Scroll fertig! Block-Counter: 1
-[17:06:58] 
-[DEBUG] Berechnung der ersten Reihe:
-[17:06:58]   START_Y = 224
-[17:06:58]   FIRST_ROW_Y_OFFSET = 38
-[17:06:58]   base_y (ohne Drift) = 262
-[17:06:58]   drift_correction = 0px
-[17:06:58]   adjusted_y (mit Drift) = 262
-[17:06:58] 
-[DEBUG] Bewege Maus zur ersten Reihe: X=1405, Y=262
-[17:06:59] [DEBUG] Prüfe jetzt visuell: Ist die Maus auf der ersten Tile-Reihe?
-
-[17:06:59] 
-Drücke INSERT (Scan) oder Q (Debug Scroll) zum Fortfahren...
-[17:07:16] 
-=== DEBUG SCROLL ===
-[17:07:16] [DEBUG] SCROLL_PIXELS_UP = 280
-[17:07:16] [DEBUG] DRIFT_COMPENSATION_PER_BLOCK = 0
-[17:07:16] Komplett nach oben scrollen...
-[17:07:20] Zurück am Anfang – Drift-Reset
-[17:07:20] 
-[DEBUG] Führe einen Scroll durch...
-[17:07:20]   Suche nach größter Scrollbalken-Fläche...
-[17:07:20]   Scrollbalken gefunden: Y=352, Höhe=266px
-[17:07:20]   Starte Drag von X=1795, Y=352, Distanz=280px
-[17:07:20]   Gescrollt. Block-Zähler: 1
-[17:07:20] [DEBUG] Scroll fertig! Block-Counter: 1
-[17:07:20] 
-[DEBUG] Berechnung der ersten Reihe:
-[17:07:20]   START_Y = 224
-[17:07:20]   FIRST_ROW_Y_OFFSET = 38
-[17:07:20]   base_y (ohne Drift) = 262
-[17:07:20]   drift_correction = 0px
-[17:07:20]   adjusted_y (mit Drift) = 262
-[17:07:20] 
-[DEBUG] Bewege Maus zur ersten Reihe: X=1405, Y=262
-[17:07:21] [DEBUG] Prüfe jetzt visuell: Ist die Maus auf der ersten Tile-Reihe?
-
-[17:07:21] 
-Drücke INSERT (Scan) oder Q (Debug Scroll) zum Fortfahren...
-[17:07:31] 
-=== DEBUG SCROLL ===
-[17:07:31] [DEBUG] SCROLL_PIXELS_UP = 290
-[17:07:31] [DEBUG] DRIFT_COMPENSATION_PER_BLOCK = 0
-[17:07:31] Komplett nach oben scrollen...
-[17:07:35] Zurück am Anfang – Drift-Reset
-[17:07:35] 
-[DEBUG] Führe einen Scroll durch...
-[17:07:35]   Suche nach größter Scrollbalken-Fläche...
-[17:07:35]   Scrollbalken gefunden: Y=352, Höhe=266px
-[17:07:35]   Starte Drag von X=1795, Y=352, Distanz=290px
-[17:07:36]   Gescrollt. Block-Zähler: 1
-[17:07:36] [DEBUG] Scroll fertig! Block-Counter: 1
-[17:07:36] 
-[DEBUG] Berechnung der ersten Reihe:
-[17:07:36]   START_Y = 224
-[17:07:36]   FIRST_ROW_Y_OFFSET = 38
-[17:07:36]   base_y (ohne Drift) = 262
-[17:07:36]   drift_correction = 0px
-[17:07:36]   adjusted_y (mit Drift) = 262
-[17:07:36] 
-[DEBUG] Bewege Maus zur ersten Reihe: X=1405, Y=262
-[17:07:36] [DEBUG] Prüfe jetzt visuell: Ist die Maus auf der ersten Tile-Reihe?
-
-[17:07:36] 
-Drücke INSERT (Scan) oder Q (Debug Scroll) zum Fortfahren...
-[17:07:41] 
-=== DEBUG SCROLL ===
-[17:07:41] [DEBUG] SCROLL_PIXELS_UP = 285
-[17:07:41] [DEBUG] DRIFT_COMPENSATION_PER_BLOCK = 0
-[17:07:41] Komplett nach oben scrollen...
-[17:07:45] Zurück am Anfang – Drift-Reset
-[17:07:45] 
-[DEBUG] Führe einen Scroll durch...
-[17:07:45]   Suche nach größter Scrollbalken-Fläche...
-[17:07:45]   Scrollbalken gefunden: Y=352, Höhe=266px
-[17:07:45]   Starte Drag von X=1795, Y=352, Distanz=285px
-[17:07:46]   Gescrollt. Block-Zähler: 1
-[17:07:46] [DEBUG] Scroll fertig! Block-Counter: 1
-[17:07:46] 
-[DEBUG] Berechnung der ersten Reihe:
-[17:07:46]   START_Y = 224
-[17:07:46]   FIRST_ROW_Y_OFFSET = 38
-[17:07:46]   base_y (ohne Drift) = 262
-[17:07:46]   drift_correction = 0px
-[17:07:46]   adjusted_y (mit Drift) = 262
-[17:07:46] 
-[DEBUG] Bewege Maus zur ersten Reihe: X=1405, Y=262
-[17:07:47] [DEBUG] Prüfe jetzt visuell: Ist die Maus auf der ersten Tile-Reihe?
-
-[17:07:47] 
-Drücke INSERT (Scan) oder Q (Debug Scroll) zum Fortfahren...
-[17:07:51] 
-=== DEBUG SCROLL ===
-[17:07:51] [DEBUG] SCROLL_PIXELS_UP = 282
-[17:07:51] [DEBUG] DRIFT_COMPENSATION_PER_BLOCK = 0
-[17:07:51] Komplett nach oben scrollen...
-[17:07:55] Zurück am Anfang – Drift-Reset
-[17:07:55] 
-[DEBUG] Führe einen Scroll durch...
-[17:07:55]   Suche nach größter Scrollbalken-Fläche...
-[17:07:55]   Scrollbalken gefunden: Y=352, Höhe=266px
-[17:07:55]   Starte Drag von X=1795, Y=352, Distanz=282px
-[17:07:56]   Gescrollt. Block-Zähler: 1
-[17:07:56] [DEBUG] Scroll fertig! Block-Counter: 1
-[17:07:56] 
-[DEBUG] Berechnung der ersten Reihe:
-[17:07:56]   START_Y = 224
-[17:07:56]   FIRST_ROW_Y_OFFSET = 38
-[17:07:56]   base_y (ohne Drift) = 262
-[17:07:56]   drift_correction = 0px
-[17:07:56]   adjusted_y (mit Drift) = 262
-[17:07:56] 
-[DEBUG] Bewege Maus zur ersten Reihe: X=1405, Y=262
-[17:07:57] [DEBUG] Prüfe jetzt visuell: Ist die Maus auf der ersten Tile-Reihe?
-
-[17:07:57] 
-Drücke INSERT (Scan) oder Q (Debug Scroll) zum Fortfahren...
-[17:08:06] [INFO] Config neu geladen
-[17:08:06] 
-SCAN GESTARTET – jetzt mit 101px Drag-Scroll und Datenbank-Korrektur!
-
-[17:08:06] 
-================================================================================
-[17:08:06] SCAN GESTARTET – Drift pro Block: 0px
-[17:08:06] X-Offset: 53px | Zeilenschritt: 97px
-[17:08:06] ================================================================================
-
-[17:08:06] Komplett nach oben scrollen...
-[17:08:10] Zurück am Anfang – Drift-Reset
-[17:08:10] 
-=== BLOCK 1 WIRD GESCANNT ===
-[17:08:10]   [DEBUG] Block 1:
-[17:08:10]     START_Y=224, FIRST_ROW_Y_OFFSET=38
-[17:08:10]     Erwartete Y-Position (ohne Drift): 262
-[17:08:10]     Drift-Korrektur: -0px (block_counter=0, drift_val=0)
-[17:08:10]     Finale base_y: 262
-[17:08:10]     Differenz zum Soll: 0px
-[17:08:11]   → The Butcher Helmet
-[17:08:12]   → Stoneskin Helmet Desert
-[17:08:13]   → Balor HCH Helmet Orange
-[17:08:15]   → Harizon Helmet White
-[17:08:16]   → Argus Helmet Black/Aqua/Silver
-[17:08:17]   → Aril Helmet
-[17:08:19]   → CBH-3 Helmet Olive
-[17:08:21]   → ORC-mkX Helmet Nightfire
-[17:08:23]   → Carrion Helmet Stalker
-[17:08:24]   → Morningstar Helmet Grey
-[17:08:29]   → Balor HCH Helmet Olive
-[17:08:33]   → J-5 Helmet
-[17:08:34]   → Oracle Helmet
-[17:08:36]   → Morningstar Helmet Base
-[17:08:39]   → Aril Helmet Hazard
-[17:08:42]   → Zeus Exploration Suit Helmet
-[17:08:43]   → CBH-3 Helmet Imperial
-[17:08:45]   → CBH-3 Helmet Grey
-[17:08:46]   → Strata Helmet Onyx
-[17:08:47]   → Paladin Helmet Black/Gold/Red
-[17:08:48]   → ADP-mk4 Helmet (Modified)
-[17:08:50]   → Artimex Helmet Red Alert
-[17:08:51]   → Mirai Racing Helmet
-[17:08:51]   Suche nach größter Scrollbalken-Fläche...
-[17:08:51]   Scrollbalken gefunden: Y=352, Höhe=266px
-[17:08:51]   Starte Drag von X=1795, Y=352, Distanz=282px
-[17:08:52]   Gescrollt. Block-Zähler: 1
-[17:08:52] 
-=== BLOCK 2 WIRD GESCANNT ===
-[17:08:52]   [DEBUG] Block 2:
-[17:08:52]     START_Y=224, FIRST_ROW_Y_OFFSET=38
-[17:08:52]     Erwartete Y-Position (ohne Drift): 262
-[17:08:52]     Drift-Korrektur: -0px (block_counter=1, drift_val=0)
-[17:08:52]     Finale base_y: 262
-[17:08:52]     Differenz zum Soll: 0px
-[17:08:58]   → Odyssey II Helmet Sienna
-[17:09:05]   → Neoni Yuki Onna Helmet
-[17:09:06]   → Manticore Helmet
-[17:09:09]   → G-2 Helmet Red
-[17:09:13]   → Xanthule Helmet
-[17:09:14]   → Horizon Helmet Rust Society
-[17:09:15]   → Xanthule Sehya Helmet
-[17:09:18]   → Strata Helmet Piston
-[17:09:19]   → Venture Helmet Seagreen
-[17:09:20]   → Pembroke Helmet RSI Graphite Edition
-[17:09:23]   → Paladin Helmet Black/ Silver
-[17:09:24]   → CBH-3 Helmet Black
-[17:09:31]   → Defiance Helmet Tactical
-[17:09:33]   → Renegade Helmet Tactical
-[17:09:33]   Suche nach größter Scrollbalken-Fläche...
-[17:09:33]   Scrollbalken gefunden: Y=578, Höhe=267px
-[17:09:33]   Starte Drag von X=1795, Y=578, Distanz=282px
-[17:09:34]   Gescrollt. Block-Zähler: 2
-[17:09:34] 
-=== BLOCK 3 WIRD GESCANNT ===
-[17:09:34]   [DEBUG] Block 3:
-[17:09:34]     START_Y=224, FIRST_ROW_Y_OFFSET=38
-[17:09:34]     Erwartete Y-Position (ohne Drift): 262
-[17:09:34]     Drift-Korrektur: -0px (block_counter=2, drift_val=0)
-[17:09:34]     Finale base_y: 262
-[17:09:34]     Differenz zum Soll: 0px
-[17:09:41]   → Field Recon Suit Helmet
-[17:09:46]   → Balor HCH Helmet Twilight
-[17:09:47]   → J-5 Helmet Rust
-[17:09:49]   → Artimex Helmet Wildwood
-[17:09:51]   → Horizon Helmet White
-[17:09:54]   → Calico Helmet Tactical
-[17:09:55]   → Aztalan Galena Helmet
-[17:09:59]   → Voidripper Helmet (Modified)
-[17:10:00]   → Arden-SL Helmet Rime
-[17:10:03]   → Aztalan Tamarack Helmet
-[17:10:04]   → Arden-SL Helmet
-[17:10:05]   → Artimex Helmet
-[17:10:08]   → Aril Helmet Quicksilver
-[17:10:09]   → Morozov-SH Helmet Thule
-[17:10:11]   → Neoni Jami Helmet
-[17:10:12]   → Morozov-SH-I Helmet Pyrotechnic Spitfire
-[17:10:13]   → Venture Helmet Twilight
-[17:10:16]   → Morningstar Helmet Earthwork
-[17:10:16]   Suche nach größter Scrollbalken-Fläche...
-[17:10:16]   Scrollbalken gefunden: Y=804, Höhe=267px
-[17:10:16]   Starte Drag von X=1795, Y=804, Distanz=282px
-[17:10:17]   Gescrollt. Block-Zähler: 3
-[17:10:17] 
-=== BLOCK 4 WIRD GESCANNT ===
-[17:10:17]   [DEBUG] Block 4:
-[17:10:17]     START_Y=224, FIRST_ROW_Y_OFFSET=38
-[17:10:17]     Erwartete Y-Position (ohne Drift): 262
-[17:10:17]     Drift-Korrektur: -0px (block_counter=3, drift_val=0)
-[17:10:17]     Finale base_y: 262
-[17:10:17]     Differenz zum Soll: 0px
-[17:10:22] 
-[ABBRUCH] ENTF gedrückt bei scan_8_rows_block:225
-[17:10:22] Maus gestoppt und in Ruheposition bewegt.
-[17:10:22] 
-SCAN FERTIG! Siehe detected_items.txt
-[17:10:22] Insgesamt 55 unterschiedliche Items gefunden.
-[17:10:22] 
-Drücke ENTER für einen weiteren Scan oder schließe das Fenster zum Beenden.
+[22:55:51] [INFO] Output-Datei erstellt: detected_items.txt
+[22:55:51] Komplett nach oben scrollen...
+[22:55:55] Zurück am Anfang – Drift-Reset
+[22:55:55] 
+=== DEBUG BLOCK 1 ===
+[22:55:55]   Reihe 0: Y=262
+[22:55:55]   Reihe 1: Y=359
+[22:55:56]   Reihe 2: Y=456
+[22:55:57]   Reihe 3: Y=553
+[22:55:58]   Reihe 4: Y=650
+[22:55:58]   Reihe 5: Y=747
+[22:55:59]   Reihe 6: Y=844
+[22:56:00]   Reihe 7: Y=941
+[22:56:01] 
+  → Scrolle nach unten...
+[22:56:01]   Suche nach größter Scrollbalken-Fläche...
+[22:56:01]   Scrollbalken gefunden: Mitte Y=352, Unten Y=485, Höhe=266px
+[22:56:01]   [SCROLLBAR CHECK] Unteres Ende Y=485 (Ziel-Bereich: 1010-1021)
+[22:56:01]   → [SCROLLBAR] Noch nicht im Zielbereich (Differenz: 525px)
+[22:56:01]   Starte Drag von X=1795, Y=352, Distanz=282px
+[22:56:02]   Gescrollt. Block-Zähler: 1
+[22:56:02] 
+=== DEBUG BLOCK 2 ===
+[22:56:02]   Reihe 0: Y=262
+[22:56:02]   Reihe 1: Y=359
+[22:56:03]   Reihe 2: Y=456
+[22:56:04]   Reihe 3: Y=553
+[22:56:05]   Reihe 4: Y=650
+[22:56:05]   Reihe 5: Y=747
+[22:56:06]   Reihe 6: Y=844
+[22:56:07]   Reihe 7: Y=941
+[22:56:08] 
+  → Scrolle nach unten...
+[22:56:08]   Suche nach größter Scrollbalken-Fläche...
+[22:56:08]   Scrollbalken gefunden: Mitte Y=578, Unten Y=711, Höhe=267px
+[22:56:08]   [SCROLLBAR CHECK] Unteres Ende Y=711 (Ziel-Bereich: 1010-1021)
+[22:56:08]   → [SCROLLBAR] Noch nicht im Zielbereich (Differenz: 299px)
+[22:56:08]   Starte Drag von X=1795, Y=578, Distanz=282px
+[22:56:09]   Gescrollt. Block-Zähler: 2
+[22:56:09] 
+=== DEBUG BLOCK 3 ===
+[22:56:09]   Reihe 0: Y=262
+[22:56:10]   Reihe 1: Y=359
+[22:56:10]   Reihe 2: Y=456
+[22:56:11]   Reihe 3: Y=553
+[22:56:12]   Reihe 4: Y=650
+[22:56:13]   Reihe 5: Y=747
+[22:56:13]   Reihe 6: Y=844
+[22:56:14]   Reihe 7: Y=941
+[22:56:15] 
+  → Scrolle nach unten...
+[22:56:15]   Suche nach größter Scrollbalken-Fläche...
+[22:56:15]   Scrollbalken gefunden: Mitte Y=804, Unten Y=937, Höhe=267px
+[22:56:15]   [SCROLLBAR CHECK] Unteres Ende Y=937 (Ziel-Bereich: 1010-1021)
+[22:56:15]   → [SCROLLBAR] Noch nicht im Zielbereich (Differenz: 73px)
+[22:56:15]   [WARNUNG] Drag würde Scrollbalken aus Bereich ziehen!
+[22:56:15]     Original: 282px würde zu Y=1086 führen (Max: 1026)
+[22:56:15]     Angepasst: 222px (Ziel Y=1026)
+[22:56:15]   Starte Drag von X=1795, Y=804, Distanz=222px
+[22:56:16]   Gescrollt. Block-Zähler: 3
+[22:56:16] 
+=== DEBUG BLOCK 4 ===
+[22:56:16]   Reihe 0: Y=262
+[22:56:17]   Reihe 1: Y=359
+[22:56:18]   Reihe 2: Y=456
+[22:56:18]   Reihe 3: Y=553
+[22:56:19]   Reihe 4: Y=650
+[22:56:20]   Reihe 5: Y=747
+[22:56:20]   Reihe 6: Y=844
+[22:56:21]   Reihe 7: Y=941
+[22:56:22] 
+  → Scrolle nach unten...
+[22:56:22]   Suche nach größter Scrollbalken-Fläche...
+[22:56:22]   Scrollbalken gefunden: Mitte Y=888, Unten Y=1021, Höhe=266px
+[22:56:22]   [SCROLLBAR CHECK] Unteres Ende Y=1021 (Ziel-Bereich: 1010-1021)
+[22:56:22]   ✓ [SCROLLBAR-ENDE] Scrollbalken im Zielbereich erkannt! Y=1021
+[22:56:22] 
+[DEBUG] Scrollbalken-Ende erkannt! Starte Reverse-Scan...
+[22:56:22] 
+=== DEBUG REVERSE BLOCK 4 ===
+[22:56:22]   [REVERSE] Starte von unten bei Y=970
+[22:56:22]   Reihe 0: Y=291
+[22:56:22] 
+[ABBRUCH] ENTF gedrückt bei debug_hover_and_scroll:146
+[22:56:22] 
+[DEBUG] Hover-Test abgebrochen (ENTF gedrückt).
+[22:56:22] 
+Drücke INSERT (Scan) oder Q (Debug Hover ohne OCR) zum Fortfahren...

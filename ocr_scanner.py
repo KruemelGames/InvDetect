@@ -32,14 +32,31 @@ def correct_with_database(text):
     if not text or len(text) < 4 or not ITEM_DATABASE:
         return text.strip()
 
-    # Hartkodierte Fixes
+    # Hartkodierte Fixes für häufige OCR-Fehler
     fixes = {
+        # Bekannte Probleme
         "Olve": "Olive",
         "Helment": "Helmet",
         "Hel met": "Helmet",
         "J-S": "J-5",
         "Morozov SH": "Morozov-SH",
         "CBH-3": "CBH-3",
+        "Harizon": "Horizon",  # a ↔ o
+
+        # Zahlen-Buchstaben Verwechslungen
+        "6-2": "G-2",   # 6 ↔ G
+        "0RC": "ORC",   # 0 ↔ O
+        "R5I": "RSI",   # 5 ↔ S
+        "R51": "RSI",   # 5+1 ↔ S+I
+        "1-5": "I-5",   # 1 ↔ I (wenn I gemeint ist)
+        "8CS": "BCS",   # 8 ↔ B
+        "C-S4": "C-54", # S ↔ 5
+
+        # Fehlende/falsche Bindestriche
+        "J5": "J-5",
+        "J 5": "J-5",
+        "G2": "G-2",
+        "G 2": "G-2",
     }
     for wrong, right in fixes.items():
         text = text.replace(wrong, right)
@@ -51,10 +68,20 @@ def correct_with_database(text):
         if score >= 88:
             return best_match
 
-    return text.strip()
+    # Kein Match gefunden - gib leeren String zurück
+    # Der rohe OCR-Text wird separat für Debug-Ausgabe verwendet
+    return ""
 
 def scan_image_for_text(image):
-    """Hauptfunktion – wird von inventory_detector aufgerufen"""
+    """
+    Hauptfunktion – wird von inventory_detector aufgerufen
+
+    Returns:
+        tuple: (korrigierter_text, roher_ocr_text, wurde_korrigiert)
+               - korrigierter_text: Der finale Text nach Datenbank-Korrektur (oder "" wenn ungültig)
+               - roher_ocr_text: Der ursprüngliche OCR-Text vor Korrektur
+               - wurde_korrigiert: True wenn Text durch Datenbank korrigiert wurde
+    """
     try:
         processed = preprocess(image)
         results = reader.readtext(processed, detail=0, paragraph=True)
@@ -64,15 +91,22 @@ def scan_image_for_text(image):
         if "Volume:" in raw_text:
             raw_text = raw_text.split("Volume:")[0].strip()
 
+        # Speichere rohen Text für Debug-Ausgabe
+        raw_ocr_text = raw_text
+
         # Datenbank-Korrektur anwenden
         final_text = correct_with_database(raw_text)
 
+        # Prüfe ob Text korrigiert wurde
+        wurde_korrigiert = (final_text != raw_text) and final_text in ITEM_DATABASE
+
         # Nur sinnvolle Ergebnisse zurückgeben
         if len(final_text) >= 4 and not final_text[0].isdigit():
-            return final_text
+            return (final_text, raw_ocr_text, wurde_korrigiert)
         else:
-            return ""
+            # Auch bei ungültigem Ergebnis den rohen Text zurückgeben
+            return ("", raw_ocr_text, False)
 
     except Exception as e:
         print(f"[OCR] Fehler: {e}")
-        return ""
+        return ("", "", False)

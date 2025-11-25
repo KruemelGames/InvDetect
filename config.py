@@ -12,6 +12,10 @@ INVENTORY_BOTTOM = 1021
 INVENTORY_LEFT = 1348
 INVENTORY_RIGHT = 1790
 
+# Scrollbalken-Ende-Erkennung (unteres Ende des Scrollbalkens)
+SCROLLBAR_END_MIN = 1010  # Untere Grenze für "am Ende" (vorher 930 - zu niedrig!)
+SCROLLBAR_END_MAX = 1021  # Obere Grenze (INVENTORY_BOTTOM)
+
 BORDER_OFFSET_TOP = 4
 BORDER_OFFSET_LEFT = 4
 
@@ -29,8 +33,9 @@ SCROLL_AREA_TOP = 220
 SCROLL_AREA_RIGHT = 1800
 SCROLL_AREA_BOTTOM = 1022
 
-# Die Farbe des Scrollbalken-Daumens (RGB für #00839e)
-SCROLLBAR_COLOR = (0, 131, 158)
+# Die Farben des Scrollbalken-Daumens
+SCROLLBAR_COLOR = (0, 131, 158)  # RGB für #00839e (nicht gehovert)
+SCROLLBAR_COLOR_HOVER = (0, 193, 178)  # RGB für #00c1b2 (gehovert)
 SCROLL_COLOR_TOLERANCE = 15     # Toleranz für Farbunterschiede (Wichtig für Zuverlässigkeit)
 
 # Fester OCR-Bereich (Tooltip oben mittig)
@@ -48,8 +53,8 @@ START_Y = INVENTORY_TOP + BORDER_OFFSET_TOP      # 224
 
 # Exaktes 101px Drag-Scroll
 SCROLL_PIXELS_UP = 282
-SCROLL_DURATION = 0.46 # Erhöht von 0.22 für zuverlässigeres Ziehen/Draggen
-SCROLL_WAIT = 0.42
+SCROLL_DURATION = 0.5  # Drag-Dauer (verwendet in pyautogui.drag)
+SCROLL_WAIT = 0.6      # Wartezeit nach Scroll (für Spiel-Latenz)
 
 # DATEIEN
 OUTPUT_FILE = "detected_items.txt"
