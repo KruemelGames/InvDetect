@@ -47,7 +47,7 @@ START_X = INVENTORY_LEFT + BORDER_OFFSET_LEFT    # 1352
 START_Y = INVENTORY_TOP + BORDER_OFFSET_TOP      # 224
 
 # Exaktes 101px Drag-Scroll
-SCROLL_PIXELS_UP = 255
+SCROLL_PIXELS_UP = 282
 SCROLL_DURATION = 0.46 # Erhöht von 0.22 für zuverlässigeres Ziehen/Draggen
 SCROLL_WAIT = 0.42
 
@@ -61,4 +61,4 @@ DB_PATH = r"C:\Users\kruem\PycharmProjects\GearCrate\data\inventory.db"
 # ←←← HIER SIND DIE KERN-KORREKTUREN ←←←
 HOVER_OFFSET_X = 53                     # X-Position innerhalb des Tiles
 FIRST_ROW_Y_OFFSET = 38                 # Y-Offset zur Mitte der ersten Reihe
-DRIFT_COMPENSATION_PER_BLOCK = 16       # Korrigiert von 200 auf realistischen Wert (15-18)
+DRIFT_COMPENSATION_PER_BLOCK = 0      # 28px-4px = 24px Korrektur pro Scroll (zu viel gescrollt)

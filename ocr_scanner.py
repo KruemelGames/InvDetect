@@ -11,7 +11,11 @@ from rapidfuzz import fuzz, process
 from database import ITEM_DATABASE   # ← alle Namen aus deiner DB
 
 # EasyOCR einmalig starten (CPU reicht völlig aus)
-reader = easyocr.Reader(['en'], gpu=False)
+# Warnungen unterdrücken
+import warnings
+warnings.filterwarnings('ignore', category=UserWarning)
+
+reader = easyocr.Reader(['en'], gpu=False, verbose=False)
 
 def preprocess(img):
     """Optimiert für deine 231×35px Tooltip-Region"""

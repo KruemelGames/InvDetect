@@ -1,15 +1,19 @@
 The Butcher Helmet
 Stoneskin Helmet Desert
 Balor HCH Helmet Orange
-Horizon Helmet White
+Harizon Helmet White
+The Butcher Helmet
+Stoneskin Helmet Desert
+Balor HCH Helmet Orange
+Harizon Helmet White
 Argus Helmet Black/Aqua/Silver
 Aril Helmet
-cBH- 3 Helmet Olive
+CBH-3 Helmet Olive
 ORC-mkX Helmet Nightfire
 Carrion Helmet Stalker
 Morningstar Helmet Grey
-Harizon Helmet White
 Balor HCH Helmet Olive
+J-5 Helmet
 Oracle Helmet
 Morningstar Helmet Base
 Aril Helmet Hazard
@@ -20,3 +24,36 @@ Strata Helmet Onyx
 Paladin Helmet Black/Gold/Red
 ADP-mk4 Helmet (Modified)
 Artimex Helmet Red Alert
+Mirai Racing Helmet
+Odyssey II Helmet Sienna
+Neoni Yuki Onna Helmet
+Manticore Helmet
+G-2 Helmet Red
+Xanthule Helmet
+Horizon Helmet Rust Society
+Xanthule Sehya Helmet
+Strata Helmet Piston
+Venture Helmet Seagreen
+Pembroke Helmet RSI Graphite Edition
+Paladin Helmet Black/ Silver
+CBH-3 Helmet Black
+Defiance Helmet Tactical
+Renegade Helmet Tactical
+Field Recon Suit Helmet
+Balor HCH Helmet Twilight
+J-5 Helmet Rust
+Artimex Helmet Wildwood
+Horizon Helmet White
+Calico Helmet Tactical
+Aztalan Galena Helmet
+Voidripper Helmet (Modified)
+Arden-SL Helmet Rime
+Aztalan Tamarack Helmet
+Arden-SL Helmet
+Artimex Helmet
+Aril Helmet Quicksilver
+Morozov-SH Helmet Thule
+Neoni Jami Helmet
+Morozov-SH-I Helmet Pyrotechnic Spitfire
+Venture Helmet Twilight
+Morningstar Helmet Earthwork
