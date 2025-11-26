@@ -14,3 +14,6 @@ detected_items.txt
 # OS
 .DS_Store
 Thumbs.db
+__pycache__/ocr_scanner.cpython-311.pyc
+__pycache__/inventory_detector.cpython-311.pyc
+__pycache__/config.cpython-311.pyc
