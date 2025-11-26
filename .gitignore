@@ -1,7 +1,16 @@
-__pycache__/config.cpython-311.pyc
-__pycache__/inventory_detector.cpython-311.pyc
-__pycache__/ocr_scanner.cpython-311.pyc
-__pycache__/inventory_detector.cpython-311.pyc
-__pycache__/config.cpython-311.pyc
-__pycache__/inventory_detector.cpython-311.pyc
-__pycache__/config.cpython-311.pyc
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Log und Output Dateien
+scan_log.txt
+detected_items.txt
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
