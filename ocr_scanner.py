@@ -9,6 +9,7 @@ import cv2
 import numpy as np
 from rapidfuzz import fuzz, process
 from database import ITEM_DATABASE   # ← alle Namen aus deiner DB
+from ocr_fixes import get_fixes, get_chars_to_remove  # ← OCR-Korrekturen aus externer Datei
 
 # EasyOCR einmalig starten (CPU reicht völlig aus)
 # Warnungen unterdrücken
@@ -32,32 +33,15 @@ def correct_with_database(text):
     if not text or len(text) < 4 or not ITEM_DATABASE:
         return text.strip()
 
-    # Hartkodierte Fixes für häufige OCR-Fehler
-    fixes = {
-        # Bekannte Probleme
-        "Olve": "Olive",
-        "Helment": "Helmet",
-        "Hel met": "Helmet",
-        "J-S": "J-5",
-        "Morozov SH": "Morozov-SH",
-        "CBH-3": "CBH-3",
-        "Harizon": "Horizon",  # a ↔ o
+    # Lade OCR-Fixes aus externer Datei
+    fixes = get_fixes()
+    chars_to_remove = get_chars_to_remove()
 
-        # Zahlen-Buchstaben Verwechslungen
-        "6-2": "G-2",   # 6 ↔ G
-        "0RC": "ORC",   # 0 ↔ O
-        "R5I": "RSI",   # 5 ↔ S
-        "R51": "RSI",   # 5+1 ↔ S+I
-        "1-5": "I-5",   # 1 ↔ I (wenn I gemeint ist)
-        "8CS": "BCS",   # 8 ↔ B
-        "C-S4": "C-54", # S ↔ 5
+    # Entferne unerwünschte Zeichen
+    for char in chars_to_remove:
+        text = text.replace(char, '')
 
-        # Fehlende/falsche Bindestriche
-        "J5": "J-5",
-        "J 5": "J-5",
-        "G2": "G-2",
-        "G 2": "G-2",
-    }
+    # Wende Fixes an
     for wrong, right in fixes.items():
         text = text.replace(wrong, right)
 
