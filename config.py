@@ -52,7 +52,7 @@ START_X = INVENTORY_LEFT + BORDER_OFFSET_LEFT    # 1352
 START_Y = INVENTORY_TOP + BORDER_OFFSET_TOP      # 224
 
 # Exaktes 101px Drag-Scroll
-SCROLL_PIXELS_UP = 282
+SCROLL_PIXELS_UP = 322
 SCROLL_DURATION = 0.5  # Drag-Dauer (verwendet in pyautogui.drag)
 SCROLL_WAIT = 0.6      # Wartezeit nach Scroll (für Spiel-Latenz)
 

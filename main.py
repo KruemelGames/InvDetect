@@ -30,9 +30,9 @@ def log_print(*args, **kwargs):
         pass
 
 def debug_hover_and_scroll():
-    """DEBUG: Kacheln abgehen und scrollen OHNE OCR/Datenbank"""
-    log_print("\n=== DEBUG MODE: Hover + Scroll (KEIN OCR) ===")
-    log_print("Geht alle Kacheln ab, hovert und scrollt - ohne OCR-Scan\n")
+    """DEBUG: Kacheln abgehen und scrollen OHNE OCR/Datenbank - MIT Button-Check Schleife"""
+    log_print("\n=== DEBUG MODE: Hover + Scroll (KEIN OCR) + Button-Check ===")
+    log_print("3 Blöcke + kleiner Scroll + letzte Reihe + Button-Check-Schleife\n")
 
     # Config neu laden
     import importlib
@@ -40,130 +40,138 @@ def debug_hover_and_scroll():
 
     scanner = InventoryScanner()
     scanner.scan_active = True
+    scan_iteration = 0  # Zähler für Durchläufe
 
     try:
         # Erst nach oben scrollen
         scanner.reset_to_top()
 
-        empty_blocks = 0
+        # Hauptschleife: Wiederhole bis Button inaktiv
+        while scanner.scan_active:
+            scan_iteration += 1
+            log_print(f"\n{'='*80}")
+            log_print(f"DEBUG DURCHLAUF #{scan_iteration}")
+            log_print(f"{'='*80}\n")
 
-        # PHASE 1: Von oben nach unten
-        while empty_blocks < 4 and scanner.scan_active:
+            # Scanne 3 Blöcke (je 8 Reihen)
+            for block_num in range(3):
+                scanner.check_abort()
+
+                log_print(f"\n=== DEBUG BLOCK {scanner.block_counter + 1} ===")
+
+                # Basis-Y berechnen
+                base_y = config.START_Y + config.FIRST_ROW_Y_OFFSET
+                drift_val = int(config.DRIFT_COMPENSATION_PER_BLOCK)
+                drift_correction = int(scanner.block_counter * drift_val)
+                base_y -= drift_correction
+                log_print(f"  Block {scanner.block_counter + 1} → Y-Korrektur: -{drift_correction}px → erste Reihe bei y={base_y}")
+
+                # Row offsets
+                try:
+                    row_offsets = [i * config.ROW_STEP for i in range(8)]
+                except AttributeError:
+                    row_offsets = [i * 97 for i in range(8)]
+
+                # 8 Reihen durchgehen
+                for row_idx, offset in enumerate(row_offsets):
+                    scanner.check_abort()
+                    row_y = base_y + offset
+
+                    if row_y < 0:
+                        log_print(f"  [ACHTUNG] Y-Koordinate {row_y} ist < 0! Übersprungen.")
+                        continue
+
+                    log_print(f"  Reihe {row_idx + 1}: Y={row_y}")
+
+                    # 4 Spalten durchgehen
+                    for col in range(config.MAX_COLUMNS):
+                        scanner.check_abort()
+
+                        x = config.START_X + config.HOVER_OFFSET_X + col * (config.TILE_WIDTH + config.TILE_SPACING)
+                        y = row_y
+
+                        # Nur hovern (kein OCR!)
+                        pyautogui.moveTo(x, y, duration=0.02)
+
+                        # Kurze Wiggle-Bewegung
+                        scanner.check_abort()
+                        pyautogui.moveRel(0, -3, duration=0.02)
+                        time.sleep(0.05)
+                        scanner.check_abort()
+                        pyautogui.moveRel(0, 3, duration=0.02)
+                        time.sleep(0.1)  # Kurz warten damit Tooltip sichtbar ist
+
+                    pyautogui.moveTo(100, 100, duration=0)  # Maus weg
+
+                # Nach Block 1 und 2 scrollen (nicht nach Block 3)
+                if block_num < 2:
+                    log_print("\n  → Scrolle nach unten...")
+                    scanner.check_abort()
+                    scanner.precise_scroll_down_once()
+
+            # Nach 3 Blöcken: Kleiner Scroll für 1 Reihe
+            log_print("\n→ Kleiner Scroll zur letzten Reihe...")
             scanner.check_abort()
 
-            log_print(f"\n=== DEBUG BLOCK {scanner.block_counter + 1} ===")
+            cx = (config.SCROLL_AREA_LEFT + config.SCROLL_AREA_RIGHT) // 2
+            cy = config.SCROLL_AREA_BOTTOM - 100
 
-            # Basis-Y berechnen
-            base_y = config.START_Y + config.FIRST_ROW_Y_OFFSET
-            drift_val = int(config.DRIFT_COMPENSATION_PER_BLOCK)
-            drift_correction = int(scanner.block_counter * drift_val)
-            base_y -= drift_correction
+            small_scroll = config.SCROLL_PIXELS_UP // 8  # 322 / 8 = 40px
+            log_print(f"  Scrolle {small_scroll}px nach unten (für 1 Reihe)")
 
-            # Row offsets
-            try:
-                row_offsets = [i * config.ROW_STEP for i in range(8)]
-            except AttributeError:
-                row_offsets = [i * 97 for i in range(8)]
+            pyautogui.moveTo(cx, cy, duration=0)
+            pyautogui.drag(0, small_scroll, duration=0.2, button='left')
+            time.sleep(0.3)
 
-            # 8 Reihen durchgehen
-            for row_idx, offset in enumerate(row_offsets):
+            # Scanne nur die letzte Reihe (Reihe 25 bei Y=974)
+            log_print("\n=== DEBUG: LETZTE REIHE (25) ===")
+
+            # Berechne Y-Position
+            row_25_y = config.INVENTORY_BOTTOM - config.BORDER_OFFSET_TOP - (config.TILE_HEIGHT // 2)
+            log_print(f"  Reihe 25: Y={row_25_y}")
+
+            for col in range(config.MAX_COLUMNS):
                 scanner.check_abort()
-                row_y = base_y + offset
 
-                if row_y < 0:
-                    continue
+                x = config.START_X + config.HOVER_OFFSET_X + col * (config.TILE_WIDTH + config.TILE_SPACING)
 
-                log_print(f"  Reihe {row_idx}: Y={row_y}")
+                # Nur hovern (kein OCR!)
+                pyautogui.moveTo(x, row_25_y, duration=0.02)
 
-                # 4 Spalten durchgehen
-                for col in range(config.MAX_COLUMNS):
+                # Kurze Wiggle-Bewegung
+                scanner.check_abort()
+                pyautogui.moveRel(0, -3, duration=0.02)
+                time.sleep(0.05)
+                scanner.check_abort()
+                pyautogui.moveRel(0, 3, duration=0.02)
+                time.sleep(0.1)
+
+            pyautogui.moveTo(100, 100, duration=0)
+
+            # Button-Check nach letzter Reihe
+            log_print("\n→ Prüfe Button-Status...")
+            scanner.check_abort()
+            button_active = scanner.check_button_brightness()
+
+            if button_active:
+                log_print("[DEBUG] Button aktiv - klicke und starte neuen Durchlauf")
+                button_center_x = 1612
+                button_center_y = 1040
+                pyautogui.click(button_center_x, button_center_y)
+                log_print(f"  Button geklickt bei ({button_center_x}, {button_center_y})")
+                # Warte 5 Sekunden (Inventar muss sich aufbauen)
+                log_print("  Warte 5 Sekunden (Inventar lädt)...")
+                for _ in range(50):  # 50 * 0.1s = 5s
                     scanner.check_abort()
+                    time.sleep(0.1)
+                # Reset für nächsten Durchlauf
+                scanner.reset_to_top()
+                log_print("  Bereit für nächsten Debug-Durchlauf\n")
+            else:
+                log_print("[DEBUG] Button inaktiv - Schleife beendet")
+                break  # Beende die while-Schleife
 
-                    x = config.START_X + config.HOVER_OFFSET_X + col * (config.TILE_WIDTH + config.TILE_SPACING)
-                    y = row_y
-
-                    # Nur hovern (kein OCR!)
-                    pyautogui.moveTo(x, y, duration=0.02)
-
-                    # Kurze Wiggle-Bewegung
-                    scanner.check_abort()
-                    pyautogui.moveRel(0, -3, duration=0.02)
-                    time.sleep(0.05)
-                    scanner.check_abort()
-                    pyautogui.moveRel(0, 3, duration=0.02)
-                    time.sleep(0.1)  # Kurz warten damit Tooltip sichtbar ist
-
-                pyautogui.moveTo(100, 100, duration=0)  # Maus weg
-
-            # Scroll nach unten
-            log_print("\n  → Scrolle nach unten...")
-            scroll_result = scanner.precise_scroll_down_once()
-
-            if scroll_result == "END":
-                log_print("\n[DEBUG] Scrollbalken-Ende erkannt! Starte Reverse-Scan...")
-
-                # PHASE 2: Reverse-Scan von unten nach oben
-                reverse_blocks = 0
-                while reverse_blocks < 10 and scanner.scan_active:  # Max 10 Reverse-Blöcke
-                    scanner.check_abort()
-
-                    log_print(f"\n=== DEBUG REVERSE BLOCK {scanner.block_counter + 1} ===")
-
-                    # Basis-Y von UNTEN berechnen
-                    base_y = config.INVENTORY_BOTTOM - config.BORDER_OFFSET_TOP - (config.TILE_HEIGHT // 2) - 4
-                    log_print(f"  [REVERSE] Starte von unten bei Y={base_y}")
-
-                    # Row offsets negativ (von unten nach oben)
-                    try:
-                        row_offsets = [-i * config.ROW_STEP for i in reversed(range(8))]
-                    except AttributeError:
-                        row_offsets = [-i * 97 for i in reversed(range(8))]
-
-                    # 8 Reihen durchgehen (von unten nach oben)
-                    for row_idx, offset in enumerate(row_offsets):
-                        scanner.check_abort()
-                        row_y = base_y + offset
-
-                        if row_y < 0:
-                            continue
-
-                        log_print(f"  Reihe {row_idx}: Y={row_y}")
-
-                        # 4 Spalten durchgehen
-                        for col in range(config.MAX_COLUMNS):
-                            scanner.check_abort()
-
-                            x = config.START_X + config.HOVER_OFFSET_X + col * (config.TILE_WIDTH + config.TILE_SPACING)
-                            y = row_y
-
-                            # Nur hovern (kein OCR!)
-                            pyautogui.moveTo(x, y, duration=0.02)
-
-                            # Kurze Wiggle-Bewegung
-                            scanner.check_abort()
-                            pyautogui.moveRel(0, -3, duration=0.02)
-                            time.sleep(0.05)
-                            scanner.check_abort()
-                            pyautogui.moveRel(0, 3, duration=0.02)
-                            time.sleep(0.1)
-
-                        pyautogui.moveTo(100, 100, duration=0)
-
-                    # Scroll nach oben
-                    log_print("\n  → Scrolle nach oben...")
-                    scroll_result = scanner.precise_scroll_up_once()
-
-                    if scroll_result == "TOP":
-                        log_print("\n[DEBUG] Scrollbalken am Anfang erkannt! Reverse-Scan beendet.")
-                        break
-
-                    reverse_blocks += 1
-
-                break
-
-            empty_blocks = 0  # Reset da wir nicht auf leere Kacheln prüfen
-
-        log_print("\n[DEBUG] Hover-Test beendet.")
+        log_print("\n[DEBUG] Hover-Test mit Button-Check abgeschlossen.")
         pyautogui.moveTo(100, 100, duration=0)
 
     except (KeyboardInterrupt, ScanAbortedException):

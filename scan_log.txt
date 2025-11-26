@@ -1,98 +1,413 @@
-[22:55:31] 
+[20:43:12] 
 === InvDetect – Star Citizen Universal Inventory Scanner ===
-[22:55:32] INSERT → Start Scan | Q → Debug Hover (ohne OCR) | ENTF → Stoppen
+[20:43:12] INSERT → Start Scan | Q → Debug Hover (ohne OCR) | ENTF → Stoppen
 
-[22:55:32] 
+[20:43:12] 
 Warte auf INSERT (Scan) oder Q (Debug Hover ohne OCR)...
-[22:55:51] 
-=== DEBUG MODE: Hover + Scroll (KEIN OCR) ===
-[22:55:51] Geht alle Kacheln ab, hovert und scrollt - ohne OCR-Scan
+[20:43:32] [INFO] Config neu geladen
+[20:43:32] 
+SCAN GESTARTET – jetzt mit 101px Drag-Scroll und Datenbank-Korrektur!
 
-[22:55:51] [INFO] Output-Datei erstellt: detected_items.txt
-[22:55:51] Komplett nach oben scrollen...
-[22:55:55] Zurück am Anfang – Drift-Reset
-[22:55:55] 
-=== DEBUG BLOCK 1 ===
-[22:55:55]   Reihe 0: Y=262
-[22:55:55]   Reihe 1: Y=359
-[22:55:56]   Reihe 2: Y=456
-[22:55:57]   Reihe 3: Y=553
-[22:55:58]   Reihe 4: Y=650
-[22:55:58]   Reihe 5: Y=747
-[22:55:59]   Reihe 6: Y=844
-[22:56:00]   Reihe 7: Y=941
-[22:56:01] 
-  → Scrolle nach unten...
-[22:56:01]   Suche nach größter Scrollbalken-Fläche...
-[22:56:01]   Scrollbalken gefunden: Mitte Y=352, Unten Y=485, Höhe=266px
-[22:56:01]   [SCROLLBAR CHECK] Unteres Ende Y=485 (Ziel-Bereich: 1010-1021)
-[22:56:01]   → [SCROLLBAR] Noch nicht im Zielbereich (Differenz: 525px)
-[22:56:01]   Starte Drag von X=1795, Y=352, Distanz=282px
-[22:56:02]   Gescrollt. Block-Zähler: 1
-[22:56:02] 
-=== DEBUG BLOCK 2 ===
-[22:56:02]   Reihe 0: Y=262
-[22:56:02]   Reihe 1: Y=359
-[22:56:03]   Reihe 2: Y=456
-[22:56:04]   Reihe 3: Y=553
-[22:56:05]   Reihe 4: Y=650
-[22:56:05]   Reihe 5: Y=747
-[22:56:06]   Reihe 6: Y=844
-[22:56:07]   Reihe 7: Y=941
-[22:56:08] 
-  → Scrolle nach unten...
-[22:56:08]   Suche nach größter Scrollbalken-Fläche...
-[22:56:08]   Scrollbalken gefunden: Mitte Y=578, Unten Y=711, Höhe=267px
-[22:56:08]   [SCROLLBAR CHECK] Unteres Ende Y=711 (Ziel-Bereich: 1010-1021)
-[22:56:08]   → [SCROLLBAR] Noch nicht im Zielbereich (Differenz: 299px)
-[22:56:08]   Starte Drag von X=1795, Y=578, Distanz=282px
-[22:56:09]   Gescrollt. Block-Zähler: 2
-[22:56:09] 
-=== DEBUG BLOCK 3 ===
-[22:56:09]   Reihe 0: Y=262
-[22:56:10]   Reihe 1: Y=359
-[22:56:10]   Reihe 2: Y=456
-[22:56:11]   Reihe 3: Y=553
-[22:56:12]   Reihe 4: Y=650
-[22:56:13]   Reihe 5: Y=747
-[22:56:13]   Reihe 6: Y=844
-[22:56:14]   Reihe 7: Y=941
-[22:56:15] 
-  → Scrolle nach unten...
-[22:56:15]   Suche nach größter Scrollbalken-Fläche...
-[22:56:15]   Scrollbalken gefunden: Mitte Y=804, Unten Y=937, Höhe=267px
-[22:56:15]   [SCROLLBAR CHECK] Unteres Ende Y=937 (Ziel-Bereich: 1010-1021)
-[22:56:15]   → [SCROLLBAR] Noch nicht im Zielbereich (Differenz: 73px)
-[22:56:15]   [WARNUNG] Drag würde Scrollbalken aus Bereich ziehen!
-[22:56:15]     Original: 282px würde zu Y=1086 führen (Max: 1026)
-[22:56:15]     Angepasst: 222px (Ziel Y=1026)
-[22:56:15]   Starte Drag von X=1795, Y=804, Distanz=222px
-[22:56:16]   Gescrollt. Block-Zähler: 3
-[22:56:16] 
-=== DEBUG BLOCK 4 ===
-[22:56:16]   Reihe 0: Y=262
-[22:56:17]   Reihe 1: Y=359
-[22:56:18]   Reihe 2: Y=456
-[22:56:18]   Reihe 3: Y=553
-[22:56:19]   Reihe 4: Y=650
-[22:56:20]   Reihe 5: Y=747
-[22:56:20]   Reihe 6: Y=844
-[22:56:21]   Reihe 7: Y=941
-[22:56:22] 
-  → Scrolle nach unten...
-[22:56:22]   Suche nach größter Scrollbalken-Fläche...
-[22:56:22]   Scrollbalken gefunden: Mitte Y=888, Unten Y=1021, Höhe=266px
-[22:56:22]   [SCROLLBAR CHECK] Unteres Ende Y=1021 (Ziel-Bereich: 1010-1021)
-[22:56:22]   ✓ [SCROLLBAR-ENDE] Scrollbalken im Zielbereich erkannt! Y=1021
-[22:56:22] 
-[DEBUG] Scrollbalken-Ende erkannt! Starte Reverse-Scan...
-[22:56:22] 
-=== DEBUG REVERSE BLOCK 4 ===
-[22:56:22]   [REVERSE] Starte von unten bei Y=970
-[22:56:22]   Reihe 0: Y=291
-[22:56:22] 
-[ABBRUCH] ENTF gedrückt bei debug_hover_and_scroll:146
-[22:56:22] 
-[DEBUG] Hover-Test abgebrochen (ENTF gedrückt).
-[22:56:22] 
-Drücke INSERT (Scan) oder Q (Debug Hover ohne OCR) zum Fortfahren...
+[20:43:32] [INFO] Output-Datei erstellt: detected_items.txt
+[20:43:32] 
+================================================================================
+[20:43:32] SCAN GESTARTET – Schleife mit Button-Check aktiviert
+[20:43:32] X-Offset: 53px | Zeilenschritt: 97px
+[20:43:32] ================================================================================
+
+[20:43:32] Komplett nach oben scrollen...
+[20:43:36] Zurück am Anfang – Drift-Reset
+[20:43:36] 
+================================================================================
+[20:43:36] SCAN-DURCHLAUF #1
+[20:43:36] ================================================================================
+
+[20:43:36] 
+=== BLOCK 1 WIRD GESCANNT ===
+[20:43:36]   [DEBUG] Block 1:
+[20:43:36]     START_Y=224, FIRST_ROW_Y_OFFSET=38
+[20:43:36]     Erwartete Y-Position (ohne Drift): 262
+[20:43:36]     Drift-Korrektur: -0px (block_counter=0, drift_val=0)
+[20:43:36]     Finale base_y: 262
+[20:43:36]     Differenz zum Soll: 0px
+[20:43:38]   → The Butcher Helmet (#1)
+[20:43:39]   → Stoneskin Helmet Desert (#1)
+[20:43:40]   → Balor HCH Helmet Orange (#1)
+[20:43:42]   → Horizon Helmet White (#1)
+[20:43:43]   → Argus Helmet Black/Aqua/Silver (#1)
+[20:43:45]   → Aril Helmet (#1)
+[20:43:46]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: 'cBH 3 Helmet Olive'
+[20:43:48]     [RETRY] Text erkannt nach 2 Versuchen
+[20:43:48]   → CBH-3 Helmet Olive (#1)
+[20:43:49]   → G-2 Helmet Aqua (#1)
+[20:43:51]   → ORC-mkX Helmet Nightfire (#1)
+[20:43:53]   → Carrion Helmet Stalker (#1)
+[20:43:54]   → Morningstar Helmet Grey (#1)
+[20:43:56]   → Horizon Helmet White (#2)
+[20:43:57]   → Horizon Helmet White (#3)
+[20:43:59]   → Horizon Helmet White (#4)
+[20:44:00]   → Balor HCH Helmet Olive (#1)
+[20:44:02]   → Horizon Helmet White (#5)
+[20:44:03]   → Horizon Helmet White (#6)
+[20:44:05]   → J-5 Helmet (#1)
+[20:44:06]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: 'Oracle Helmet'
+[20:44:08]     [SCAN FAILED] OCR erkannte: '@racle Helmet' - KEINE Übereinstimmung in Datenbank!
+[20:44:09]   → Morningstar Helmet Base (#1)
+[20:44:11]   → Horizon Helmet White (#7)
+[20:44:12]   → Horizon Helmet White (#8)
+[20:44:13]   → Aril Helmet Hazard (#1)
+[20:44:15]   → Horizon Helmet White (#9)
+[20:44:16]   → Zeus Exploration Suit Helmet (#1)
+[20:44:18]   → Zeus Exploration Suit Helmet (#2)
+[20:44:19]   → CBH-3 Helmet Imperial (#1)
+[20:44:21]   → CBH-3 Helmet Grey (#1)
+[20:44:22]   → Strata Helmet Onyx (#1)
+[20:44:24]   → Paladin Helmet Black/Gold/Red (#1)
+[20:44:25]   → ADP-mk4 Helmet (Modified) (#1)
+[20:44:27]   → Artimex Helmet Red Alert (#1)
+[20:44:27]   Items gefunden
+[20:44:27]   Suche nach größter Scrollbalken-Fläche...
+[20:44:27]   Scrollbalken gefunden: Mitte Y=352, Unten Y=485, Höhe=266px
+[20:44:27]   [SCROLLBAR CHECK] Unteres Ende Y=485 (Ziel-Bereich: 1010-1021)
+[20:44:27]   → [SCROLLBAR] Noch nicht im Zielbereich (Differenz: 525px)
+[20:44:27]   Starte Drag von X=1795, Y=352, Distanz=322px
+[20:44:28]   Gescrollt. Block-Zähler: 1
+[20:44:28] 
+=== BLOCK 2 WIRD GESCANNT ===
+[20:44:28]   [DEBUG] Block 2:
+[20:44:28]     START_Y=224, FIRST_ROW_Y_OFFSET=38
+[20:44:28]     Erwartete Y-Position (ohne Drift): 262
+[20:44:28]     Drift-Korrektur: -0px (block_counter=1, drift_val=0)
+[20:44:28]     Finale base_y: 262
+[20:44:28]     Differenz zum Soll: 0px
+[20:44:30]   → Mirai Racing Helmet (#1)
+[20:44:31]   → Odyssey II Helmet Sienna (#1)
+[20:44:33]   → Horizon Helmet White (#10)
+[20:44:34]   → Horizon Helmet White (#11)
+[20:44:36]   → Horizon Helmet White (#12)
+[20:44:37]   → Horizon Helmet White (#13)
+[20:44:38]   → Neoni Yuki Onna Helmet (#1)
+[20:44:40]   → Manticore Helmet (#1)
+[20:44:41]   → Horizon Helmet White (#14)
+[20:44:43]   → G-2 Helmet Red (#1)
+[20:44:44]   → Morningstar Helmet Base (#2)
+[20:44:46]   → Horizon Helmet White (#15)
+[20:44:47]   → Xanthule Helmet (#1)
+[20:44:48]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: 'Horizon Helmet Rust Society'
+[20:44:50]     [SCAN FAILED] OCR erkannte: 'Harizon Helmet Rust Society' - KEINE Übereinstimmung in Datenbank!
+[20:44:51]   → Xanthule Sehya Helmet (#1)
+[20:44:53]   → Horizon Helmet White (#16)
+[20:44:54]   → Strata Helmet Piston (#1)
+[20:44:56]   → Venture Helmet Seagreen (#1)
+[20:44:57]   → Pembroke Helmet RSI Graphite Edition (#1)
+[20:44:59]   → Horizon Helmet White (#17)
+[20:45:00]   → Paladin Helmet Black/Silver (#1)
+[20:45:02]   → CBH-3 Helmet Black (#1)
+[20:45:03]   → Horizon Helmet White (#18)
+[20:45:04]   → Mirai Racing Helmet (#2)
+[20:45:06]   → Horizon Helmet White (#19)
+[20:45:07]   → Manticore Helmet (#2)
+[20:45:09]   → Defiance Helmet Tactical (#1)
+[20:45:10]   → G-2 Helmet Executive (#1)
+[20:45:12]   → Renegade Helmet Tactical (#1)
+[20:45:13]   → Field Recon Suit Helmet (#1)
+[20:45:15]   → Horizon Helmet White (#20)
+[20:45:16]   → Horizon Helmet White (#21)
+[20:45:16]   Items gefunden
+[20:45:16]   Suche nach größter Scrollbalken-Fläche...
+[20:45:16]   Scrollbalken gefunden: Mitte Y=610, Unten Y=743, Höhe=267px
+[20:45:16]   [SCROLLBAR CHECK] Unteres Ende Y=743 (Ziel-Bereich: 1010-1021)
+[20:45:16]   → [SCROLLBAR] Noch nicht im Zielbereich (Differenz: 267px)
+[20:45:16]   Starte Drag von X=1795, Y=610, Distanz=322px
+[20:45:17]   Gescrollt. Block-Zähler: 2
+[20:45:17] 
+=== BLOCK 3 WIRD GESCANNT ===
+[20:45:17]   [DEBUG] Block 3:
+[20:45:17]     START_Y=224, FIRST_ROW_Y_OFFSET=38
+[20:45:17]     Erwartete Y-Position (ohne Drift): 262
+[20:45:17]     Drift-Korrektur: -0px (block_counter=2, drift_val=0)
+[20:45:17]     Finale base_y: 262
+[20:45:17]     Differenz zum Soll: 0px
+[20:45:19]   → Horizon Helmet White (#22)
+[20:45:20]   → Balor HCH Helmet Twilight (#1)
+[20:45:22]   → J-5 Helmet Rust (#1)
+[20:45:23]   → Artimex Helmet Wildwood (#1)
+[20:45:25]   → Neoni Yuki Onna Helmet (#2)
+[20:45:26]   → Horizon Helmet White (#23)
+[20:45:28]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: 'Paladin Helmet Black/ Silver'
+[20:45:29]     [SCAN FAILED] OCR erkannte: 'Paladin Helmet Black/ Silver' - KEINE Übereinstimmung in Datenbank!
+[20:45:31]   → Calico Helmet Tactical (#1)
+[20:45:33]   → Aztalan Galena Helmet (#1)
+[20:45:34]   → Morningstar Helmet Base (#3)
+[20:45:36]   → Neoni Yuki Onna Helmet (#3)
+[20:45:37]   → Voidripper Helmet (Modified) (#1)
+[20:45:39]   → Arden-SL Helmet Rime (#1)
+[20:45:40]   → Horizon Helmet White (#24)
+[20:45:42]   → Aztalan Tamarack Helmet (#1)
+[20:45:43]   → Arden-SL Helmet (#1)
+[20:45:44]   → Artimex Helmet (#1)
+[20:45:46]   → Horizon Helmet White (#25)
+[20:45:47]   → Aril Helmet Quicksilver (#1)
+[20:45:49]   → Morozov-SH Helmet Thule (#1)
+[20:45:50]   → Neoni Jami Helmet (#1)
+[20:45:52]   → Morozov-SH-I Helmet Pyrotechnic Spitfire (#1)
+[20:45:53]   → Venture Helmet Twilight (#1)
+[20:45:55]   → Horizon Helmet White (#26)
+[20:45:56]   → Morningstar Helmet Earthwork (#1)
+[20:45:58]   → G-2 Helmet Executive (#2)
+[20:45:59]   → Balor HCH Helmet Tan (#1)
+[20:46:01]   → Odyssey II Helmet Orange (#1)
+[20:46:02]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: '348" Voidripper Helmet'
+[20:46:04]     [RETRY] Text erkannt nach 2 Versuchen
+[20:46:04]   → Voidripper Helmet (#1)
+[20:46:05]   → Balor HCH Helmet Red (#1)
+[20:46:07]   → Morningstar Helmet Olive (#1)
+[20:46:08]   → Oracle Helmet Lichen (#1)
+[20:46:08]   Items gefunden
+[20:46:08] 
+→ Kleiner Scroll zur letzten Reihe...
+[20:46:08]   Scrolle 40px nach unten (für 1 Reihe)
+[20:46:09] 
+=== LETZTE REIHE (25) WIRD GESCANNT ===
+[20:46:09]   Scanne bei Y=974
+[20:46:11]   → Oracle Helmet Sienna (#1)
+[20:46:12]   → Xanthule Sehya Helmet (#2)
+[20:46:13]   → Argus Helmet Black/Silver/Green (#1)
+[20:46:15]   → Novikov Helmet (#1)
+[20:46:15] 
+→ Prüfe Button-Status...
+[20:46:15] [BUTTON CHECK] Durchschnittshelligkeit: 75.1 → Drückbar (Aktiv)
+[20:46:15] [BUTTON AKTIV] Klicke auf Button und starte neuen Scan-Durchlauf
+[20:46:15]   Button geklickt bei (1612, 1040)
+[20:46:15]   Warte 5 Sekunden (Inventar lädt)...
+[20:46:20] Komplett nach oben scrollen...
+[20:46:23] Zurück am Anfang – Drift-Reset
+[20:46:24]   Bereit für nächsten Scan-Durchlauf
+
+[20:46:24] 
+================================================================================
+[20:46:24] SCAN-DURCHLAUF #2
+[20:46:24] ================================================================================
+
+[20:46:24] 
+=== BLOCK 1 WIRD GESCANNT ===
+[20:46:24]   [DEBUG] Block 1:
+[20:46:24]     START_Y=224, FIRST_ROW_Y_OFFSET=38
+[20:46:24]     Erwartete Y-Position (ohne Drift): 262
+[20:46:24]     Drift-Korrektur: -0px (block_counter=0, drift_val=0)
+[20:46:24]     Finale base_y: 262
+[20:46:24]     Differenz zum Soll: 0px
+[20:46:25]   → CBH-3 Helmet Purple (#1)
+[20:46:26]   → Arden-SL Helmet (Modified) (#1)
+[20:46:28]   → Horizon Helmet Orange (#1)
+[20:46:29]   → Venture Helmet Pathfinder (#1)
+[20:46:31]   → Xanthule Sehya Helmet (#3)
+[20:46:32]   → Morningstar Helmet Roughshod (#1)
+[20:46:34]   → Zeus Exploration Suit Helmet Solar (#1)
+[20:46:35]   → Overlord Helmet Switchback (#1)
+[20:46:37]   → CBH-3 Helmet Dark Red (#1)
+[20:46:38]   → Morningstar Helmet Black (#1)
+[20:46:40]   → Giocoso Helmet Obsidian (#1)
+[20:46:41]   → Aztalan Tamarack Helmet (#2)
+[20:46:43]   → Voidripper Sunbeam Helmet (#1)
+[20:46:44]   → Aztalan Galena Helmet (#2)
+[20:46:46]   → Odyssey II Helmet Blue (#1)
+[20:46:47]   → Overlord Helmet Dust Storm (#1)
+[20:46:48]   → CBH-3 Helmet Red (#1)
+[20:46:50]   → Artimex Helmet Hurston Dynamics Executive Security (#1)
+[20:46:51]   → Badami Helmet Graphite (#1)
+[20:46:53]   → Xanthule Helmet (#2)
+[20:46:54]   → Sangar Helmet Orange/Black (#1)
+[20:46:56]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: 'cbH 3 Helmet Yellow'
+[20:46:57]     [SCAN FAILED] OCR erkannte: 'cBH- 3 Helmet Yellow' - KEINE Übereinstimmung in Datenbank!
+[20:46:59]   → Aves Talon Helmet (#1)
+[20:47:00]   → Morningstar Helmet Dark Green (#1)
+[20:47:02]   → Badami Helmet Graphite (#2)
+[20:47:03]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: 'Venture Helmet Rust Society"'
+[20:47:04]     [SCAN FAILED] OCR erkannte: 'Venture Helmet Rust Society"' - KEINE Übereinstimmung in Datenbank!
+[20:47:06]   → Oracle Helmet Seagreen (#1)
+[20:47:07]   → Aril Helmet (Modified) (#1)
+[20:47:09]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: '@racle Helmet Violet'
+[20:47:10]     [RETRY] Text erkannt nach 2 Versuchen
+[20:47:10]   → Oracle Helmet Violet (#1)
+[20:47:12]   → Oracle Helmet Aqua (#1)
+[20:47:13]   → Horizon Helmet White (#27)
+[20:47:15]   → Horizon Helmet White (#28)
+[20:47:15]   Items gefunden
+[20:47:15]   Suche nach größter Scrollbalken-Fläche...
+[20:47:15]   Scrollbalken gefunden: Mitte Y=352, Unten Y=485, Höhe=266px
+[20:47:15]   [SCROLLBAR CHECK] Unteres Ende Y=485 (Ziel-Bereich: 1010-1021)
+[20:47:15]   → [SCROLLBAR] Noch nicht im Zielbereich (Differenz: 525px)
+[20:47:15]   Starte Drag von X=1795, Y=352, Distanz=322px
+[20:47:16]   Gescrollt. Block-Zähler: 1
+[20:47:16] 
+=== BLOCK 2 WIRD GESCANNT ===
+[20:47:16]   [DEBUG] Block 2:
+[20:47:16]     START_Y=224, FIRST_ROW_Y_OFFSET=38
+[20:47:16]     Erwartete Y-Position (ohne Drift): 262
+[20:47:16]     Drift-Korrektur: -0px (block_counter=1, drift_val=0)
+[20:47:16]     Finale base_y: 262
+[20:47:16]     Differenz zum Soll: 0px
+[20:47:18]   → Horizon Helmet White (#29)
+[20:47:19]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: 'cBH 3 Helmet Executive'
+[20:47:21]     [RETRY] Text erkannt nach 2 Versuchen
+[20:47:21]   → CBH-3 Helmet Executive (#1)
+[20:47:22]   → Morningstar Helmet Ignitor (#1)
+[20:47:24]   → Overlord Helmet Supernova (#1)
+[20:47:25]   → Morningstar Helmet Yellow (#1)
+[20:47:27]   → Strata Helmet Onyx (#2)
+[20:47:28]   → ORC-mkX Helmet Twilight (#1)
+[20:47:30]   → Sangar Helmet Grey/Black (#1)
+[20:47:31]   → Morozov-SH-C Helmet Vesper (#1)
+[20:47:33]   → Siebe Helmet Beachhead (#1)
+[20:47:34]   → Balor HCH Helmet Grey (#1)
+[20:47:35]   → Morozov-SH-C Helmet Smokescreen (#1)
+[20:47:37]   → Horizon Helmet White (#30)
+[20:47:38]   → Horizon Helmet White (#31)
+[20:47:40]   → CBH-3 Helmet Blue (#1)
+[20:47:41]   → Aves Talon Helmet (#2)
+[20:47:43]   → Strata Helmet Shooting Star (#1)
+[20:47:44]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: 'Morozov-SH-CHelmet Vesper'
+[20:47:45]     [SCAN FAILED] OCR erkannte: 'Morozov-SH-CHelmet Vesper' - KEINE Übereinstimmung in Datenbank!
+[20:47:47]   → Morozov-SH-I Helmet Pyrotechnic Vesper (#1)
+[20:47:48]   → ORC-mkX Helmet (XenoThreat v2) (#1)
+[20:47:50]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: 'Adp-mk4 Core Justified'
+[20:47:51]     [SCAN FAILED] OCR erkannte: 'AdP-mk4 Core Justified' - KEINE Übereinstimmung in Datenbank!
+[20:47:53]   → ORC-mkX Helmet Singularity (#1)
+[20:47:54]   → Morozov-SH Helmet Aftershock (#1)
+[20:47:56]   → Calico Helmet Desert (#1)
+[20:47:57]   → Paladin Helmet Black/Silver (#2)
+[20:47:59]   → G-2 Helmet Yellow (#1)
+[20:48:00]   → Horizon Helmet White (#32)
+[20:48:02]   → Voidripper Sea Shiver Helmet (#1)
+[20:48:03]   → Zeus Exploration Helmet Starscape (#1)
+[20:48:05]   → Parasite Replica Helmet (#1)
+[20:48:06]   → Oracle Helmet Firebrick (#1)
+[20:48:08]   → Star Kitten Sally Helmet (#1)
+[20:48:08]   Items gefunden
+[20:48:08]   Suche nach größter Scrollbalken-Fläche...
+[20:48:08]   Scrollbalken gefunden: Mitte Y=610, Unten Y=743, Höhe=267px
+[20:48:08]   [SCROLLBAR CHECK] Unteres Ende Y=743 (Ziel-Bereich: 1010-1021)
+[20:48:08]   → [SCROLLBAR] Noch nicht im Zielbereich (Differenz: 267px)
+[20:48:08]   Starte Drag von X=1795, Y=610, Distanz=322px
+[20:48:09]   Gescrollt. Block-Zähler: 2
+[20:48:09] 
+=== BLOCK 3 WIRD GESCANNT ===
+[20:48:09]   [DEBUG] Block 3:
+[20:48:09]     START_Y=224, FIRST_ROW_Y_OFFSET=38
+[20:48:09]     Erwartete Y-Position (ohne Drift): 262
+[20:48:09]     Drift-Korrektur: -0px (block_counter=2, drift_val=0)
+[20:48:09]     Finale base_y: 262
+[20:48:09]     Differenz zum Soll: 0px
+[20:48:10]   → Star Kitten Damon Helmet (#1)
+[20:48:12]   → Morningstar Helmet (Modified) (#1)
+[20:48:13]   → Exo-8 Helmet (Used) (#1)
+[20:48:15]   → Star Kitten Damon Helmet (#2)
+[20:48:16]   → ORC-mkX Helmet (XenoThreat) (#1)
+[20:48:18]   → Aztalan Helmet (#1)
+[20:48:19]   → Venture Helmet Black (#1)
+[20:48:21]   → Balor HCH Helmet Imperial (#1)
+[20:48:22]   → A23 Helmet Woodland (#1)
+[20:48:24]   → Balor HCH Helmet Crusader Edition (#1)
+[20:48:25]   → Pembroke Helmet (#1)
+[20:48:27]   → Morozov-SH-C Helmet Terrene (#1)
+[20:48:28]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: '@racle Helmet Blue'
+[20:48:30]     [RETRY] Text erkannt nach 2 Versuchen
+[20:48:30]   → Oracle Helmet Blue (#1)
+[20:48:31]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: '@RC-mkX Helmet Justified'
+[20:48:33]     [SCAN FAILED] OCR erkannte: '@RC-mkX Helmet Justified' - KEINE Übereinstimmung in Datenbank!
+[20:48:34]   → Morningstar Helmet Violet (#1)
+[20:48:36]   → Balor HCH Helmet Black (#1)
+[20:48:37]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: 'orc-mkx Helmet Arctic'
+[20:48:39]     [SCAN FAILED] OCR erkannte: 'orc-mkx Helmet Arctic' - KEINE Übereinstimmung in Datenbank!
+[20:48:40]   → Balor HCH Helmet Grey (#2)
+[20:48:42]   → Oracle Helmet Firebrick (#2)
+[20:48:43]   → Balor HCH Helmet Black (#2)
+[20:48:45]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: 'orc-mkx Helmet (XenoTihreat v2)'
+[20:48:46]     [RETRY] Text erkannt nach 2 Versuchen
+[20:48:46]   → ORC-mkX Helmet (XenoThreat v2) (#2)
+[20:48:48]   → Balor HCH Helmet Imperial (#2)
+[20:48:49]   → Neoni Tengubi Helmet (#1)
+[20:48:50]   → Odyssey II Helmet White (#1)
+[20:48:52]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: '@RC-mkx Helmet Autumn'
+[20:48:54]     [SCAN FAILED] OCR erkannte: '@RC-mkx Helmet Autumn' - KEINE Übereinstimmung in Datenbank!
+[20:48:55]   → Fortifier Helmet Base (#1)
+[20:48:56]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: 'Argus Helmet Black White/ Violet'
+[20:48:58]     [SCAN FAILED] OCR erkannte: 'Argus Helmet Black/White/ Violet' - KEINE Übereinstimmung in Datenbank!
+[20:48:59]   → Geist Armor Helmet Golden Blossom (#1)
+[20:49:01]   → Odyssey II Helmet Black (#1)
+[20:49:02]   → Morningstar Helmet Icefall (#1)
+[20:49:04]   → Venture Helmet Grey (#1)
+[20:49:05]   → Morozov-SH-C Helmet Spite (#1)
+[20:49:05]   Items gefunden
+[20:49:05] 
+→ Kleiner Scroll zur letzten Reihe...
+[20:49:05]   Scrolle 40px nach unten (für 1 Reihe)
+[20:49:06] 
+=== LETZTE REIHE (25) WIRD GESCANNT ===
+[20:49:06]   Scanne bei Y=974
+[20:49:07]   → Renegade Helmet Desert (#1)
+[20:49:09]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: 'Pembroke Helmet RSIIvory Edition'
+[20:49:10]     [SCAN FAILED] OCR erkannte: 'Pembroke Helmet RSIIvory Edition' - KEINE Übereinstimmung in Datenbank!
+[20:49:12]   → Neoni Jami Helmet (#2)
+[20:49:13]   → Odyssey II Helmet Tan (#1)
+[20:49:13] 
+→ Prüfe Button-Status...
+[20:49:13] [BUTTON CHECK] Durchschnittshelligkeit: 75.1 → Drückbar (Aktiv)
+[20:49:13] [BUTTON AKTIV] Klicke auf Button und starte neuen Scan-Durchlauf
+[20:49:13]   Button geklickt bei (1612, 1040)
+[20:49:13]   Warte 5 Sekunden (Inventar lädt)...
+[20:49:18] Komplett nach oben scrollen...
+[20:49:22] Zurück am Anfang – Drift-Reset
+[20:49:22]   Bereit für nächsten Scan-Durchlauf
+
+[20:49:22] 
+================================================================================
+[20:49:22] SCAN-DURCHLAUF #3
+[20:49:22] ================================================================================
+
+[20:49:22] 
+=== BLOCK 1 WIRD GESCANNT ===
+[20:49:22]   [DEBUG] Block 1:
+[20:49:22]     START_Y=224, FIRST_ROW_Y_OFFSET=38
+[20:49:22]     Erwartete Y-Position (ohne Drift): 262
+[20:49:22]     Drift-Korrektur: -0px (block_counter=0, drift_val=0)
+[20:49:22]     Finale base_y: 262
+[20:49:22]     Differenz zum Soll: 0px
+[20:49:23]   → CBH-3 Helmet Sakura Sun Edition (#1)
+[20:49:25]   → Balor HCH Helmet Yellow (#1)
+[20:49:26]   → Odyssey II Helmet Obsidian (#1)
+[20:49:28]   → Venture Helmet Carrack Edition (#1)
+[20:49:29]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: 'Arden-SLHelmet Balefire'
+[20:49:31]     [RETRY] Text erkannt nach 2 Versuchen
+[20:49:31]   → Arden-SL Helmet Balefire (#1)
+[20:49:32]   → Mirai Racing Helmet (#3)
+[20:49:34]   → Strata Helmet microTech Edition (#1)
+[20:49:35]   → ADP-mk4 Helmet Woodland (#1)
+[20:49:37]   → Odyssey II Helmet Alpha (#1)
+[20:49:38]   → Strata Helmet Onyx (#3)
+[20:49:40]   → Voidripper Helmet (#2)
+[20:49:42]     [RETRY] Versuch 1/2: Kein DB-Match für OCR-Text: 'Aztalan Helmet Epoque'
+[20:49:43]     [SCAN FAILED] OCR erkannte: 'Aztalan Helmet Epoque' - KEINE Übereinstimmung in Datenbank!
+[20:49:45]   → Wrecker Helmet (#1)
+[20:49:46]     [RETRY] Versuch 1/2: Kein Text erkannt, versuche erneut...
+[20:49:47]     [RETRY] Alle 2 Versuche fehlgeschlagen - Kachel leer
+[20:49:49]     [RETRY] Versuch 1/2: Kein Text erkannt, versuche erneut...
+[20:49:50]     [RETRY] Alle 2 Versuche fehlgeschlagen - Kachel leer
+[20:49:51]     [RETRY] Versuch 1/2: Kein Text erkannt, versuche erneut...
+[20:49:53]     [RETRY] Alle 2 Versuche fehlgeschlagen - Kachel leer
+[20:49:54]     [RETRY] Versuch 1/2: Kein Text erkannt, versuche erneut...
+[20:49:55]     [RETRY] Alle 2 Versuche fehlgeschlagen - Kachel leer
+[20:49:55] 
+[INFO] 4 leere Items hintereinander erkannt! Scan wird beendet.
+[20:49:55] [SCAN ENDE] 4 leere Items erkannt → Beende Scan komplett
+[20:49:55] 
+Scan abgeschlossen!
+[20:49:55] Maus gestoppt und in Ruheposition bewegt.
+[20:49:55] 
+[INFO] 142 verschiedene Items in detected_items.txt gespeichert.
+[20:49:55] [INFO] Insgesamt 200 Items gescannt (142 unique).
+[20:49:55] 
+SCAN FERTIG! Siehe detected_items.txt
+[20:49:55] 
+Drücke ENTER für einen weiteren Scan oder schließe das Fenster zum Beenden.

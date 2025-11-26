@@ -1,3 +1,142 @@
-# Inventory Scan Results
-# Format: Anzahl, Item-Name
-# Waiting for scan to complete...
+1, A23 Helmet Woodland
+1, ADP-mk4 Helmet (Modified)
+1, ADP-mk4 Helmet Woodland
+1, Arden-SL Helmet
+1, Arden-SL Helmet (Modified)
+1, Arden-SL Helmet Balefire
+1, Arden-SL Helmet Rime
+1, Argus Helmet Black/Aqua/Silver
+1, Argus Helmet Black/Silver/Green
+1, Aril Helmet
+1, Aril Helmet (Modified)
+1, Aril Helmet Hazard
+1, Aril Helmet Quicksilver
+1, Artimex Helmet
+1, Artimex Helmet Hurston Dynamics Executive Security
+1, Artimex Helmet Red Alert
+1, Artimex Helmet Wildwood
+2, Aves Talon Helmet
+2, Aztalan Galena Helmet
+1, Aztalan Helmet
+2, Aztalan Tamarack Helmet
+2, Badami Helmet Graphite
+2, Balor HCH Helmet Black
+1, Balor HCH Helmet Crusader Edition
+2, Balor HCH Helmet Grey
+2, Balor HCH Helmet Imperial
+1, Balor HCH Helmet Olive
+1, Balor HCH Helmet Orange
+1, Balor HCH Helmet Red
+1, Balor HCH Helmet Tan
+1, Balor HCH Helmet Twilight
+1, Balor HCH Helmet Yellow
+1, CBH-3 Helmet Black
+1, CBH-3 Helmet Blue
+1, CBH-3 Helmet Dark Red
+1, CBH-3 Helmet Executive
+1, CBH-3 Helmet Grey
+1, CBH-3 Helmet Imperial
+1, CBH-3 Helmet Olive
+1, CBH-3 Helmet Purple
+1, CBH-3 Helmet Red
+1, CBH-3 Helmet Sakura Sun Edition
+1, Calico Helmet Desert
+1, Calico Helmet Tactical
+1, Carrion Helmet Stalker
+1, Defiance Helmet Tactical
+1, Exo-8 Helmet (Used)
+1, Field Recon Suit Helmet
+1, Fortifier Helmet Base
+1, G-2 Helmet Aqua
+2, G-2 Helmet Executive
+1, G-2 Helmet Red
+1, G-2 Helmet Yellow
+1, Geist Armor Helmet Golden Blossom
+1, Giocoso Helmet Obsidian
+1, Horizon Helmet Orange
+32, Horizon Helmet White
+1, J-5 Helmet
+1, J-5 Helmet Rust
+2, Manticore Helmet
+3, Mirai Racing Helmet
+1, Morningstar Helmet (Modified)
+3, Morningstar Helmet Base
+1, Morningstar Helmet Black
+1, Morningstar Helmet Dark Green
+1, Morningstar Helmet Earthwork
+1, Morningstar Helmet Grey
+1, Morningstar Helmet Icefall
+1, Morningstar Helmet Ignitor
+1, Morningstar Helmet Olive
+1, Morningstar Helmet Roughshod
+1, Morningstar Helmet Violet
+1, Morningstar Helmet Yellow
+1, Morozov-SH Helmet Aftershock
+1, Morozov-SH Helmet Thule
+1, Morozov-SH-C Helmet Smokescreen
+1, Morozov-SH-C Helmet Spite
+1, Morozov-SH-C Helmet Terrene
+1, Morozov-SH-C Helmet Vesper
+1, Morozov-SH-I Helmet Pyrotechnic Spitfire
+1, Morozov-SH-I Helmet Pyrotechnic Vesper
+2, Neoni Jami Helmet
+1, Neoni Tengubi Helmet
+3, Neoni Yuki Onna Helmet
+1, Novikov Helmet
+2, ORC-mkX Helmet (XenoThreat v2)
+1, ORC-mkX Helmet (XenoThreat)
+1, ORC-mkX Helmet Nightfire
+1, ORC-mkX Helmet Singularity
+1, ORC-mkX Helmet Twilight
+1, Odyssey II Helmet Alpha
+1, Odyssey II Helmet Black
+1, Odyssey II Helmet Blue
+1, Odyssey II Helmet Obsidian
+1, Odyssey II Helmet Orange
+1, Odyssey II Helmet Sienna
+1, Odyssey II Helmet Tan
+1, Odyssey II Helmet White
+1, Oracle Helmet Aqua
+1, Oracle Helmet Blue
+2, Oracle Helmet Firebrick
+1, Oracle Helmet Lichen
+1, Oracle Helmet Seagreen
+1, Oracle Helmet Sienna
+1, Oracle Helmet Violet
+1, Overlord Helmet Dust Storm
+1, Overlord Helmet Supernova
+1, Overlord Helmet Switchback
+1, Paladin Helmet Black/Gold/Red
+2, Paladin Helmet Black/Silver
+1, Parasite Replica Helmet
+1, Pembroke Helmet
+1, Pembroke Helmet RSI Graphite Edition
+1, Renegade Helmet Desert
+1, Renegade Helmet Tactical
+1, Sangar Helmet Grey/Black
+1, Sangar Helmet Orange/Black
+1, Siebe Helmet Beachhead
+2, Star Kitten Damon Helmet
+1, Star Kitten Sally Helmet
+1, Stoneskin Helmet Desert
+3, Strata Helmet Onyx
+1, Strata Helmet Piston
+1, Strata Helmet Shooting Star
+1, Strata Helmet microTech Edition
+1, The Butcher Helmet
+1, Venture Helmet Black
+1, Venture Helmet Carrack Edition
+1, Venture Helmet Grey
+1, Venture Helmet Pathfinder
+1, Venture Helmet Seagreen
+1, Venture Helmet Twilight
+2, Voidripper Helmet
+1, Voidripper Helmet (Modified)
+1, Voidripper Sea Shiver Helmet
+1, Voidripper Sunbeam Helmet
+1, Wrecker Helmet
+2, Xanthule Helmet
+3, Xanthule Sehya Helmet
+1, Zeus Exploration Helmet Starscape
+2, Zeus Exploration Suit Helmet
+1, Zeus Exploration Suit Helmet Solar
