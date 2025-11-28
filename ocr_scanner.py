@@ -45,12 +45,19 @@ def correct_with_database(text):
     for wrong, right in fixes.items():
         text = text.replace(wrong, right)
 
+    # Case-insensitive Fuzzy-Matching: Konvertiere zu lowercase für Vergleich
+    text_lower = text.lower()
+    db_lower = [item.lower() for item in ITEM_DATABASE]
+
     # Neuer Aufruf ohne limit-Parameter (funktioniert mit 3.x und 4.x)
-    result = process.extractOne(text, ITEM_DATABASE, scorer=fuzz.token_sort_ratio)
+    result = process.extractOne(text_lower, db_lower, scorer=fuzz.token_sort_ratio)
     if result:
-        best_match, score, _ = result
-        if score >= 88:
-            return best_match
+        best_match_lower, score, index = result
+        # Threshold von 88 auf 75 gesenkt für bessere Teilwort-Matches
+        # z.B. "Oracle Helmet" → "Oracle Helmet Black" (Score ~80)
+        if score >= 75:
+            # Gebe den ORIGINAL-Namen aus der DB zurück (nicht lowercase)
+            return ITEM_DATABASE[index]
 
     # Kein Match gefunden - gib leeren String zurück
     # Der rohe OCR-Text wird separat für Debug-Ausgabe verwendet

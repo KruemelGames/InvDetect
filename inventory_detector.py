@@ -40,6 +40,10 @@ class InventoryScanner:
         self.block_counter = 0   # wird erst NACH dem Scrollen erhöht → korrekt!
         self.scan_active = False  # Flag für aktiven Scan
         self.last_row_items = []  # Speichert Items der letzten Reihe vor Reverse-Scan
+        self.not_detected_items = {}  # Stores OCR text with position: {text: [(page, row, col), ...]}
+        self.current_page = 0  # Track current page number
+        self.current_row = 0  # Track current row number
+        self.current_col = 0  # Track current column number
 
         # Erstelle Output-Datei beim Start, falls nicht vorhanden
         if not os.path.exists(config.OUTPUT_FILE):
@@ -48,9 +52,9 @@ class InventoryScanner:
                     f.write("# Inventory Scan Results\n")
                     f.write("# Format: Anzahl, Item-Name\n")
                     f.write("# Waiting for scan to complete...\n")
-                log_print(f"[INFO] Output-Datei erstellt: {config.OUTPUT_FILE}")
+                log_print(f"[INFO] Output file created: {config.OUTPUT_FILE}")
             except Exception as e:
-                log_print(f"[WARNUNG] Konnte Output-Datei nicht erstellen: {e}")
+                log_print(f"[WARNING] Could not create output file: {e}")
 
     def check_abort(self):
         """Prüft ob ENTF gedrückt wurde und wirft Exception"""
@@ -60,14 +64,14 @@ class InventoryScanner:
             # Debug: Zeige wo der Abbruch stattfindet
             stack = traceback.extract_stack()
             caller = stack[-2]  # Die aufrufende Funktion
-            log_print(f"\n[ABBRUCH] ENTF gedrückt bei {caller.name}:{caller.lineno}")
-            raise ScanAbortedException("ENTF gedrückt")
+            log_print(f"\n[ABORT] DELETE pressed at {caller.name}:{caller.lineno}")
+            raise ScanAbortedException("DELETE pressed")
 
     def check_button_brightness(self):
         """
         Prüft die durchschnittliche Graustufenhelligkeit des Buttons im Bereich x1608-1616, y1034-1047.
         Returns:
-            bool: True wenn Button aktiv (Helligkeit >= 65), False sonst
+            bool: True wenn Button aktiv (Helligkeit 65-85), False sonst
         """
         # Screenshot des Button-Bereichs
         button_region = (1608, 1034, 8, 13)  # x, y, width, height
@@ -86,37 +90,58 @@ class InventoryScanner:
         # Berechne Durchschnittshelligkeit
         avg_brightness = np.mean(gray_array)
 
-        is_active = avg_brightness >= 65
-        status = "Drückbar (Aktiv)" if is_active else "Nicht drückbar (Inaktiv)"
+        # Button ist nur aktiv wenn Helligkeit im Bereich 65-85 liegt
+        # Zu dunkel (< 65) = kein Button oder inaktiv
+        # Zu hell (> 85) = Hintergrund ohne Button
+        is_active = 65 <= avg_brightness <= 85
 
-        log_print(f"[BUTTON CHECK] Durchschnittshelligkeit: {avg_brightness:.1f} → {status}")
+        if is_active:
+            status = "Active"
+        elif avg_brightness > 85:
+            status = "Too bright (background)"
+        else:
+            status = "Inactive"
+
+        log_print(f"[BUTTON] Brightness: {avg_brightness:.1f} → {status}")
 
         return is_active
 
     def reset_to_top(self):
-        log_print("Komplett nach oben scrollen...")
-        # Maus auf Inventar-Mitte setzen, um Scroll-Events zu empfangen
-        cx = (config.INVENTORY_LEFT + config.INVENTORY_RIGHT) // 2
-        cy = config.INVENTORY_BOTTOM - 50
-        pyautogui.moveTo(cx, cy, duration=0)  # Instant
-        # 40 Scrolls nach oben, um sicher ganz oben zu sein
+        log_print("Scrolling to top...")
+
+        # Move to first tile (top left)
+        first_tile_x = config.START_X + config.HOVER_OFFSET_X
+        first_tile_y = config.START_Y + config.FIRST_ROW_Y_OFFSET
+
+        pyautogui.moveTo(first_tile_x, first_tile_y, duration=0)
+        time.sleep(0.1)
+
+        # Scroll to top
         for i in range(40):
             self.check_abort()
             pyautogui.scroll(1200)
             time.sleep(0.04)
 
-        # 1.5s Wartezeit aufteilen für bessere Responsiveness
         for _ in range(15):
             self.check_abort()
             time.sleep(0.1)
 
         self.block_counter = 0
-        log_print("Zurück am Anfang – Drift-Reset")
+        log_print("Reset complete")
 
-    def precise_scroll_down_once(self):
+    def precise_scroll_down_once(self, scroll_distance=None):
+        """
+        Scrollt nach unten mit angepasster Distanz.
+
+        Args:
+            scroll_distance: Pixel zum Scrollen (Standard: config.SCROLL_PIXELS_UP)
+        """
         self.check_abort()
 
-        log_print("  Suche nach größter Scrollbalken-Fläche...")
+        if scroll_distance is None:
+            scroll_distance = config.SCROLL_PIXELS_UP
+
+        log_print(f"  Scrollbar detection (distance: {scroll_distance}px)...")
 
         # 1. Screenshot der Scroll-Region machen
         scroll_shot = pyautogui.screenshot(region=(
@@ -180,23 +205,20 @@ class InventoryScanner:
                 absolute_y = found_y + config.SCROLL_AREA_TOP
                 absolute_y_bottom = found_y_bottom + config.SCROLL_AREA_TOP
 
-                log_print(f"  Scrollbalken gefunden: Mitte Y={absolute_y}, Unten Y={absolute_y_bottom}, Höhe={scrollbar_height}px")
+                log_print(f"  Scrollbar found: Y={absolute_y}, Bottom={absolute_y_bottom}, Height={scrollbar_height}px")
 
-                # Prüfe ob unteres Ende des Scrollbalkens im Ende-Bereich ist
+                # Check if scrollbar is at bottom
                 end_min = getattr(config, 'SCROLLBAR_END_MIN', 930)
                 end_max = getattr(config, 'SCROLLBAR_END_MAX', 1021)
-                log_print(f"  [SCROLLBAR CHECK] Unteres Ende Y={absolute_y_bottom} (Ziel-Bereich: {end_min}-{end_max})")
                 if absolute_y_bottom >= end_min and absolute_y_bottom <= end_max:
-                    log_print(f"  ✓ [SCROLLBAR-ENDE] Scrollbalken im Zielbereich erkannt! Y={absolute_y_bottom}")
-                    return "END"  # Spezieller Rückgabewert für Ende
-                else:
-                    log_print(f"  → [SCROLLBAR] Noch nicht im Zielbereich (Differenz: {end_min - absolute_y_bottom}px)")
+                    log_print(f"  ✓ [END] Scrollbar at bottom (Y={absolute_y_bottom})")
+                    return "END"
             else:
-                log_print(f"  [WARNUNG] Scrollbalken zu klein: {len(largest_group)}px")
+                log_print(f"  [WARNING] Scrollbar too small: {len(largest_group)}px")
 
-        # 3. Bestimme den finalen Drag-Startpunkt
+        # Determine drag start point
         if found_y == -1:
-            log_print("  [WARNUNG] Scrollbalken-Fläche nicht gefunden. Nutze Fallback.")
+            log_print("  [WARNING] Scrollbar not found, using fallback")
             cx = (config.SCROLL_AREA_LEFT + config.SCROLL_AREA_RIGHT) // 2
             cy = config.SCROLL_AREA_BOTTOM - 50
         else:
@@ -205,45 +227,43 @@ class InventoryScanner:
             cy = found_y + config.SCROLL_AREA_TOP
 
         # 4. Prüfe ob Drag den Scrollbalken aus dem Bereich ziehen würde
-        drag_distance = config.SCROLL_PIXELS_UP
+        drag_distance = scroll_distance
         target_y = cy + drag_distance
         # Erlaube bis knapp vor SCROLLBAR_END_MAX (damit Scrollbalken im Zielbereich landen kann)
         end_max = getattr(config, 'SCROLLBAR_END_MAX', 1021)
         max_y = end_max + 5  # 5px Puffer über dem Zielbereich
 
         if target_y > max_y:
-            # Drag würde zu weit gehen - reduziere die Distanz
             adjusted_drag = max_y - cy
-            log_print(f"  [WARNUNG] Drag würde Scrollbalken aus Bereich ziehen!")
-            log_print(f"    Original: {drag_distance}px würde zu Y={target_y} führen (Max: {max_y})")
-            log_print(f"    Angepasst: {adjusted_drag}px (Ziel Y={max_y})")
+            log_print(f"  [WARNING] Drag too far, adjusting: {drag_distance}px → {adjusted_drag}px")
             drag_distance = adjusted_drag
 
-        log_print(f"  Starte Drag von X={cx}, Y={cy}, Distanz={drag_distance}px")
+        log_print(f"  Dragging from X={cx}, Y={cy}, distance={drag_distance}px")
 
-        # 5. Maus zum Startpunkt bewegen und warten (für Hover-Effekt)
         self.check_abort()
         pyautogui.moveTo(cx, cy, duration=0.05)
-        time.sleep(0.15)  # Erhöht von 0.1s auf 0.15s für Hover-Effekt
+        time.sleep(0.15)
 
-        # 6. Drag mit tatsächlicher Duration (duration=0 funktioniert nicht zuverlässig für drag!)
         self.check_abort()
         pyautogui.drag(0, drag_distance, duration=0.3, button='left')
 
-        # Wartezeit nach Scroll aufteilen für bessere Responsiveness
         wait_steps = 8
         for _ in range(wait_steps):
             self.check_abort()
             time.sleep(config.SCROLL_WAIT / wait_steps)
 
         self.block_counter += 1
-        log_print(f"  Gescrollt. Block-Zähler: {self.block_counter}")
+        log_print(f"  Scrolled (block {self.block_counter})")
 
 
-    def scan_8_rows_block(self):
+    def scan_rows_block(self, rows_per_block, row_step, tile_height):
         """
-        Scannt 8 Reihen eines Blocks.
-        Stoppt wenn 4 Items hintereinander leer sind (kein OCR-Text).
+        Scannt einen Block mit variabler Reihenzahl (8 für 1x1, 4 für 1x2).
+
+        Args:
+            rows_per_block: Anzahl Reihen pro Block (8 oder 4)
+            row_step: Abstand zwischen Reihen in px (97 oder 180)
+            tile_height: Höhe der Kacheln in px (86 oder 170)
 
         Returns:
             int: Anzahl leerer Items hintereinander (für Abbruch-Logik), oder -1 wenn Items gefunden
@@ -252,48 +272,49 @@ class InventoryScanner:
         consecutive_empty_items = 0  # Zähler für leere Items hintereinander
 
         # 1. Basis-Y berechnen (Startpunkt + Offset für die Mitte der ersten Reihe)
-        base_y = config.START_Y + config.FIRST_ROW_Y_OFFSET
+        # Y-Offset = Mitte der Kachel
+        first_row_y_offset = tile_height // 2
+        base_y = config.START_Y + first_row_y_offset
 
         # 2. Drift-Kompensation berechnen und anwenden (Maus bewegt sich nach oben)
         drift_val = int(config.DRIFT_COMPENSATION_PER_BLOCK)
         drift_correction = int(self.block_counter * drift_val)
         base_y -= drift_correction
 
-        # DEBUG: Zeige detaillierte Y-Position Berechnung
-        expected_y = config.START_Y + config.FIRST_ROW_Y_OFFSET
-        log_print(f"  [DEBUG] Block {self.block_counter + 1}:")
-        log_print(f"    START_Y={config.START_Y}, FIRST_ROW_Y_OFFSET={config.FIRST_ROW_Y_OFFSET}")
-        log_print(f"    Erwartete Y-Position (ohne Drift): {expected_y}")
-        log_print(f"    Drift-Korrektur: -{drift_correction}px (block_counter={self.block_counter}, drift_val={drift_val})")
-        log_print(f"    Finale base_y: {base_y}")
-        log_print(f"    Differenz zum Soll: {base_y - expected_y}px")
+        log_print(f"  Block {self.block_counter + 1}: {rows_per_block} rows, {row_step}px step, drift -{drift_correction}px")
 
-        # 3. Dynamische row_offsets verwenden (FIX für 97px Zeilenabstand)
-        try:
-            row_offsets = [i * config.ROW_STEP for i in range(8)]
-        except AttributeError:
-            log_print("FEHLER: config.ROW_STEP nicht gefunden! Nutze Fallback 97px.")
-            row_offsets = [i * 97 for i in range(8)]
+        # 3. Dynamische row_offsets basierend auf Scan-Modus
+        row_offsets = [i * row_step for i in range(rows_per_block)]
 
         for row_idx, offset in enumerate(row_offsets):
             self.check_abort()
             row_y = base_y + offset
 
-            # Sicherheitscheck: verhindert Abstürze durch negative Y-Koordinaten
             if row_y < 0:
-                log_print(f"  [ACHTUNG] Y-Koordinate {row_y} ist < 0! Scan übersprungen.")
+                log_print(f"  [WARNING] Y-coordinate {row_y} < 0! Skipped.")
                 continue
+
+            # Calculate absolute row number (1-based)
+            self.current_row = (self.block_counter * rows_per_block) + row_idx + 1
 
             for col in range(config.MAX_COLUMNS):
                 self.check_abort()
+
+                # Track current column (1-based)
+                self.current_col = col + 1
 
                 # X-Koordinate berechnen
                 x = config.START_X + config.HOVER_OFFSET_X + col * (config.TILE_WIDTH + config.TILE_SPACING)
                 y = row_y
 
-                # Bis zu 2 Scan-Versuche, wenn nichts erkannt wird
+                # Adaptive Retry-Logik:
+                # - 5 Versuche wenn OCR Text erkennt, aber kein DB-Match
+                # - 2 Versuche wenn OCR gar keinen Text erkennt
                 text = ""
-                for attempt in range(1, 3):  # Versuche 1-2
+                raw_ocr = ""
+                max_attempts = 2  # Start mit 2 (für "kein Text")
+
+                for attempt in range(1, 6):  # Max. 5 Versuche möglich
                     self.check_abort()
 
                     # Sehr kurze Bewegung (20ms), damit Spiel Maus-Event erkennt
@@ -327,22 +348,29 @@ class InventoryScanner:
                     self.check_abort()
 
                     if text:
-                        # Text erkannt - fertig!
                         if attempt > 1:
-                            log_print(f"    [RETRY] Text erkannt nach {attempt} Versuchen")
+                            log_print(f"    [RETRY] Text found after {attempt} attempts")
                         break
-                    else:
-                        # Kein Text - Retry wenn noch Versuche übrig
-                        if attempt < 2:
-                            if raw_ocr:
-                                log_print(f"    [RETRY] Versuch {attempt}/2: Kein DB-Match für OCR-Text: '{raw_ocr}'")
-                            else:
-                                log_print(f"    [RETRY] Versuch {attempt}/2: Kein Text erkannt, versuche erneut...")
+                    elif raw_ocr:
+                        if max_attempts < 5:
+                            max_attempts = 5
+                            log_print(f"    [RETRY] OCR text found but no DB match → max attempts: 5")
+
+                        if attempt < max_attempts:
+                            log_print(f"    [RETRY] {attempt}/{max_attempts}: No DB match for '{raw_ocr}'")
                         else:
-                            if raw_ocr:
-                                log_print(f"    [SCAN FAILED] OCR erkannte: '{raw_ocr}' - KEINE Übereinstimmung in Datenbank!")
-                            else:
-                                log_print(f"    [RETRY] Alle 2 Versuche fehlgeschlagen - Kachel leer")
+                            log_print(f"    [FAILED] OCR: '{raw_ocr}' - No DB match after {max_attempts} attempts")
+                            # Track unmatched OCR text with position (page, row, column)
+                            if raw_ocr not in self.not_detected_items:
+                                self.not_detected_items[raw_ocr] = []
+                            self.not_detected_items[raw_ocr].append((self.current_page, self.current_row, self.current_col))
+                            break
+                    else:
+                        if attempt < max_attempts:
+                            log_print(f"    [RETRY] {attempt}/{max_attempts}: No text")
+                        else:
+                            log_print(f"    [RETRY] All {max_attempts} attempts failed - empty slot")
+                            break
 
                 pyautogui.moveTo(100, 100, duration=0)  # Maus instant aus dem Weg
 
@@ -354,34 +382,53 @@ class InventoryScanner:
                     consecutive_empty_items = 0  # Reset bei Fund
                 else:
                     consecutive_empty_items += 1
-                    # Prüfe ob 4 leere Items hintereinander
-                    if consecutive_empty_items >= 4:
-                        log_print(f"\n[INFO] 4 leere Items hintereinander erkannt! Scan wird beendet.")
-                        return consecutive_empty_items  # Gebe Anzahl zurück (>=4)
+                    log_print(f"  [EMPTY] Checking for next page...")
+                    button_active = self.check_button_brightness()
 
-        # Block fertig: Gebe -1 zurück wenn Items gefunden, sonst Anzahl leerer Items
+                    if not button_active:
+                        log_print(f"  [INACTIVE] No more pages → Ending scan")
+                        return 999
+                    else:
+                        log_print(f"  [ACTIVE] More pages available → Continuing")
+
         return -1 if found > 0 else consecutive_empty_items
 
-    def scan_last_row(self):
+    def scan_last_row(self, tile_height=86):
         """
-        Scannt nur die letzte Reihe bei Y=974 (Reihe 25).
-        """
-        log_print("\n=== LETZTE REIHE (25) WIRD GESCANNT ===")
+        Scans only the last row (row 25).
 
-        # Y-Position für letzte Reihe (ganz unten)
-        # INVENTORY_BOTTOM (1021) - BORDER_OFFSET_TOP (4) - TILE_HEIGHT/2 (43) = 974
-        row_y = config.INVENTORY_BOTTOM - config.BORDER_OFFSET_TOP - (config.TILE_HEIGHT // 2)
-        log_print(f"  Scanne bei Y={row_y}")
+        Args:
+            tile_height: Tile height in px (86 or 170)
+
+        Returns:
+            int: Number of consecutive empty items, or -1 if items found
+        """
+        log_print("\n=== SCANNING LAST ROW (25) ===")
+
+        row_y = config.INVENTORY_BOTTOM - config.BORDER_OFFSET_TOP - (tile_height // 2)
+        log_print(f"  Scanning at Y={row_y} (tile height: {tile_height}px)")
+
+        found = 0
+        consecutive_empty_items = 0
+
+        # Set row number to 25 (last row)
+        self.current_row = 25
 
         for col in range(config.MAX_COLUMNS):
             self.check_abort()
 
+            # Track current column (1-based)
+            self.current_col = col + 1
+
             x = config.START_X + config.HOVER_OFFSET_X + col * (config.TILE_WIDTH + config.TILE_SPACING)
             y = row_y
 
-            # Bis zu 2 Scan-Versuche
+            # Adaptive Retry-Logik (wie in scan_8_rows_block)
             text = ""
-            for attempt in range(1, 3):
+            raw_ocr = ""
+            max_attempts = 2
+
+            for attempt in range(1, 6):
                 self.check_abort()
 
                 pyautogui.moveTo(x, y, duration=0.02)
@@ -412,19 +459,28 @@ class InventoryScanner:
 
                 if text:
                     if attempt > 1:
-                        log_print(f"    [RETRY] Text erkannt nach {attempt} Versuchen")
+                        log_print(f"    [RETRY] Text found after {attempt} attempts")
                     break
-                else:
-                    if attempt < 2:
-                        if raw_ocr:
-                            log_print(f"    [RETRY] Versuch {attempt}/2: Kein DB-Match für OCR-Text: '{raw_ocr}'")
-                        else:
-                            log_print(f"    [RETRY] Versuch {attempt}/2: Kein Text erkannt, versuche erneut...")
+                elif raw_ocr:
+                    if max_attempts < 5:
+                        max_attempts = 5
+                        log_print(f"    [RETRY] OCR text found but no DB match → max attempts: 5")
+
+                    if attempt < max_attempts:
+                        log_print(f"    [RETRY] {attempt}/{max_attempts}: No DB match for '{raw_ocr}'")
                     else:
-                        if raw_ocr:
-                            log_print(f"    [SCAN FAILED] OCR erkannte: '{raw_ocr}' - KEINE Übereinstimmung in Datenbank!")
-                        else:
-                            log_print(f"    [RETRY] Alle 2 Versuche fehlgeschlagen - Kachel leer")
+                        log_print(f"    [FAILED] OCR: '{raw_ocr}' - No DB match after {max_attempts} attempts")
+                        # Track unmatched OCR text with position (page, row, column)
+                        if raw_ocr not in self.not_detected_items:
+                            self.not_detected_items[raw_ocr] = []
+                        self.not_detected_items[raw_ocr].append((self.current_page, self.current_row, self.current_col))
+                        break
+                else:
+                    if attempt < max_attempts:
+                        log_print(f"    [RETRY] {attempt}/{max_attempts}: No text")
+                    else:
+                        log_print(f"    [RETRY] All {max_attempts} attempts failed - empty slot")
+                        break
 
             pyautogui.moveTo(100, 100, duration=0)
 
@@ -432,9 +488,109 @@ class InventoryScanner:
                 self.detected_items[text] += 1
                 count = self.detected_items[text]
                 log_print(f"  → {text} (#{count})")
+                found += 1
+                consecutive_empty_items = 0  # Reset bei Fund
+            else:
+                consecutive_empty_items += 1
+                log_print(f"  [EMPTY] Checking for next page...")
+                button_active = self.check_button_brightness()
+
+                if not button_active:
+                    log_print(f"  [INACTIVE] No more pages → Ending scan")
+                    return 999
+                else:
+                    log_print(f"  [ACTIVE] More pages available → Continuing")
+
+        return -1 if found > 0 else consecutive_empty_items
+
+    def write_not_detected(self):
+        """Writes OCR text that couldn't be matched to database to not_detected.md"""
+        if not self.not_detected_items:
+            return
+
+        not_detected_file = "not_detected.md"
+
+        try:
+            # Read existing items if file exists
+            existing_items = {}  # {text: [(page, row, col), ...]}
+            if os.path.exists(not_detected_file):
+                try:
+                    with open(not_detected_file, 'r', encoding='utf-8') as f:
+                        for line in f:
+                            line = line.strip()
+                            if line and not line.startswith('#') and not line.startswith('---'):
+                                # Parse line format: "Item Name - Page X, Row Y, Col Z; Page X, Row Y, Col Z"
+                                if ' - ' in line:
+                                    parts = line.split(' - ', 1)
+                                    item_name = parts[0].strip()
+                                    positions_str = parts[1].strip()
+
+                                    positions = []
+                                    for pos_str in positions_str.split('; '):
+                                        if 'Page' in pos_str and 'Row' in pos_str:
+                                            try:
+                                                # Extract page, row, and col numbers
+                                                pos_parts = pos_str.split(',')
+                                                page_part = pos_parts[0].strip()
+                                                row_part = pos_parts[1].strip()
+
+                                                page = int(page_part.replace('Page', '').strip())
+                                                row = int(row_part.replace('Row', '').strip())
+
+                                                # Check if column exists (new format)
+                                                if len(pos_parts) >= 3 and 'Col' in pos_parts[2]:
+                                                    col_part = pos_parts[2].strip()
+                                                    col = int(col_part.replace('Col', '').strip())
+                                                    positions.append((page, row, col))
+                                                else:
+                                                    # Old format without column
+                                                    positions.append((page, row, 0))
+                                            except:
+                                                pass
+
+                                    if positions:
+                                        existing_items[item_name] = positions
+                                else:
+                                    # Old format without positions
+                                    existing_items[line] = []
+                except Exception as e:
+                    log_print(f"[WARNING] Could not read existing not_detected.md: {e}")
+
+            # Merge with new items
+            for item_name, positions in self.not_detected_items.items():
+                if item_name in existing_items:
+                    # Add new positions, avoiding exact duplicates
+                    for pos in positions:
+                        if pos not in existing_items[item_name]:
+                            existing_items[item_name].append(pos)
+                else:
+                    existing_items[item_name] = positions
+
+            # Write sorted list
+            with open(not_detected_file, 'w', encoding='utf-8') as f:
+                f.write("# Items detected by OCR but not matched to database\n")
+                f.write("# These items may need to be added to inventory.db\n")
+                f.write("# Format: Item Name - Page X, Row Y, Col Z; Page X, Row Y, Col Z\n\n")
+
+                for item_name in sorted(existing_items.keys()):
+                    positions = existing_items[item_name]
+                    if positions:
+                        # Sort positions by page, then row, then col
+                        positions.sort()
+                        positions_str = '; '.join([f"Page {p}, Row {r}, Col {c}" for p, r, c in positions])
+                        f.write(f"{item_name} - {positions_str}\n")
+                    else:
+                        f.write(f"{item_name}\n")
+
+            new_count = len(self.not_detected_items)
+            total_count = len(existing_items)
+            log_print(f"[NOT DETECTED] {new_count} new unmatched items ({total_count} total)")
+            log_print(f"[NOT DETECTED] Saved to {not_detected_file}")
+        except Exception as e:
+            log_print(f"[ERROR] Could not write not_detected.md: {e}")
 
     def write_results(self):
-        """Schreibt finale Ergebnisse im Format: Anzahl, Item-Name"""
+        """Writes final results in format: count, item_name"""
         if not self.detected_items:
             return
 
@@ -445,18 +601,45 @@ class InventoryScanner:
                     count = self.detected_items[item_name]
                     f.write(f"{count}, {item_name}\n")
 
-            log_print(f"\n[INFO] {len(self.detected_items)} verschiedene Items in {config.OUTPUT_FILE} gespeichert.")
-
-            # Zeige auch Gesamtzahl aller Items
             total_items = sum(self.detected_items.values())
-            log_print(f"[INFO] Insgesamt {total_items} Items gescannt ({len(self.detected_items)} unique).")
+            log_print(f"\n[RESULTS] {total_items} items scanned ({len(self.detected_items)} unique)")
+            log_print(f"[RESULTS] Saved to {config.OUTPUT_FILE}")
         except Exception as e:
-            log_print(f"[FEHLER] Konnte Ergebnisse nicht schreiben: {e}")
+            log_print(f"[ERROR] Could not write results: {e}")
 
-    def scan_all_tiles(self):
+        # Write not detected items
+        self.write_not_detected()
+
+    def scan_all_tiles(self, scan_mode=1):
+        """
+        Scannt alle Inventar-Kacheln.
+
+        Args:
+            scan_mode: 1 für 1x1 Items (Standard), 2 für 1x2 Items (Undersuits)
+        """
+        # Parameter basierend auf Modus setzen
+        if scan_mode == 2:
+            # 1x2 Modus (Undersuits)
+            rows_per_block = 4
+            row_step = 180  # 170px Item + 10px Abstand
+            total_blocks = 6
+            tile_height = 170
+            # Scroll-Distanz für 4 Reihen (basierend auf Tests)
+            # 360px = 9 Reihen → 160px für 4 Reihen
+            scroll_pixels = 160
+            mode_name = "1x2 (Undersuits)"
+        else:
+            # 1x1 Modus (Standard)
+            rows_per_block = 8
+            row_step = 97  # 86px Item + 10px Abstand + 1px
+            total_blocks = 3
+            tile_height = 86
+            scroll_pixels = 322  # Original SCROLL_PIXELS_UP für 8 Reihen
+            mode_name = "1x1 (Normal)"
+
         log_print("\n" + "="*80)
-        log_print(f"SCAN GESTARTET – Schleife mit Button-Check aktiviert")
-        log_print(f"X-Offset: {config.HOVER_OFFSET_X}px | Zeilenschritt: {getattr(config, 'ROW_STEP', 'NICHT GESETZT')}px")
+        log_print(f"SCAN STARTED - Mode: {mode_name}")
+        log_print(f"Rows/Block: {rows_per_block} | Step: {row_step}px | Blocks: {total_blocks}")
         log_print("="*80 + "\n")
 
         self.scan_active = True
@@ -465,105 +648,93 @@ class InventoryScanner:
         try:
             self.reset_to_top()
 
-            # Hauptschleife: Wiederhole Scan bis Button inaktiv oder 4 leere Items hintereinander
             while self.scan_active:
                 scan_iteration += 1
+                self.current_page = scan_iteration  # Track current page for not_detected
                 log_print(f"\n{'='*80}")
-                log_print(f"SCAN-DURCHLAUF #{scan_iteration}")
+                log_print(f"PAGE #{scan_iteration}")
                 log_print(f"{'='*80}\n")
 
-                # Flag für frühzeitigen Abbruch durch 4 leere Items
-                should_exit = False
+                scan_complete = False
 
-                # Scanne maximal 3 Blöcke (24 Reihen)
-                for block_num in range(3):
+                # Reset block_counter at the start of each page
+                self.block_counter = 0
+
+                for block_num in range(total_blocks):
                     self.check_abort()
 
-                    log_print(f"\n=== BLOCK {self.block_counter + 1} WIRD GESCANNT ===")
+                    log_print(f"\n=== SCANNING BLOCK {self.block_counter + 1} ===")
 
-                    # Scanne Block mit Leere-Items-Tracking
-                    scan_result = self.scan_8_rows_block()
+                    scan_result = self.scan_rows_block(rows_per_block, row_step, tile_height)
 
-                    # scan_result: -1 wenn Items gefunden, sonst Anzahl leerer Items (0-32)
-                    if scan_result >= 4:
-                        # 4 oder mehr leere Items → Beende KOMPLETTEN Scan
-                        log_print(f"[SCAN ENDE] {scan_result} leere Items erkannt → Beende Scan komplett")
-                        should_exit = True
-                        break  # Beende die Block-Schleife
+                    if scan_result == 999:
+                        log_print(f"[END] Button inactive → Scan complete")
+                        scan_complete = True
+                        break
 
                     if scan_result == -1:
-                        log_print("  Items gefunden")
+                        log_print("  Items found")
                     else:
-                        log_print(f"  {scan_result} leere Items (unter Schwellenwert)")
+                        log_print(f"  {scan_result} empty slots (button active)")
 
-                    # Nach dem Scan: Scrollen (außer nach Block 3)
-                    if block_num < 2:  # Nach Block 1 und 2 scrollen
+                    if block_num < (total_blocks - 1):
                         self.check_abort()
-                        self.precise_scroll_down_once()
+                        self.precise_scroll_down_once(scroll_pixels)
 
-                # Wenn 4 leere Items erkannt wurden, überspringe Button-Check und beende
-                if should_exit:
-                    break  # Beende die while-Schleife
+                if scan_complete:
+                    break
 
-                # Nach 3 Blöcken: Kleiner Scroll für 1 Reihe
-                log_print("\n→ Kleiner Scroll zur letzten Reihe...")
+                log_print("\n→ Scrolling to last row...")
                 self.check_abort()
 
                 cx = (config.SCROLL_AREA_LEFT + config.SCROLL_AREA_RIGHT) // 2
                 cy = config.SCROLL_AREA_BOTTOM - 100
 
-                # SCROLL_PIXELS_UP = 322 entspricht 8 Reihen, also 1/8 davon = 1 Reihe
-                small_scroll = config.SCROLL_PIXELS_UP // 8  # 322 / 8 = 40px
-                log_print(f"  Scrolle {small_scroll}px nach unten (für 1 Reihe)")
+                small_scroll = scroll_pixels // rows_per_block
+                log_print(f"  Scrolling {small_scroll}px down (1 row)")
 
                 pyautogui.moveTo(cx, cy, duration=0)
                 pyautogui.drag(0, small_scroll, duration=0.2, button='left')
                 time.sleep(0.3)
 
-                # Scanne nur die letzte Reihe (Reihe 25 bei Y=974)
-                self.scan_last_row()
+                last_row_result = self.scan_last_row(tile_height)
+                if last_row_result == 999:
+                    log_print(f"[END] Button inactive in row 25 → Scan complete")
+                    break
 
-                # Button-Check nach letzter Reihe
-                log_print("\n→ Prüfe Button-Status...")
+                log_print("\n→ Final button check...")
                 self.check_abort()
 
                 button_active = self.check_button_brightness()
 
                 if button_active:
-                    log_print("[BUTTON AKTIV] Klicke auf Button und starte neuen Scan-Durchlauf")
+                    log_print("[ACTIVE] Clicking next page button")
 
-                    # Klicke in die Mitte des Button-Bereichs (x1612, y1040)
                     button_center_x = 1612
                     button_center_y = 1040
 
                     pyautogui.click(button_center_x, button_center_y)
-                    log_print(f"  Button geklickt bei ({button_center_x}, {button_center_y})")
 
-                    # Warte 5 Sekunden (Inventar muss sich aufbauen)
-                    log_print("  Warte 5 Sekunden (Inventar lädt)...")
-                    for _ in range(50):  # 50 * 0.1s = 5s
+                    log_print("  Waiting 5s for inventory to load...")
+                    for _ in range(50):
                         self.check_abort()
                         time.sleep(0.1)
 
-                    # Reset für nächsten Durchlauf
-                    self.reset_to_top()
-                    log_print("  Bereit für nächsten Scan-Durchlauf\n")
+                    log_print("  Ready for next page\n")
 
                 else:
-                    log_print("[BUTTON INAKTIV] Scan-Schleife beendet")
-                    break  # Beende die while-Schleife
+                    log_print("[INACTIVE] No more pages → Scan complete")
+                    break
 
-            log_print("\nScan abgeschlossen!")
+            log_print("\nScan finished!")
 
         except ScanAbortedException:
             # Normal handling für ESC-Abbruch
             pass
 
         finally:
-            # Bei Abbruch: Maus in neutrale Position bewegen
             self.scan_active = False
-            pyautogui.moveTo(100, 100, duration=0)  # Instant
-            log_print("Maus gestoppt und in Ruheposition bewegt.")
+            pyautogui.moveTo(100, 100, duration=0)
+            log_print("Mouse stopped")
 
-            # Schreibe finale Ergebnisse in detected_items.txt
             self.write_results()
