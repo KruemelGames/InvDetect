@@ -1,1581 +1,1357 @@
-[16:30:02] 
+[17:21:22] 
 === InvDetect - Star Citizen Universal Inventory Scanner ===
-[16:30:02] INSERT → Start Scan | DELETE → Stop
+[17:21:22] INSERT → Start Scan | DELETE → Stop
 
-[16:30:02] 
+[17:21:22] 
 ================================================================================
-[16:30:02] SELECT SCAN MODE
-[16:30:02] ================================================================================
-[16:30:02] [1] 1x1 Items (Normal) - 8 rows/block, 97px spacing
-[16:30:02] [2] 1x2 Items (Undersuits) - 4 rows/block, 180px spacing
-[16:30:02] ================================================================================
+[17:21:22] SELECT SCAN MODE
+[17:21:22] ================================================================================
+[17:21:22] [1] 1x1 Items (Normal) - 8 rows/block, 97px spacing
+[17:21:22] [2] 1x2 Items (Undersuits) - 4 rows/block, 180px spacing
+[17:21:22] ================================================================================
 
-[16:30:05] 
+[17:24:43] 
 [INFO] Selected mode: 1x1 (Normal)
-[16:30:05] 
+[17:24:43] 
 Waiting for INSERT to start scan...
-[16:30:06] 
+[17:24:47] 
 [WINDOW] Searching for StarCitizen.exe process...
-[16:30:06] [WINDOW] Found StarCitizen.exe (PID: 9716)
-[16:30:06] [WINDOW] Switched to: Star Citizen 
-[16:30:06] [INFO] Config reloaded
-[16:30:06] [INFO] Output file created: detected_items.txt
-[16:30:06] 
+[17:24:47] [WINDOW] Found StarCitizen.exe (PID: 9716)
+[17:24:47] [WINDOW] Switched to: Star Citizen 
+[17:24:48] [INFO] Config reloaded
+[17:24:48] [INFO] Output file created: detected_items.txt
+[17:24:48] 
 ================================================================================
-[16:30:06] SCAN STARTED - Mode: 1x1 (Normal)
-[16:30:06] Rows/Block: 8 | Step: 97px | Blocks: 3
-[16:30:06] ================================================================================
+[17:24:48] SCAN STARTED - Mode: 1x1 (Normal)
+[17:24:48] Rows/Block: 8 | Step: 97px | Blocks: 3
+[17:24:48] ================================================================================
 
-[16:30:06] Scrolling to top...
-[16:30:10] Reset complete
-[16:30:10] 
-================================================================================
-[16:30:10] PAGE #1
-[16:30:10] ================================================================================
-
-[16:30:10] 
-=== SCANNING BLOCK 1 ===
-[16:30:10]   Block 1: 8 rows, 97px step, drift -0px
-[16:30:11]     [RETRY] 1/2: No text
-[16:30:12]     [RETRY] All 2 attempts failed - empty slot
-[16:30:12]   [EMPTY] Checking for next page...
-[16:30:12] [BUTTON] Brightness: 33.3 → Inactive
-[16:30:12]   [INACTIVE] No more pages → Ending scan
-[16:30:12] [END] Button inactive → Scan complete
-[16:30:12] 
-Scan finished!
-[16:30:12] Mouse stopped
-[16:30:12] 
+[17:24:48] Scrolling to top...
+[17:24:50] 
+[ABORT] DELETE pressed at reset_to_top:121
+[17:24:50] Mouse stopped
+[17:24:50] 
 SCAN COMPLETE! See detected_items.txt
-[16:30:12] 
+[17:24:50] 
 Press ENTER for another scan or close the window to exit.
-[16:30:17] 
+[17:24:53] 
 Press INSERT to start another scan...
-[16:30:20] 
+[17:25:00] 
 [WINDOW] Searching for StarCitizen.exe process...
-[16:30:20] [WINDOW] Found StarCitizen.exe (PID: 9716)
-[16:30:20] [WINDOW] Switched to: Star Citizen 
-[16:30:20] [INFO] Config reloaded
-[16:30:20] 
+[17:25:00] [WINDOW] Found StarCitizen.exe (PID: 9716)
+[17:25:00] [WINDOW] Switched to: Star Citizen 
+[17:25:00] [INFO] Config reloaded
+[17:25:00] 
 ================================================================================
-[16:30:20] SCAN STARTED - Mode: 1x1 (Normal)
-[16:30:20] Rows/Block: 8 | Step: 97px | Blocks: 3
-[16:30:20] ================================================================================
+[17:25:00] SCAN STARTED - Mode: 1x1 (Normal)
+[17:25:00] Rows/Block: 8 | Step: 97px | Blocks: 3
+[17:25:00] ================================================================================
 
-[16:30:20] Scrolling to top...
-[16:30:24] Reset complete
-[16:30:24] 
+[17:25:00] Scrolling to top...
+[17:25:04] Reset complete
+[17:25:04] 
 ================================================================================
-[16:30:24] PAGE #1
-[16:30:24] ================================================================================
+[17:25:04] PAGE #1
+[17:25:04] ================================================================================
 
-[16:30:24] 
+[17:25:04] 
 === SCANNING BLOCK 1 ===
-[16:30:24]   Block 1: 8 rows, 97px step, drift -0px
-[16:30:25]   → Wrecker Core (#1)
-[16:30:26]     [RETRY] 1/2: No text
-[16:30:27]     [RETRY] Text found after 2 attempts
-[16:30:27]   → ADP-mk4 Core (Modified) (#1)
-[16:30:29]   → Venture Core Olive (#1)
-[16:30:29] 
->>> PyAutoGUI Fail-Safe triggered (mouse moved to screen corner) <<<
-[16:30:29] This happens when the mouse is moved to a corner.
-[16:30:29] 
-Press INSERT to start another scan...
-[16:30:33] 
-[WINDOW] Searching for StarCitizen.exe process...
-[16:30:33] [WINDOW] Found StarCitizen.exe (PID: 9716)
-[16:30:33] [WINDOW] Switched to: Star Citizen 
-[16:30:33] [INFO] Config reloaded
-[16:30:33] 
-================================================================================
-[16:30:33] SCAN STARTED - Mode: 1x1 (Normal)
-[16:30:33] Rows/Block: 8 | Step: 97px | Blocks: 3
-[16:30:33] ================================================================================
-
-[16:30:33] Scrolling to top...
-[16:30:37] Reset complete
-[16:30:37] 
-================================================================================
-[16:30:37] PAGE #1
-[16:30:37] ================================================================================
-
-[16:30:37] 
-=== SCANNING BLOCK 1 ===
-[16:30:37]   Block 1: 8 rows, 97px step, drift -0px
-[16:30:38]   → Wrecker Core (#1)
-[16:30:39]   → ADP-mk4 Core (Modified) (#1)
-[16:30:40]   → Venture Core Olive (#1)
-[16:30:42]   → Lynx Core (#1)
-[16:30:43]   → PAB-1 Core Imperial (#1)
-[16:30:44]   → ORC-mkV Core Cry-Astro Edition (#1)
-[16:30:45]   → ORC-mkV Core Red (#1)
-[16:30:46]   → Inquisitor Core (#1)
-[16:30:48]   → Microid Battle Suit Core Nomad (#1)
-[16:30:49]   → Lynx Core Green (#1)
-[16:30:50]   → Artimex Core Canuto (#1)
-[16:30:51]   → Inquisitor Core (#2)
-[16:30:52]   → Microid Battle Suit Core Crucible (#1)
-[16:30:53]   → PAB-1 Core (#1)
-[16:30:54]   → ADP Core Black (#1)
-[16:30:56]   → Lynx Core Draas (#1)
-[16:30:57]   → PAB-1 Core (#2)
-[16:30:58]   → Dust Devil Armor Core (#1)
-[16:30:59]   → PAB-1 Core Seagreen (#1)
-[16:31:00]   → TrueDef-Pro Core Red/Silver (#1)
-[16:31:01]   → Aril Core Hazard (#1)
-[16:31:02]   → Aztalan Core (#1)
-[16:31:04]   → Aztalan Core (#2)
-[16:31:05]   → PAB-1 Core Tan (#1)
-[16:31:06]   → Venture Core Tan (#1)
-[16:31:07]   → Lynx Core (#2)
-[16:31:08]   → PAB-1 Core Imperial (#2)
-[16:31:09]   → PAB-1 Core Dark Red (#1)
-[16:31:10]   → Artimex Core (#1)
-[16:31:12]   → PAB-1 Core Desert (#1)
-[16:31:13]   → Inquisitor Core Outcrop (#1)
-[16:31:14]   → MacFlex Core "Rust Society" (#1)
-[16:31:14]   Items found
-[16:31:14]   Scrollbar detection (distance: 322px)...
-[16:31:14]   Scrollbar found: Y=352, Bottom=485, Height=266px
-[16:31:14]   Dragging from X=1795, Y=352, distance=322px
-[16:31:15]   Scrolled (block 1)
-[16:31:15] 
+[17:25:04]   Block 1: 8 rows, 97px step, drift -0px
+[17:25:06]   → Edgewear Pants Tan (#1)
+[17:25:07]   → Carrion Arms Maniac (#1)
+[17:25:08]   → Wrecker Core (#1)
+[17:25:09]   → Nyman Jacket Yellow (#1)
+[17:25:11]   → ADP-mk4 Arms (Modified) (#1)
+[17:25:12]   → ADP-mk4 Core (Modified) (#1)
+[17:25:13]   → ADP-mk4 Legs (Modified) (#1)
+[17:25:14]   → The Butcher Helmet (#1)
+[17:25:16]   → Stoneskin Helmet Desert (#1)
+[17:25:17]   → Venture Core Olive (#1)
+[17:25:18]   → Morozov-SH Arms Smokescreen (#1)
+[17:25:20]   → Balor HCH Helmet Orange (#1)
+[17:25:21]   → MacFlex Legs Green (#1)
+[17:25:22]   → ORC-mkX Arms Twilight (#1)
+[17:25:24]   → Horizon Helmet White (#1)
+[17:25:25]   → MacFlex Arms Blue (#1)
+[17:25:26]   → Argus Helmet Black/Aqua/Silver (#1)
+[17:25:27]   → Aril Helmet (#1)
+[17:25:29]   → Venture Arms Dark Green (#1)
+[17:25:30]   → CBH-3 Helmet Olive (#1)
+[17:25:32]   → Aztalan Galena Arms (#1)
+[17:25:33]   → Lynx Core Violet (#1)
+[17:25:34]   → PAB-1 Core Imperial (#1)
+[17:25:35]   → G-2 Helmet Aqua (#1)
+[17:25:37]   → ORC-mkX Helmet Nightfire (#1)
+[17:25:38]   → Carrion Helmet Stalker (#1)
+[17:25:39]   → Morningstar Helmet Grey (#1)
+[17:25:40]   → Horizon Helmet White (#2)
+[17:25:42]   → Horizon Helmet White (#3)
+[17:25:43]   → Horizon Helmet White (#4)
+[17:25:44]   → Brocius Waist Apron (#1)
+[17:25:46]   → Balor HCH Helmet Olive (#1)
+[17:25:46]   Items found
+[17:25:46]   Scrollbar detection (distance: 322px)...
+[17:25:46]   Scrollbar found: Y=352, Bottom=485, Height=266px
+[17:25:46]   Dragging from X=1795, Y=352, distance=322px
+[17:25:47]   Scrolled (block 1)
+[17:25:47] 
 === SCANNING BLOCK 2 ===
-[16:31:15]   Block 2: 8 rows, 97px step, drift -0px
-[16:31:16]   → Venture Core Pathfinder (#1)
-[16:31:17]   → Inquisitor Core Brimstone (#1)
-[16:31:19]   → MacFlex Core Orange (#1)
-[16:31:20]   → FBL-8a Core Arctic Digital (#1)
-[16:31:21]   → PAB-1 Core Orange (#1)
-[16:31:22]   → FBL-8a Core Justified (#1)
-[16:31:23]   → MacFlex Core White (#1)
-[16:31:24]   → MacFlex Core Grey (#1)
-[16:31:26]   → TrueDef-Pro Core Black/Aqua/Silver (#1)
-[16:31:27]   → PAB-1 Core Twilight (#1)
-[16:31:28]   → DustUp Core Tactical (#1)
-[16:31:29]   → PAB-1 Core Grey (#1)
-[16:31:30]   → Inquisitor Core Outcrop (#2)
-[16:31:31]   → Inquisitor Core (#3)
-[16:31:33]   → ORC-mkV Core Black (#1)
-[16:31:34]   → ORC-mkV Core Black (#2)
-[16:31:35]   → Inquisitor Core Neon Pink (#1)
-[16:31:36]   → TrueDef-Pro Arms Black/Aqua/Silver (#1)
-[16:31:37]   → Artimex Core Hurston Dynamics Executive Security (#1)
-[16:31:39]   → TrueDef-Pro Core Black/Silver/Blue (#1)
-[16:31:40]   → Inquisitor Core Roughshod (#1)
-[16:31:41]   → Lynx Core Cold Steel (#1)
-[16:31:42]   → Artimex Core Wildwood (#1)
-[16:31:43]   → ORC-mkV Core Dark Green (#1)
-[16:31:44]   → Lynx Core Lichen (#1)
-[16:31:46]   → Inquisitor Core Icefall (#1)
-[16:31:47]   → ORC-mkV Core (#1)
-[16:31:48]   → Venture Core Blue (#1)
-[16:31:49]   → Venture Core Voyager (#1)
-[16:31:50]   → MacFlex Core Dark Green (#1)
-[16:31:52]   → Inquisitor Core Raven (#1)
-[16:31:53]   → DustUp Core Tactical (#2)
-[16:31:53]   Items found
-[16:31:53]   Scrollbar detection (distance: 322px)...
-[16:31:53]   Scrollbar found: Y=610, Bottom=743, Height=267px
-[16:31:53]   Dragging from X=1795, Y=610, distance=322px
-[16:31:54]   Scrolled (block 2)
-[16:31:54] 
+[17:25:47]   Block 2: 8 rows, 97px step, drift -0px
+[17:25:48]   → Inquisitor Arms Outcrop (#1)
+[17:25:49]   → ORC-mkV Core Cry-Astro Edition (#1)
+[17:25:51]   → Horizon Helmet White (#5)
+[17:25:52]   → Keldur Hat and Oak Goggles (#1)
+[17:25:53]   → Microid Battle Suit Legs Nomad (#1)
+[17:25:55]   → Horizon Helmet White (#6)
+[17:25:56]   → J-5 Helmet (#1)
+[17:25:57]   → Deo Shirt Dark Green (#1)
+[17:25:59]   → Oracle Helmet Red (#1)
+[17:26:00]   → Citadel-SE Arms Maroon (#1)
+[17:26:01]   → Cliffback T-Shirt Twilight (#1)
+[17:26:02]   → ORC-mkV Core Red (#1)
+[17:26:04]   → Morningstar Helmet Base (#1)
+[17:26:05]   → Microid Battle Suit Legs Lodestone (#1)
+[17:26:06]   → Ati Jacket Black (#1)
+[17:26:07]   → Inquisitor Core (#1)
+[17:26:08]   → Inquisitor Legs Base (#1)
+[17:26:10]   → Ridgewalker Boots Dark Blue (#1)
+[17:26:11]   → Kaswal Jacket Pine (#1)
+[17:26:12]   → Hillcrest Boots (#1)
+[17:26:13]   → Faction Jacket Green (#1)
+[17:26:15]   → Microid Battle Suit Core Nomad (#1)
+[17:26:16]   → WorkLife Pants Black (#1)
+[17:26:17]   → Horde Jacket (#1)
+[17:26:18]   → Inquisitor Legs Base (#2)
+[17:26:20]   → Horizon Helmet White (#7)
+[17:26:21]     [RETRY] OCR text found but no DB match → max attempts: 5
+[17:26:21]     [RETRY] 1/5: No DB match for '@item Name Ina vest ol 0 1 01'
+[17:26:22]     [RETRY] 2/5: No DB match for '@item Name Ina vest ol 0 1 01'
+[17:26:24]     [RETRY] 3/5: No DB match for '@item Name Ina vest ol 0 1 0l'
+[17:26:25]     [RETRY] 4/5: No DB match for '@item Name Ina vest ol 0 1 01'
+[17:26:26]     [FAILED] OCR: '@item Name Ina vest ol 0 1 0l' - No DB match after 5 attempts
+[17:26:26]   [EMPTY] Checking for next page...
+[17:26:26] [BUTTON] Brightness: 75.0 → Active
+[17:26:26]   [ACTIVE] More pages available → Continuing
+[17:26:28]   → WK-8 Shoes (#1)
+[17:26:29]   → Frontier 05 Pants Harvest (#1)
+[17:26:30]     [RETRY] OCR text found but no DB match → max attempts: 5
+[17:26:30]     [RETRY] 1/5: No DB match for '@item Name Ina vest ol 0 1 01'
+[17:26:32]     [RETRY] 2/5: No DB match for '@item Name Ina vest ol 0 1 01'
+[17:26:33]     [RETRY] 3/5: No DB match for '@item Name Ina vest ol 0 1 01'
+[17:26:35]     [RETRY] 4/5: No DB match for '@item Name Ina vest ol 0 1 01'
+[17:26:36]     [FAILED] OCR: '@item Name Ina vest ol 0 1 01' - No DB match after 5 attempts
+[17:26:36]   [EMPTY] Checking for next page...
+[17:26:36] [BUTTON] Brightness: 75.1 → Active
+[17:26:36]   [ACTIVE] More pages available → Continuing
+[17:26:37]   → Cliffback T-Shirt Green (#1)
+[17:26:39]   → Landlite Boots Tan (#1)
+[17:26:39]   Items found
+[17:26:39]   Scrollbar detection (distance: 322px)...
+[17:26:39]   Scrollbar found: Y=610, Bottom=743, Height=267px
+[17:26:39]   Dragging from X=1795, Y=610, distance=322px
+[17:26:40]   Scrolled (block 2)
+[17:26:40] 
 === SCANNING BLOCK 3 ===
-[16:31:54]   Block 3: 8 rows, 97px step, drift -0px
-[16:31:55]   → ORC-mkV Core Violet (#1)
-[16:31:56]   → Aves Talon Core (#1)
-[16:31:58]   → FBL-8a Core Justified (#2)
-[16:31:59]   → ORC-mkV Core (Modified) (#1)
-[16:32:00]   → ADP Core Green (#1)
-[16:32:01]   → Venture Core Aqua (#1)
-[16:32:03]   → Morozov-SH Core Terracotta (#1)
-[16:32:04]   → Aves Shrike Core (#1)
-[16:32:05]   → ORC-mkV Core Sakura Sun Edition (#1)
-[16:32:06]   → Inquisitor Core Icefall (#2)
-[16:32:07]   → Morozov-SH Core (#1)
-[16:32:09]   → ORC-mkV Core Aqua (#1)
-[16:32:10]   → Morozov-SH Core Vesper (#1)
-[16:32:11]   → ADP Core (#1)
-[16:32:12]   → ORC-mkX Core Arctic (#1)
-[16:32:13]   → Inquisitor Core Black Steel (#1)
-[16:32:15]   → ORC-mkX Core (XenoThreat v2) (#1)
-[16:32:16]   → Venture Core White (#1)
-[16:32:17]   → ORC-mkX Core (XenoThreat) (#1)
-[16:32:18]   → ORC-mkV Core Green (#1)
-[16:32:20]   → PAB-1 Core Green (#1)
-[16:32:21]   → MacFlex Core Twilight (#1)
-[16:32:22]   → Inquisitor Core Earthwork (#1)
-[16:32:23]   → Aves Talon Core (#2)
-[16:32:25]   → Geist Armor Core Golden Blossom (#1)
-[16:32:26]   → Lynx Core Ferrum (#1)
-[16:32:27]   → MacFlex Core Tan (#1)
-[16:32:28]   → MacFlex Core White (#2)
-[16:32:30]   → Morozov-SH-I Core Pyrotechnic (#1)
-[16:32:31]   → Aztalan Tamarack Core (#1)
-[16:32:32]   → ADP-mk4 Core Woodland (#1)
-[16:32:33]   → Venture Core Seagreen (#1)
-[16:32:33]   Items found
-[16:32:33] 
+[17:26:40]   Block 3: 8 rows, 97px step, drift -0px
+[17:26:41]   → Falston Jumpsuit (#1)
+[17:26:42]   → Wanderer Boots Forest (#1)
+[17:26:44]   → Ardent Boots Aqua (#1)
+[17:26:45]   → Falston Jumpsuit (#2)
+[17:26:46]   → Horizon Helmet White (#8)
+[17:26:47]   → Aril Helmet Hazard (#1)
+[17:26:49]   → Aril Arms Hazard (#1)
+[17:26:50]   → Aril Legs Hazard (#1)
+[17:26:51]   → Horizon Helmet White (#9)
+[17:26:53]   → Orison T-Shirt White (#1)
+[17:26:54]   → Prestige Origin Racing Jacket (#1)
+[17:26:55]   → Prestige Origin Racing Jacket (#2)
+[17:26:56]     [RETRY] OCR text found but no DB match → max attempts: 5
+[17:26:56]     [RETRY] 1/5: No DB match for 'Ambrus Suit'
+[17:26:57]     [RETRY] 2/5: No DB match for 'Ambrus Suit'
+[17:26:59]     [RETRY] 3/5: No DB match for 'Ambrus Suit'
+[17:27:00]     [RETRY] 4/5: No DB match for 'Ambrus Suit'
+[17:27:01]     [FAILED] OCR: 'Ambrus Suit' - No DB match after 5 attempts
+[17:27:01]   [EMPTY] Checking for next page...
+[17:27:01] [BUTTON] Brightness: 75.1 → Active
+[17:27:01]   [ACTIVE] More pages available → Continuing
+[17:27:02]   → Faction Jacket Teal (#1)
+[17:27:03]     [RETRY] OCR text found but no DB match → max attempts: 5
+[17:27:03]     [RETRY] 1/5: No DB match for 'Ambrus Suit'
+[17:27:05]     [RETRY] 2/5: No DB match for 'Ambrus Suit'
+[17:27:06]     [RETRY] 3/5: No DB match for 'Ambrus Suit'
+[17:27:07]     [RETRY] 4/5: No DB match for 'Ambrus Suit'
+[17:27:08]     [FAILED] OCR: 'Ambrus Suit' - No DB match after 5 attempts
+[17:27:08]   [EMPTY] Checking for next page...
+[17:27:08] [BUTTON] Brightness: 75.0 → Active
+[17:27:08]   [ACTIVE] More pages available → Continuing
+[17:27:09]   → Stratus Pants Maroon (#1)
+[17:27:10]   → Vacha Jacket Spruce (#1)
+[17:27:12]   → Kino Shoes Dark Red (#1)
+[17:27:13]   → Coloma Coat Blue and Brick (#1)
+[17:27:14]   → Cardona Jacket Sand (#1)
+[17:27:15]   → Legion Jacket (#1)
+[17:27:17]   → Artimex Arms Red Alert (#1)
+[17:27:18]   → Enkel Shirt Saddle (#1)
+[17:27:19]   → Zeus Exploration Suit Helmet (#1)
+[17:27:21]   → Legion Jacket (#2)
+[17:27:22]   → Artimex Arms Red Alert (#2)
+[17:27:23]   → Enkel Shirt Saddle (#2)
+[17:27:25]   → Zeus Exploration Suit Helmet (#2)
+[17:27:26]   → CBH-3 Helmet Imperial (#1)
+[17:27:27]   → CBH-3 Helmet Grey (#1)
+[17:27:29]   → Strata Helmet Onyx (#1)
+[17:27:30]   → Paladin Helmet Black/Gold/Red (#1)
+[17:27:30]   Items found
+[17:27:30] 
 → Scrolling to last row...
-[16:32:33]   Scrolling 40px down (1 row)
-[16:32:34] 
+[17:27:30]   Scrolling 40px down (1 row)
+[17:27:30] 
 === SCANNING LAST ROW (25) ===
-[16:32:34]   Scanning at Y=974 (tile height: 86px)
-[16:32:35]   → Lynx Core Aqua (#1)
-[16:32:36]   → PAB-1 Core Sakura Sun Edition (#1)
-[16:32:37]   → Venture Core Pathfinder (#2)
-[16:32:39]   → ADP Core Violet (#1)
-[16:32:39] 
+[17:27:30]   Scanning at Y=974 (tile height: 86px)
+[17:27:32]   → ADP-mk4 Helmet (Modified) (#1)
+[17:27:33]   → Artimex Helmet Red Alert (#1)
+[17:27:34]   → Mirai Racing Helmet (#1)
+[17:27:35]   → Lynx Core Green (#1)
+[17:27:35] 
 → Final button check...
-[16:32:39] [BUTTON] Brightness: 74.7 → Active
-[16:32:39] [ACTIVE] Clicking next page button
-[16:32:39]   Waiting 5s for inventory to load...
-[16:32:44]   Ready for next page
+[17:27:35] [BUTTON] Brightness: 75.1 → Active
+[17:27:35] [ACTIVE] Clicking next page button
+[17:27:35]   Waiting 5s for inventory to load...
+[17:27:41]   Ready for next page
 
-[16:32:44] 
+[17:27:41] 
 ================================================================================
-[16:32:44] PAGE #2
-[16:32:44] ================================================================================
+[17:27:41] PAGE #2
+[17:27:41] ================================================================================
 
-[16:32:44] 
-=== SCANNING BLOCK 3 ===
-[16:32:44]   Block 3: 8 rows, 97px step, drift -0px
-[16:32:45]   → Arden-SL Core Balefire (#1)
-[16:32:46]   → Lynx Core Black (#1)
-[16:32:48]   → Strata Core Crusader Edition (#1)
-[16:32:49]   → ADP Core Olive (#1)
-[16:32:50]   → Overlord Core Riptide (#1)
-[16:32:51]   → Clash Core (#1)
-[16:32:53]   → Geist Armor Core Desert (#1)
-[16:32:54]   → Artimex Core Red Alert (#1)
-[16:32:55]     [RETRY] 1/2: No text
-[16:32:56]     [RETRY] All 2 attempts failed - empty slot
-[16:32:56]   [EMPTY] Checking for next page...
-[16:32:56] [BUTTON] Brightness: 13.7 → Inactive
-[16:32:56]   [INACTIVE] No more pages → Ending scan
-[16:32:56] [END] Button inactive → Scan complete
-[16:32:56] 
-Scan finished!
-[16:32:56] Mouse stopped
-[16:32:56] 
-[RESULTS] 108 items scanned (94 unique)
-[16:32:56] [RESULTS] Saved to detected_items.txt
-[16:32:56] 
-SCAN COMPLETE! See detected_items.txt
-[16:32:56] 
-Press ENTER for another scan or close the window to exit.
-[16:35:19] 
-Press INSERT to start another scan...
-[16:36:57] 
-[WINDOW] Searching for StarCitizen.exe process...
-[16:36:57] [WINDOW] Found StarCitizen.exe (PID: 9716)
-[16:36:57] [WINDOW] Switched to: Star Citizen 
-[16:36:57] [INFO] Config reloaded
-[16:36:57] 
-================================================================================
-[16:36:57] SCAN STARTED - Mode: 1x1 (Normal)
-[16:36:57] Rows/Block: 8 | Step: 97px | Blocks: 3
-[16:36:57] ================================================================================
-
-[16:36:57] Scrolling to top...
-[16:37:01] Reset complete
-[16:37:01] 
-================================================================================
-[16:37:01] PAGE #1
-[16:37:01] ================================================================================
-
-[16:37:01] 
+[17:27:41] 
 === SCANNING BLOCK 1 ===
-[16:37:01]   Block 1: 8 rows, 97px step, drift -0px
-[16:37:02]   → Edgewear Pants Tan (#1)
-[16:37:03]   → Carrion Arms Maniac (#1)
-[16:37:04]   → Wrecker Core (#1)
-[16:37:06]   → Nyman Jacket Yellow (#1)
-[16:37:07]   → ADP-mk4 Arms (Modified) (#1)
-[16:37:08]   → ADP-mk4 Core (Modified) (#1)
-[16:37:09]   → ADP-mk4 Legs (Modified) (#1)
-[16:37:11]   → The Butcher Helmet (#1)
-[16:37:12]   → Stoneskin Helmet Desert (#1)
-[16:37:13]   → Venture Core Olive (#1)
-[16:37:15]   → Morozov-SH Arms Smokescreen (#1)
-[16:37:16]   → Balor HCH Helmet Orange (#1)
-[16:37:17]   → MacFlex Legs Green (#1)
-[16:37:19]   → ORC-mkX Arms Twilight (#1)
-[16:37:20]   → Horizon Helmet White (#1)
-[16:37:21]   → MacFlex Arms Blue (#1)
-[16:37:22]   → Argus Helmet Black/Aqua/Silver (#1)
-[16:37:24]   → Aril Helmet (#1)
-[16:37:25]   → Venture Arms Dark Green (#1)
-[16:37:26]   → CBH-3 Helmet Olive (#1)
-[16:37:28]   → Aztalan Galena Arms (#1)
-[16:37:29]   → Lynx Core Violet (#1)
-[16:37:30]   → PAB-1 Core Imperial (#1)
-[16:37:31]   → G-2 Helmet Aqua (#1)
-[16:37:32]   → ORC-mkX Helmet Nightfire (#1)
-[16:37:34]   → Carrion Helmet Stalker (#1)
-[16:37:35]   → Morningstar Helmet Grey (#1)
-[16:37:36]   → Horizon Helmet White (#2)
-[16:37:38]   → Horizon Helmet White (#3)
-[16:37:39]   → Horizon Helmet White (#4)
-[16:37:40]   → Brocius Waist Apron (#1)
-[16:37:42]   → Balor HCH Helmet Olive (#1)
-[16:37:42]   Items found
-[16:37:42]   Scrollbar detection (distance: 322px)...
-[16:37:42]   Scrollbar found: Y=352, Bottom=485, Height=266px
-[16:37:42]   Dragging from X=1795, Y=352, distance=322px
-[16:37:43]   Scrolled (block 1)
-[16:37:43] 
+[17:27:41]   Block 1: 8 rows, 97px step, drift -0px
+[17:27:42]   → Odyssey II Helmet Sienna (#1)
+[17:27:43]   → Artimex Core Canuto (#1)
+[17:27:44]   → ORC-mkX Arms Woodland (#1)
+[17:27:46]   → Horizon Helmet White (#10)
+[17:27:47]   → Horizon Helmet White (#11)
+[17:27:48]   → Crusader Industries Hat (#1)
+[17:27:49]   → Inquisitor Core (#2)
+[17:27:51]   → Microid Battle Suit Core Crucible (#1)
+[17:27:52]   → PAB-1 Core (#1)
+[17:27:53]   → Overlord Arms Predator (#1)
+[17:27:55]   → Horizon Helmet White (#12)
+[17:27:56]   → ADP Core Black (#1)
+[17:27:57]   → ADP Arms White (#1)
+[17:27:58]   → Drake Hat Yellow Logo (#1)
+[17:28:00]   → Inquisitor Arms Base (#1)
+[17:28:01]   → WK-8 Shoes (#2)
+[17:28:02]   → Li-Tok Boots Aqua (#1)
+[17:28:04]   → Desert Cat Boots (#1)
+[17:28:05]   → WK-8 Shoes (#3)
+[17:28:06]   → RipTops Shoes (#1)
+[17:28:07]   → Nivala Shoes Crimson (#1)
+[17:28:09]   → Kutty Jacket (#1)
+[17:28:10]   → Li-Tok Boots Red (#1)
+[17:28:11]   → IAE 2953 Hat White (#1)
+[17:28:13]   → Ixonia Helmet Verdant Steel (#1)
+[17:28:14]   → Ixonia Armor Verdant Steel (#1)
+[17:28:15]   → Lynx Core Draas (#1)
+[17:28:16]   → Horizon Helmet White (#13)
+[17:28:18]   → WorkLife Pants Black (#2)
+[17:28:19]   → Ready-Up Helmet Twilight (#1)
+[17:28:20]   → K7 Pants Tan (#1)
+[17:28:21]   → Venture Arms Pathfinder (#1)
+[17:28:21]   Items found
+[17:28:21]   Scrollbar detection (distance: 322px)...
+[17:28:21]   Scrollbar found: Y=352, Bottom=485, Height=266px
+[17:28:21]   Dragging from X=1795, Y=352, distance=322px
+[17:28:23]   Scrolled (block 1)
+[17:28:23] 
 === SCANNING BLOCK 2 ===
-[16:37:43]   Block 2: 8 rows, 97px step, drift -0px
-[16:37:44]   → Inquisitor Arms Outcrop (#1)
-[16:37:45]   → ORC-mkV Core Cry-Astro Edition (#1)
-[16:37:47]   → Horizon Helmet White (#5)
-[16:37:48]   → Keldur Hat and Oak Goggles (#1)
-[16:37:49]   → Microid Battle Suit Legs Nomad (#1)
-[16:37:50]   → Horizon Helmet White (#6)
-[16:37:52]   → J-5 Helmet (#1)
-[16:37:53]   → Deo Shirt Dark Green (#1)
-[16:37:54]   → Oracle Helmet Red (#1)
-[16:37:56]   → Citadel-SE Arms Maroon (#1)
-[16:37:57]   → Cliffback T-Shirt Twilight (#1)
-[16:37:58]   → ORC-mkV Core Red (#1)
-[16:37:59]   → Morningstar Helmet Base (#1)
-[16:38:01]   → Microid Battle Suit Legs Lodestone (#1)
-[16:38:02]   → Ati Jacket Black (#1)
-[16:38:03]   → Inquisitor Core (#1)
-[16:38:04]   → Inquisitor Legs Base (#1)
-[16:38:05]   → Ridgewalker Boots Dark Blue (#1)
-[16:38:07]   → Kaswal Jacket Pine (#1)
-[16:38:08]   → Hillcrest Boots (#1)
-[16:38:09]   → Faction Jacket Green (#1)
-[16:38:10]   → Microid Battle Suit Core Nomad (#1)
-[16:38:12]   → WorkLife Pants Black (#1)
-[16:38:13]   → Horde Jacket (#1)
-[16:38:14]   → Inquisitor Legs Base (#2)
-[16:38:15]   → Horizon Helmet White (#7)
-[16:38:17]     [RETRY] OCR text found but no DB match → max attempts: 5
-[16:38:17]     [RETRY] 1/5: No DB match for '@item Name_Ina_vest 1 01'
-[16:38:18]     [RETRY] 2/5: No DB match for '@item Name Ina est_0l 0 l 01'
-[16:38:19]     [RETRY] 3/5: No DB match for '@item Name_Ina vest 0) 1401 0'
-[16:38:21]     [RETRY] 4/5: No DB match for '@item Name Ina vest 1 01'
-[16:38:22]     [FAILED] OCR: '@item Name Ina vest 01 0 1 01' - No DB match after 5 attempts
-[16:38:22]   [EMPTY] Checking for next page...
-[16:38:22] [BUTTON] Brightness: 74.7 → Active
-[16:38:22]   [ACTIVE] More pages available → Continuing
-[16:38:23]   → WK-8 Shoes (#1)
-[16:38:25]   → Frontier 05 Pants Harvest (#1)
-[16:38:26]     [RETRY] OCR text found but no DB match → max attempts: 5
-[16:38:26]     [RETRY] 1/5: No DB match for '@item Name Ina vest 0LJ 1 01'
-[16:38:27]     [RETRY] 2/5: No DB match for '@item Name Ina vest 01 0 l 0ll'
-[16:38:29]     [RETRY] 3/5: No DB match for '@item Name Ina vest 0 l 01 0'
-[16:38:30]     [RETRY] 4/5: No DB match for '@item Name Ina_vest o1 0 1 0ll'
-[16:38:31]     [FAILED] OCR: '@item Name_Ina vest 1 01 0' - No DB match after 5 attempts
-[16:38:31]   [EMPTY] Checking for next page...
-[16:38:32] [BUTTON] Brightness: 74.6 → Active
-[16:38:32]   [ACTIVE] More pages available → Continuing
-[16:38:33]   → Cliffback T-Shirt Green (#1)
-[16:38:34]   → Landlite Boots Tan (#1)
-[16:38:34]   Items found
-[16:38:34]   Scrollbar detection (distance: 322px)...
-[16:38:34]   Scrollbar found: Y=610, Bottom=743, Height=267px
-[16:38:34]   Dragging from X=1795, Y=610, distance=322px
-[16:38:35]   Scrolled (block 2)
-[16:38:35] 
+[17:28:23]   Block 2: 8 rows, 97px step, drift -0px
+[17:28:24]   → Neoni Yuki Onna Helmet (#1)
+[17:28:25]   → Manticore Helmet (#1)
+[17:28:26]   → Horizon Helmet White (#14)
+[17:28:28]   → Tussock Boots Coal (#1)
+[17:28:29]   → G-2 Helmet Red (#1)
+[17:28:30]   → ADP-mk4 Core Justified (XT) (#1)
+[17:28:32]   → Morningstar Helmet Base (#2)
+[17:28:33]   → Tekaw Pants Crimson (#1)
+[17:28:34]   → Razorback Pants Black (#1)
+[17:28:35]   → LeMarque Pants Imperial (#1)
+[17:28:36]   → Razorback Pants Twilight (#1)
+[17:28:38]   → Frontier 05 Pants Harvest (#2)
+[17:28:39]   → Stratus Pants Maroon (#2)
+[17:28:40]   → Caret Pants Army Green (#1)
+[17:28:41]   → Rustic Jacket Brown (#1)
+[17:28:43]   → Horizon Helmet White (#15)
+[17:28:44]   → Samya Tank Storm (#1)
+[17:28:45]   → Xanthule Helmet (#1)
+[17:28:46]   → Horizon Helmet "Rust Society" (#1)
+[17:28:48]   → Lynx Legs Draas (#1)
+[17:28:49]   → TrailTuff Boots (#1)
+[17:28:50]   → Tona Shoes Black (#1)
+[17:28:51]   → Inquisitor Arms Aqua (#1)
+[17:28:53]   → SafeCore Boots (#1)
+[17:28:54]   → Xanthule Sehya Helmet (#1)
+[17:28:55]   → Matiese Shoes (#1)
+[17:28:57]   → Ketchum Beanie Twilight (#1)
+[17:28:58]   → PAB-1 Core (#2)
+[17:28:59]   → IAE 2953 Shirt White (#1)
+[17:29:01]   → Sharud Wrap and Arm Bands Redwood (#1)
+[17:29:02]   → Microid Battle Suit Legs Lodestone (#2)
+[17:29:03]   → Horizon Helmet White (#16)
+[17:29:03]   Items found
+[17:29:03]   Scrollbar detection (distance: 322px)...
+[17:29:03]   Scrollbar found: Y=610, Bottom=743, Height=267px
+[17:29:03]   Dragging from X=1795, Y=610, distance=322px
+[17:29:04]   Scrolled (block 2)
+[17:29:04] 
 === SCANNING BLOCK 3 ===
-[16:38:35]   Block 3: 8 rows, 97px step, drift -0px
-[16:38:36]   → Falston Jumpsuit (#1)
-[16:38:38]   → Wanderer Boots Forest (#1)
-[16:38:39]   → Ardent Boots Aqua (#1)
-[16:38:40]   → Falston Jumpsuit (#2)
-[16:38:42]   → Horizon Helmet White (#8)
-[16:38:43]   → Aril Helmet Hazard (#1)
-[16:38:44]   → Aril Arms Hazard (#1)
-[16:38:45]   → Aril Legs Hazard (#1)
-[16:38:47]   → Horizon Helmet White (#9)
-[16:38:48]   → Orison T-Shirt White (#1)
-[16:38:49]   → Prestige Origin Racing Jacket (#1)
-[16:38:50]   → Prestige Origin Racing Jacket (#2)
-[16:38:52]     [RETRY] OCR text found but no DB match → max attempts: 5
-[16:38:52]     [RETRY] 1/5: No DB match for 'Ambrus Suit'
-[16:38:53]     [RETRY] 2/5: No DB match for 'Ambrus Suit'
-[16:38:54]     [RETRY] 3/5: No DB match for 'Ambrus Suit'
-[16:38:55]     [RETRY] 4/5: No DB match for 'Ambrus Suit'
-[16:38:56]     [FAILED] OCR: 'Ambrus Suit' - No DB match after 5 attempts
-[16:38:56]   [EMPTY] Checking for next page...
-[16:38:56] [BUTTON] Brightness: 74.7 → Active
-[16:38:56]   [ACTIVE] More pages available → Continuing
-[16:38:57]   → Faction Jacket Teal (#1)
-[16:38:59]     [RETRY] OCR text found but no DB match → max attempts: 5
-[16:38:59]     [RETRY] 1/5: No DB match for 'Ambrus Suit'
-[16:39:00]     [RETRY] 2/5: No DB match for 'Ambrus Suit'
-[16:39:01]     [RETRY] 3/5: No DB match for 'Ambrus Suit'
-[16:39:02]     [RETRY] 4/5: No DB match for 'Ambrus Suit'
-[16:39:03]     [FAILED] OCR: 'Ambrus Suit' - No DB match after 5 attempts
-[16:39:03]   [EMPTY] Checking for next page...
-[16:39:03] [BUTTON] Brightness: 74.7 → Active
-[16:39:03]   [ACTIVE] More pages available → Continuing
-[16:39:04]   → Stratus Pants Maroon (#1)
-[16:39:06]   → Vacha Jacket Spruce (#1)
-[16:39:07]   → Kino Shoes Dark Red (#1)
-[16:39:08]   → Coloma Coat Blue and Brick (#1)
-[16:39:09]   → Cardona Jacket Sand (#1)
-[16:39:11]   → Legion Jacket (#1)
-[16:39:12]   → Artimex Arms Red Alert (#1)
-[16:39:13]   → Enkel Shirt Saddle (#1)
-[16:39:15]   → Zeus Exploration Suit Helmet (#1)
-[16:39:16]   → Legion Jacket (#2)
-[16:39:17]   → Artimex Arms Red Alert (#2)
-[16:39:18]   → Enkel Shirt Saddle (#2)
-[16:39:20]   → Zeus Exploration Suit Helmet (#2)
-[16:39:21]   → CBH-3 Helmet Imperial (#1)
-[16:39:22]   → CBH-3 Helmet Grey (#1)
-[16:39:24]   → Strata Helmet Onyx (#1)
-[16:39:25]   → Paladin Helmet Black/Gold/Red (#1)
-[16:39:25]   Items found
-[16:39:25] 
+[17:29:04]   Block 3: 8 rows, 97px step, drift -0px
+[17:29:06]   → Strata Helmet Piston (#1)
+[17:29:07]   → Arden-SL Arms Balefire (#1)
+[17:29:08]   → Venture Helmet Seagreen (#1)
+[17:29:10]   → Concept Shirt Orange (#1)
+[17:29:11]   → Kino Shoes Olive (#1)
+[17:29:12]   → Ardent Boots (#1)
+[17:29:13]   → Lillo Pants (#1)
+[17:29:15]   → Ardent Boots (#2)
+[17:29:16]   → Li-Tok Boots Aqua (#2)
+[17:29:17]   → Crusader Industries Hat (#2)
+[17:29:19]   → Performance T-Shirt (#1)
+[17:29:20]   → WorkLife Pants Black (#3)
+[17:29:21]   → PAB-1 Arms Sienna (#1)
+[17:29:23]   → Pembroke Helmet RSI Graphite Edition (#1)
+[17:29:24]   → Horizon Helmet White (#17)
+[17:29:25]   → WK-8 Shoes (#4)
+[17:29:26]   → Paladin Helmet Black/Silver (#1)
+[17:29:28]   → Trekker Boots (#1)
+[17:29:29]   → CBH-3 Helmet Black (#1)
+[17:29:30]   → Horizon Helmet White (#18)
+[17:29:32]   → Razorback Pants Twilight (#2)
+[17:29:33]   → Ixonia Pants Desert Camo (#1)
+[17:29:34]   → Skellig Pants Dirt (#1)
+[17:29:35]   → Legion Jacket (#3)
+[17:29:37]   → Kutty Jacket (Modified 9T) (#1)
+[17:29:38]   → Arcus Gloves Teal (#1)
+[17:29:39]   → Taberna Jacket Tactical (#1)
+[17:29:40]   → TrailTuff Boots (#2)
+[17:29:42]   → Tulsi Jacket Conifer (#1)
+[17:29:43]   → Samya Tank Storm (#2)
+[17:29:44]   → Face Melter T-Shirt (#1)
+[17:29:45]   → Loscha Work Vest Saddle (#1)
+[17:29:45]   Items found
+[17:29:45] 
 → Scrolling to last row...
-[16:39:25]   Scrolling 40px down (1 row)
-[16:39:26] 
+[17:29:45]   Scrolling 40px down (1 row)
+[17:29:46] 
 === SCANNING LAST ROW (25) ===
-[16:39:26]   Scanning at Y=974 (tile height: 86px)
-[16:39:27]   → ADP-mk4 Helmet (Modified) (#1)
-[16:39:28]   → Artimex Helmet Red Alert (#1)
-[16:39:30]   → Mirai Racing Helmet (#1)
-[16:39:31]   → Lynx Core Green (#1)
-[16:39:31] 
+[17:29:46]   Scanning at Y=974 (tile height: 86px)
+[17:29:47]   → Tuvic Outerwear Jacket Crimson (#1)
+[17:29:48]   → Union Pants Black (#1)
+[17:29:50]   → Mirai Racing Helmet (#2)
+[17:29:51]     [RETRY] 1/2: No text
+[17:29:52]     [RETRY] All 2 attempts failed - empty slot
+[17:29:52]   [EMPTY] Checking for next page...
+[17:29:52] [BUTTON] Brightness: 75.1 → Active
+[17:29:52]   [ACTIVE] More pages available → Continuing
+[17:29:52] 
 → Final button check...
-[16:39:31] [BUTTON] Brightness: 74.7 → Active
-[16:39:31] [ACTIVE] Clicking next page button
-[16:39:31]   Waiting 5s for inventory to load...
-[16:39:36]   Ready for next page
+[17:29:52] [BUTTON] Brightness: 75.1 → Active
+[17:29:52] [ACTIVE] Clicking next page button
+[17:29:52]   Waiting 5s for inventory to load...
+[17:29:57]   Ready for next page
 
-[16:39:36] 
+[17:29:57] 
 ================================================================================
-[16:39:36] PAGE #2
-[16:39:36] ================================================================================
+[17:29:57] PAGE #3
+[17:29:57] ================================================================================
 
-[16:39:36] 
+[17:29:57] 
+=== SCANNING BLOCK 1 ===
+[17:29:57]   Block 1: 8 rows, 97px step, drift -0px
+[17:29:58]   → Horizon Helmet White (#19)
+[17:30:00]   → Manticore Helmet (#2)
+[17:30:01]   → Dust Devil Armor Core (#1)
+[17:30:02]   → Dust Devil Armor Arms (#1)
+[17:30:03]   → Dust Devil Armor Legs (#1)
+[17:30:04]   → EQ-B Pants (#1)
+[17:30:06]   → WorkLife Pants Black (#4)
+[17:30:07]   → LeMarque Pants Olive (#1)
+[17:30:08]   → Landlite Boots Tan (#2)
+[17:30:10]   → WK-8 Shoes (#5)
+[17:30:11]   → PAB-1 Core Seagreen (#1)
+[17:30:12]   → TrueDef-Pro Core Red/Silver (#1)
+[17:30:13]   → Aril Core Hazard (#1)
+[17:30:14]   → PAB-1 Arms (#1)
+[17:30:16]   → ADP-mk4 Arms Justified (#1)
+[17:30:17]   → ADP-mk4 Arms Justified (#2)
+[17:30:18]   → TrueDef-Pro Arms Silver/Gold/Grey (#1)
+[17:30:20]   → Microid Battle Suit Arms Nomad (#1)
+[17:30:21]   → Defiance Helmet Tactical (#1)
+[17:30:22]   → G-2 Helmet Executive (#1)
+[17:30:24]   → Aztalan Core (#1)
+[17:30:25]   → Renegade Helmet Tactical (#1)
+[17:30:26]   → Field Recon Suit Helmet (#1)
+[17:30:27]   → Ati Jacket Olive (#1)
+[17:30:29]   → Ajax Security Uniform Shoes (#1)
+[17:30:30]   → Aztalan Core (#2)
+[17:30:31]   → Union Pants Black (#2)
+[17:30:32]   → Ixonia Armor Desert Camo (#1)
+[17:30:34]   → Ixonia Helmet Desert Camo (#1)
+[17:30:35]   → Clempt Pants Tan (#1)
+[17:30:36]   → Horizon Helmet White (#20)
+[17:30:37]   → Horizon Helmet White (#21)
+[17:30:37]   Items found
+[17:30:37]   Scrollbar detection (distance: 322px)...
+[17:30:37]   Scrollbar found: Y=352, Bottom=485, Height=266px
+[17:30:37]   Dragging from X=1795, Y=352, distance=322px
+[17:30:39]   Scrolled (block 1)
+[17:30:39] 
+=== SCANNING BLOCK 2 ===
+[17:30:39]   Block 2: 8 rows, 97px step, drift -0px
+[17:30:40]   → Horizon Helmet White (#22)
+[17:30:41]   → TrueDef-Pro Arms Black/Aqua/Silver (#1)
+[17:30:43]   → Balor HCH Helmet Twilight (#1)
+[17:30:44]   → PAB-1 Core Tan (#1)
+[17:30:45]   → Venture Core Tan (#1)
+[17:30:46]   → Lynx Arms Twilight (#1)
+[17:30:47]   → MacFlex Legs Aqua (#1)
+[17:30:49]   → Cliffback T-Shirt Blue (#1)
+[17:30:50]   → Cerrado Boots Bronze (#1)
+[17:30:51]   → Tulsi Jacket Conifer (#2)
+[17:30:52]   → Razorback Pants Tan (#1)
+[17:30:54]   → J-5 Helmet Rust (#1)
+[17:30:55]   → Artimex Helmet Wildwood (#1)
+[17:30:56]   → Neoni Yuki Onna Helmet (#2)
+[17:30:58]   → Inquisitor Arms Icefall (#1)
+[17:30:59]   → Lynx Core (#1)
+[17:31:00]   → Lynx Legs Orange (#1)
+[17:31:01]   → Tekaw Pants Tactical (#1)
+[17:31:02]   → Ajax Security Uniform Pants (#1)
+[17:31:04]   → Courser Jeans Pitch (#1)
+[17:31:05]   → Samya Tank Rosewood (#1)
+[17:31:06]   → Livia Shirt (Modified 9T) (#1)
+[17:31:08]   → Hannu Shirt (#1)
+[17:31:09]   → ClipVest Work Harness Black (#1)
+[17:31:10]   → Ajax Security Uniform Jacket (#1)
+[17:31:11]   → Skellig Pants Dirt (#2)
+[17:31:12]   → Kutty Jacket (Modified 9T) (#2)
+[17:31:14]   → Good Boot (#1)
+[17:31:15]   → Frontier Pants (Modified 9T) (#1)
+[17:31:16]   → Horizon Helmet White (#23)
+[17:31:18]   → Paladin Helmet Black/Silver (#2)
+[17:31:19]   → Calico Helmet Tactical (#1)
+[17:31:19]   Items found
+[17:31:19]   Scrollbar detection (distance: 322px)...
+[17:31:19]   Scrollbar found: Y=610, Bottom=743, Height=267px
+[17:31:19]   Dragging from X=1795, Y=610, distance=322px
+[17:31:20]   Scrolled (block 2)
+[17:31:20] 
 === SCANNING BLOCK 3 ===
-[16:39:36]   Block 3: 8 rows, 97px step, drift -0px
-[16:39:37]   → Odyssey II Helmet Sienna (#1)
-[16:39:38]   → Artimex Core Canuto (#1)
-[16:39:40]   → ORC-mkX Arms Woodland (#1)
-[16:39:41]   → Horizon Helmet White (#10)
-[16:39:42]   → Horizon Helmet White (#11)
-[16:39:44]   → Crusader Industries Hat (#1)
-[16:39:45]   → Inquisitor Core (#2)
-[16:39:46]   → Microid Battle Suit Core Crucible (#1)
-[16:39:47]   → PAB-1 Core (#1)
-[16:39:49]   → Overlord Arms Predator (#1)
-[16:39:50]   → Horizon Helmet White (#12)
-[16:39:51]   → ADP Core Black (#1)
-[16:39:52]   → ADP Arms White (#1)
-[16:39:54]   → Drake Hat Yellow Logo (#1)
-[16:39:55]   → Inquisitor Arms Base (#1)
-[16:39:56]   → WK-8 Shoes (#2)
-[16:39:58]   → Li-Tok Boots Aqua (#1)
-[16:39:59]   → Desert Cat Boots (#1)
-[16:40:00]   → WK-8 Shoes (#3)
-[16:40:01]   → RipTops Shoes (#1)
-[16:40:03]   → Nivala Shoes Crimson (#1)
-[16:40:04]   → Kutty Jacket (#1)
-[16:40:05]   → Li-Tok Boots Red (#1)
-[16:40:06]   → IAE 2953 Hat White (#1)
-[16:40:08]   → Ixonia Helmet Verdant Steel (#1)
-[16:40:09]   → Ixonia Armor Verdant Steel (#1)
-[16:40:10]   → Lynx Core Draas (#1)
-[16:40:11]   → Horizon Helmet White (#13)
-[16:40:13]   → WorkLife Pants Black (#2)
-[16:40:14]   → Ready-Up Helmet Twilight (#1)
-[16:40:15]   → K7 Pants Tan (#1)
-[16:40:16]   → Venture Arms Pathfinder (#1)
-[16:40:16]   Items found
-[16:40:16]   Scrollbar detection (distance: 322px)...
-[16:40:16]   Scrollbar found: Y=352, Bottom=485, Height=266px
-[16:40:16]   Dragging from X=1795, Y=352, distance=322px
-[16:40:18]   Scrolled (block 3)
-[16:40:18] 
-=== SCANNING BLOCK 4 ===
-[16:40:18]   Block 4: 8 rows, 97px step, drift -0px
-[16:40:19]   → Neoni Yuki Onna Helmet (#1)
-[16:40:20]   → Manticore Helmet (#1)
-[16:40:22]   → Horizon Helmet White (#14)
-[16:40:23]   → Tussock Boots Coal (#1)
-[16:40:24]   → G-2 Helmet Red (#1)
-[16:40:25]   → ADP-mk4 Core Justified (XT) (#1)
-[16:40:27]   → Morningstar Helmet Base (#2)
-[16:40:28]   → Tekaw Pants Crimson (#1)
-[16:40:29]   → Razorback Pants Black (#1)
-[16:40:30]   → LeMarque Pants Imperial (#1)
-[16:40:32]   → Razorback Pants Twilight (#1)
-[16:40:33]   → Frontier 05 Pants Harvest (#2)
-[16:40:34]   → Stratus Pants Maroon (#2)
-[16:40:35]   → Caret Pants Army Green (#1)
-[16:40:36]   → Rustic Jacket Brown (#1)
-[16:40:38]   → Horizon Helmet White (#15)
-[16:40:39]   → Samya Tank Storm (#1)
-[16:40:40]   → Xanthule Helmet (#1)
-[16:40:42]   → Horizon Helmet "Rust Society" (#1)
-[16:40:43]   → Lynx Legs Draas (#1)
-[16:40:44]   → TrailTuff Boots (#1)
-[16:40:45]   → Tona Shoes Black (#1)
-[16:40:46]   → Inquisitor Arms Aqua (#1)
-[16:40:48]   → SafeCore Boots (#1)
-[16:40:49]   → Xanthule Sehya Helmet (#1)
-[16:40:50]   → Matiese Shoes (#1)
-[16:40:52]   → Ketchum Beanie Twilight (#1)
-[16:40:53]   → PAB-1 Core (#2)
-[16:40:54]   → IAE 2953 Shirt White (#1)
-[16:40:56]   → Sharud Wrap and Arm Bands Redwood (#1)
-[16:40:57]   → Microid Battle Suit Legs Lodestone (#2)
-[16:40:58]   → Horizon Helmet White (#16)
-[16:40:58]   Items found
-[16:40:58]   Scrollbar detection (distance: 322px)...
-[16:40:58]   Scrollbar found: Y=610, Bottom=743, Height=267px
-[16:40:58]   Dragging from X=1795, Y=610, distance=322px
-[16:40:59]   Scrolled (block 4)
-[16:40:59] 
-=== SCANNING BLOCK 5 ===
-[16:40:59]   Block 5: 8 rows, 97px step, drift -0px
-[16:41:01]   → Strata Helmet Piston (#1)
-[16:41:02]   → Arden-SL Arms Balefire (#1)
-[16:41:03]   → Venture Helmet Seagreen (#1)
-[16:41:05]   → Concept Shirt Orange (#1)
-[16:41:06]   → Kino Shoes Olive (#1)
-[16:41:07]   → Ardent Boots (#1)
-[16:41:08]   → Lillo Pants (#1)
-[16:41:10]   → Ardent Boots (#2)
-[16:41:11]   → Li-Tok Boots Aqua (#2)
-[16:41:12]   → Crusader Industries Hat (#2)
-[16:41:13]   → Performance T-Shirt (#1)
-[16:41:15]   → WorkLife Pants Black (#3)
-[16:41:16]   → PAB-1 Arms Sienna (#1)
-[16:41:17]   → Pembroke Helmet RSI Graphite Edition (#1)
-[16:41:19]   → Horizon Helmet White (#17)
-[16:41:20]   → WK-8 Shoes (#4)
-[16:41:21]   → Paladin Helmet Black/Silver (#1)
-[16:41:23]   → Trekker Boots (#1)
-[16:41:24]   → CBH-3 Helmet Black (#1)
-[16:41:25]   → Horizon Helmet White (#18)
-[16:41:26]   → Razorback Pants Twilight (#2)
-[16:41:28]   → Ixonia Pants Desert Camo (#1)
-[16:41:29]   → Skellig Pants Dirt (#1)
-[16:41:30]   → Legion Jacket (#3)
-[16:41:31]   → Kutty Jacket (Modified 9T) (#1)
-[16:41:32]   → Arcus Gloves Teal (#1)
-[16:41:34]   → Taberna Jacket Tactical (#1)
-[16:41:35]   → TrailTuff Boots (#2)
-[16:41:36]   → Tulsi Jacket Conifer (#1)
-[16:41:37]   → Samya Tank Storm (#2)
-[16:41:39]   → Face Melter T-Shirt (#1)
-[16:41:40]   → Loscha Work Vest Saddle (#1)
-[16:41:40]   Items found
-[16:41:40] 
+[17:31:20]   Block 3: 8 rows, 97px step, drift -0px
+[17:31:21]   → Aztalan Galena Helmet (#1)
+[17:31:23]   → Morningstar Helmet Base (#3)
+[17:31:24]   → Neoni Yuki Onna Helmet (#3)
+[17:31:25]   → Voidripper Helmet (Modified) (#1)
+[17:31:27]   → Arden-SL Helmet Rime (#1)
+[17:31:28]   → Creese Jacket (#1)
+[17:31:29]   → Ponos Boots Red (#1)
+[17:31:31]   → Ponos Boots Blue (#1)
+[17:31:32]   → Bedrock Boots (#1)
+[17:31:33]   → Ponos Boots Grey (#1)
+[17:31:34]   → Ponos Boots Desert (#1)
+[17:31:36]   → Wanderer Boots Forest (#2)
+[17:31:37]   → Day One Shirt Tan (#1)
+[17:31:38]   → Edgewear Pants Olive (#1)
+[17:31:40]   → UrbEx Boots Grey (#1)
+[17:31:41]   → Horizon Helmet White (#24)
+[17:31:42]   → Aztalan Tamarack Helmet (#1)
+[17:31:44]   → Ponos Boots Dark Red (#1)
+[17:31:45]   → Cumulus Jacket Gray (#1)
+[17:31:46]   → FirmWear Hard Hat (04_01_01) (#1)
+[17:31:47]   → Ajax Security Uniform Shoes (#2)
+[17:31:49]   → Ajax Security Uniform Hat (#1)
+[17:31:50]   → Ajax Security Uniform Pants (#2)
+[17:31:51]   → Ajax Security Uniform Jacket (#2)
+[17:31:53]   → Arden-SL Helmet (#1)
+[17:31:54]   → Day One Shirt Purple (#1)
+[17:31:55]   → Threshold Pants (#1)
+[17:31:56]   → Orison T-Shirt White (#2)
+[17:31:58]   → Samya Tank Storm (#3)
+[17:31:59]   → Artimex Helmet (#1)
+[17:32:00]   → Horizon Helmet White (#25)
+[17:32:01]   → Ati Jacket Orange (#1)
+[17:32:01]   Items found
+[17:32:01] 
 → Scrolling to last row...
-[16:41:40]   Scrolling 40px down (1 row)
-[16:41:41] 
+[17:32:01]   Scrolling 40px down (1 row)
+[17:32:02] 
 === SCANNING LAST ROW (25) ===
-[16:41:41]   Scanning at Y=974 (tile height: 86px)
-[16:41:42]   → Tuvic Outerwear Jacket Crimson (#1)
-[16:41:43]   → Union Pants Black (#1)
-[16:41:44]   → Mirai Racing Helmet (#2)
-[16:41:45]     [RETRY] 1/2: No text
-[16:41:46]     [RETRY] All 2 attempts failed - empty slot
-[16:41:46]   [EMPTY] Checking for next page...
-[16:41:47] [BUTTON] Brightness: 74.7 → Active
-[16:41:47]   [ACTIVE] More pages available → Continuing
-[16:41:47] 
+[17:32:02]   Scanning at Y=974 (tile height: 86px)
+[17:32:03]   → Aril Helmet Quicksilver (#1)
+[17:32:05]   → Defiance Arms Tactical (#1)
+[17:32:06]   → Venture Arms Pathfinder (#2)
+[17:32:07]   → TrueDef-Pro Arms Gold/Grey/Black (#1)
+[17:32:07] 
 → Final button check...
-[16:41:47] [BUTTON] Brightness: 74.7 → Active
-[16:41:47] [ACTIVE] Clicking next page button
-[16:41:47]   Waiting 5s for inventory to load...
-[16:41:52]   Ready for next page
+[17:32:07] [BUTTON] Brightness: 75.1 → Active
+[17:32:07] [ACTIVE] Clicking next page button
+[17:32:07]   Waiting 5s for inventory to load...
+[17:32:12]   Ready for next page
 
-[16:41:52] 
+[17:32:12] 
 ================================================================================
-[16:41:52] PAGE #3
-[16:41:52] ================================================================================
+[17:32:12] PAGE #4
+[17:32:12] ================================================================================
 
-[16:41:52] 
-=== SCANNING BLOCK 5 ===
-[16:41:52]   Block 5: 8 rows, 97px step, drift -0px
-[16:41:53]   → Horizon Helmet White (#19)
-[16:41:54]   → Manticore Helmet (#2)
-[16:41:55]   → Dust Devil Armor Core (#1)
-[16:41:57]   → Dust Devil Armor Arms (#1)
-[16:41:58]   → Dust Devil Armor Legs (#1)
-[16:41:59]   → EQ-B Pants (#1)
-[16:42:00]   → WorkLife Pants Black (#4)
-[16:42:02]   → LeMarque Pants Blue (#1)
-[16:42:03]   → Landlite Boots Tan (#2)
-[16:42:04]   → WK-8 Shoes (#5)
-[16:42:05]   → PAB-1 Core Seagreen (#1)
-[16:42:07]   → TrueDef-Pro Core Red/Silver (#1)
-[16:42:08]   → Aril Core Hazard (#1)
-[16:42:09]   → PAB-1 Arms (#1)
-[16:42:10]   → ADP-mk4 Arms Justified (#1)
-[16:42:12]   → ADP-mk4 Arms Justified (#2)
-[16:42:13]   → TrueDef-Pro Arms Silver/Gold/Grey (#1)
-[16:42:14]   → Microid Battle Suit Arms Nomad (#1)
-[16:42:16]   → Defiance Helmet Tactical (#1)
-[16:42:17]   → G-2 Helmet Executive (#1)
-[16:42:18]   → Aztalan Core (#1)
-[16:42:19]   → Renegade Helmet Tactical (#1)
-[16:42:21]   → Field Recon Suit Helmet (#1)
-[16:42:22]   → Ati Jacket Olive (#1)
-[16:42:23]   → Ajax Security Uniform Shoes (#1)
-[16:42:24]   → Aztalan Core (#2)
-[16:42:26]   → Union Pants Black (#2)
-[16:42:27]   → Ixonia Armor Desert Camo (#1)
-[16:42:28]   → Ixonia Helmet Desert Camo (#1)
-[16:42:29]   → Clempt Pants Tan (#1)
-[16:42:31]   → Horizon Helmet White (#20)
-[16:42:32]   → Horizon Helmet White (#21)
-[16:42:32]   Items found
-[16:42:32]   Scrollbar detection (distance: 322px)...
-[16:42:32]   Scrollbar found: Y=352, Bottom=485, Height=266px
-[16:42:32]   Dragging from X=1795, Y=352, distance=322px
-[16:42:33]   Scrolled (block 5)
-[16:42:33] 
-=== SCANNING BLOCK 6 ===
-[16:42:33]   Block 6: 8 rows, 97px step, drift -0px
-[16:42:34]   → Horizon Helmet White (#22)
-[16:42:36]   → TrueDef-Pro Arms Black/Aqua/Silver (#1)
-[16:42:37]   → Balor HCH Helmet Twilight (#1)
-[16:42:38]   → PAB-1 Core Tan (#1)
-[16:42:39]   → Venture Core Tan (#1)
-[16:42:41]   → Lynx Arms Twilight (#1)
-[16:42:42]   → MacFlex Legs Aqua (#1)
-[16:42:43]   → Cliffback T-Shirt Blue (#1)
-[16:42:45]   → Cerrado Boots Bronze (#1)
-[16:42:46]   → Tulsi Jacket Conifer (#2)
-[16:42:47]   → Razorback Pants Tan (#1)
-[16:42:48]   → J-5 Helmet Rust (#1)
-[16:42:50]   → Artimex Helmet Wildwood (#1)
-[16:42:51]   → Neoni Yuki Onna Helmet (#2)
-[16:42:52]   → Inquisitor Arms Icefall (#1)
-[16:42:53]   → Lynx Core (#1)
-[16:42:54]   → Venture Legs Orange (#1)
-[16:42:56]   → Tekaw Pants Tactical (#1)
-[16:42:57]   → Ajax Security Uniform Pants (#1)
-[16:42:58]   → Courser Jeans Pitch (#1)
-[16:42:59]   → Samya Tank Rosewood (#1)
-[16:43:01]   → Livia Shirt (Modified 9T) (#1)
-[16:43:02]   → Hannu Shirt (#1)
-[16:43:03]   → ClipVest Work Harness Black (#1)
-[16:43:04]   → Ajax Security Uniform Jacket (#1)
-[16:43:06]   → Skellig Pants Dirt (#2)
-[16:43:07]   → Kutty Jacket (Modified 9T) (#2)
-[16:43:08]   → Good Boot (#1)
-[16:43:09]   → Frontier Pants (Modified 9T) (#1)
-[16:43:11]   → Horizon Helmet White (#23)
-[16:43:12]   → Paladin Helmet Black/Silver (#2)
-[16:43:13]   → Calico Helmet Tactical (#1)
-[16:43:13]   Items found
-[16:43:13]   Scrollbar detection (distance: 322px)...
-[16:43:13]   Scrollbar found: Y=610, Bottom=743, Height=267px
-[16:43:13]   Dragging from X=1795, Y=610, distance=322px
-[16:43:14]   Scrolled (block 6)
-[16:43:14] 
-=== SCANNING BLOCK 7 ===
-[16:43:14]   Block 7: 8 rows, 97px step, drift -0px
-[16:43:16]   → Aztalan Galena Helmet (#1)
-[16:43:17]   → Morningstar Helmet Base (#3)
-[16:43:18]   → Neoni Yuki Onna Helmet (#3)
-[16:43:20]   → Voidripper Helmet (Modified) (#1)
-[16:43:21]   → Arden-SL Helmet Rime (#1)
-[16:43:22]   → Creese Jacket (#1)
-[16:43:24]   → Ponos Boots Red (#1)
-[16:43:25]   → Ponos Boots Blue (#1)
-[16:43:26]   → Bedrock Boots (#1)
-[16:43:27]   → Ponos Boots Grey (#1)
-[16:43:29]   → Ponos Boots Desert (#1)
-[16:43:30]   → Wanderer Boots Forest (#2)
-[16:43:32]   → Day One Shirt Tan (#1)
-[16:43:33]   → Edgewear Pants Olive (#1)
-[16:43:34]   → UrbEx Boots Grey (#1)
-[16:43:35]   → Horizon Helmet White (#24)
-[16:43:37]   → Aztalan Tamarack Helmet (#1)
-[16:43:38]   → Ponos Boots Dark Red (#1)
-[16:43:39]   → Cumulus Jacket Gray (#1)
-[16:43:41]   → FirmWear Hard Hat (04_01_01) (#1)
-[16:43:42]   → Ajax Security Uniform Shoes (#2)
-[16:43:43]   → Ajax Security Uniform Hat (#1)
-[16:43:44]   → Ajax Security Uniform Pants (#2)
-[16:43:46]   → Ajax Security Uniform Jacket (#2)
-[16:43:47]   → Arden-SL Helmet (#1)
-[16:43:48]   → Day One Shirt Purple (#1)
-[16:43:50]   → Threshold Pants (#1)
-[16:43:51]   → Orison T-Shirt White (#2)
-[16:43:52]   → Samya Tank Storm (#3)
-[16:43:53]   → Artimex Helmet (#1)
-[16:43:55]   → Horizon Helmet White (#25)
-[16:43:56]   → Ati Jacket Orange (#1)
-[16:43:56]   Items found
-[16:43:56] 
+[17:32:12] 
+=== SCANNING BLOCK 1 ===
+[17:32:12]   Block 1: 8 rows, 97px step, drift -0px
+[17:32:14]   → ADP Arms Aqua (#1)
+[17:32:15]   → Morozov-SH Helmet Thule (#1)
+[17:32:16]   → Neoni Jami Helmet (#1)
+[17:32:17]   → Morozov-SH-I Helmet Pyrotechnic Spitfire (#1)
+[17:32:19]   → PAB-1 Core Imperial (#2)
+[17:32:20]   → PAB-1 Core Dark Red (#1)
+[17:32:21]   → Venture Helmet Twilight (#1)
+[17:32:22]   → Artimex Core (#1)
+[17:32:24]   → Day One Shirt Olive (#1)
+[17:32:25]   → Coloma Coat Navy and Sage (#1)
+[17:32:26]   → Horizon Helmet White (#26)
+[17:32:28]   → Artimex Legs Hurston Dynamics Executive Security (#1)
+[17:32:29]   → Morningstar Helmet Earthwork (#1)
+[17:32:30]   → PAB-1 Core Desert (#1)
+[17:32:31]   → G-2 Helmet Executive (#2)
+[17:32:33]   → Balor HCH Helmet Tan (#1)
+[17:32:34]   → Odyssey II Helmet Orange (#1)
+[17:32:35]   → Inquisitor Arms Icefall (#2)
+[17:32:37]   → Voidripper Helmet (#1)
+[17:32:38]   → Balor HCH Helmet Red (#1)
+[17:32:39]   → Morningstar Helmet Olive (#1)
+[17:32:40]   → Inquisitor Core Outcrop (#1)
+[17:32:42]   → Silverton Jacket Blue (#1)
+[17:32:43]   → Oracle Helmet Lichen (#1)
+[17:32:44]   → MacFlex Core "Rust Society" (#1)
+[17:32:46]   → Oracle Helmet Sienna (#1)
+[17:32:47]   → Venture Arms Olive (#1)
+[17:32:48]   → Xanthule Sehya Helmet (#2)
+[17:32:49]   → Argus Helmet Black/Silver/Green (#1)
+[17:32:51]   → Overlord Arms Supernova (#1)
+[17:32:52]   → Novikov Helmet (#1)
+[17:32:53]   → Venture Core Pathfinder (#1)
+[17:32:53]   Items found
+[17:32:53]   Scrollbar detection (distance: 322px)...
+[17:32:53]   Scrollbar found: Y=352, Bottom=485, Height=266px
+[17:32:53]   Dragging from X=1795, Y=352, distance=322px
+[17:32:54]   Scrolled (block 1)
+[17:32:54] 
+=== SCANNING BLOCK 2 ===
+[17:32:54]   Block 2: 8 rows, 97px step, drift -0px
+[17:32:56]   → CBH-3 Helmet Purple (#1)
+[17:32:57]   → TrueDef-Pro Arms Black/Aqua/Silver (#2)
+[17:32:58]   → Arden-SL Helmet (Modified) (#1)
+[17:33:00]   → Nyman Jacket Sienna (#1)
+[17:33:01]   → Burgundy Paisley Bandana (01_01_01) (#1)
+[17:33:02]   → Inquisitor Core Brimstone (#1)
+[17:33:03]   → Horizon Helmet Orange (#1)
+[17:33:05]   → Venture Helmet Pathfinder (#1)
+[17:33:06]   → MacFlex Core Orange (#1)
+[17:33:07]   → Xanthule Sehya Helmet (#3)
+[17:33:09]   → Arden-SL Arms Balefire (#2)
+[17:33:10]   → Morningstar Helmet Roughshod (#1)
+[17:33:11]   → FBL-8a Core Arctic Digital (#1)
+[17:33:12]   → Lynx Arms Blue (#1)
+[17:33:14]   → Zeus Exploration Suit Helmet Solar (#1)
+[17:33:15]   → Overlord Helmet Switchback (#1)
+[17:33:16]   → CBH-3 Helmet Dark Red (#1)
+[17:33:18]   → PAB-1 Core Orange (#1)
+[17:33:19]   → Morningstar Helmet Black (#1)
+[17:33:20]     [RETRY] OCR text found but no DB match → max attempts: 5
+[17:33:20]     [RETRY] 1/5: No DB match for 'FaL-Ba Core Modified)'
+[17:33:21]     [RETRY] Text found after 2 attempts
+[17:33:21]   → FBL-8a Core Justified (#1)
+[17:33:23]   → Giocoso Helmet Obsidian (#1)
+[17:33:24]   → Aztalan Tamarack Helmet (#2)
+[17:33:26]   → Voidripper Sunbeam Helmet (#1)
+[17:33:27]   → Aztalan Galena Helmet (#2)
+[17:33:28]   → Venture Arms Pathfinder (#3)
+[17:33:29]   → ORC-mkX Arms Woodland (#2)
+[17:33:31]   → MacFlex Core White (#1)
+[17:33:32]   → MacFlex Core Grey (#1)
+[17:33:33]   → TrueDef-Pro Core Black/Aqua/Silver (#1)
+[17:33:34]   → Odyssey II Helmet Blue (#1)
+[17:33:36]   → PAB-1 Core Twilight (#1)
+[17:33:37]   → DustUp Core Tactical (#1)
+[17:33:37]   Items found
+[17:33:37]   Scrollbar detection (distance: 322px)...
+[17:33:37]   Scrollbar found: Y=610, Bottom=743, Height=267px
+[17:33:37]   Dragging from X=1795, Y=610, distance=322px
+[17:33:38]   Scrolled (block 2)
+[17:33:38] 
+=== SCANNING BLOCK 3 ===
+[17:33:38]   Block 3: 8 rows, 97px step, drift -0px
+[17:33:39]   → PAB-1 Core Grey (#1)
+[17:33:40]   → Inquisitor Core Outcrop (#2)
+[17:33:42]   → Inquisitor Core (#3)
+[17:33:43]   → ORC-mkV Core Black (#1)
+[17:33:44]   → Inquisitor Arms Base (#2)
+[17:33:45]   → Calico Arms Tactical (#1)
+[17:33:47]   → Citadel-SE Arms White (#1)
+[17:33:48]   → Geist Armor Arms (#1)
+[17:33:49]   → TrueDef-Pro Legs Black/Aqua/Silver (#1)
+[17:33:50]   → ADP Legs Grey (#1)
+[17:33:52]   → Field Recon Suit Legs (#1)
+[17:33:53]   → TrueDef-Pro Arms Black/Aqua/Silver (#3)
+[17:33:54]   → TrueDef-Pro Legs (#1)
+[17:33:55]   → Artimex Legs Canuto (#1)
+[17:33:57]   → Artimex Legs Red Alert (#1)
+[17:33:58]   → Inquisitor Arms Base (#3)
+[17:33:59]     [RETRY] OCR text found but no DB match → max attempts: 5
+[17:33:59]     [RETRY] 1/5: No DB match for 'Aril Legs Modified)'
+[17:34:00]     [RETRY] 2/5: No DB match for 'Aril Legs Modified)'
+[17:34:02]     [RETRY] 3/5: No DB match for 'Aril Legs Modified)'
+[17:34:03]     [RETRY] 4/5: No DB match for 'Aril Legs Modified)'
+[17:34:04]     [FAILED] OCR: 'Aril Legs Modified)' - No DB match after 5 attempts
+[17:34:04]   [EMPTY] Checking for next page...
+[17:34:04] [BUTTON] Brightness: 75.0 → Active
+[17:34:04]   [ACTIVE] More pages available → Continuing
+[17:34:05]   → ORC-mkV Core Black (#2)
+[17:34:06]   → K7 Pants Tan (#2)
+[17:34:08]   → Davin Work Gloves Red (#1)
+[17:34:09]   → Silverton Jacket Brown (#1)
+[17:34:10]   → Slickdry Waders (#1)
+[17:34:11]   → MC-Black Hat (#1)
+[17:34:13]   → Frontier 05 Pants Harvest (#3)
+[17:34:14]   → Sturgis Jacket Original (#1)
+[17:34:15]   → Gale Head Cover Brown (#1)
+[17:34:16]   → Adroit Gloves Olive (#1)
+[17:34:18]   → K7 Pants Olive (#1)
+[17:34:19]   → Inquisitor Core Neon Pink (#1)
+[17:34:20]   → Overlord Arms Riptide (#1)
+[17:34:21]   → TrueDef-Pro Arms Black/Aqua/Silver (#4)
+[17:34:23]   → Deo Shirt Red (#1)
+[17:34:23]   Items found
+[17:34:23] 
 → Scrolling to last row...
-[16:43:56]   Scrolling 40px down (1 row)
-[16:43:56] 
+[17:34:23]   Scrolling 40px down (1 row)
+[17:34:23] 
 === SCANNING LAST ROW (25) ===
-[16:43:56]   Scanning at Y=974 (tile height: 86px)
-[16:43:58]   → Aril Helmet Quicksilver (#1)
-[16:43:59]   → Defiance Arms Tactical (#1)
-[16:44:00]   → Venture Arms Pathfinder (#2)
-[16:44:02]   → TrueDef-Pro Arms Gold/Grey/Black (#1)
-[16:44:02] 
+[17:34:23]   Scanning at Y=974 (tile height: 86px)
+[17:34:25]   → Artimex Arms Hurston Dynamics Executive Security (#1)
+[17:34:26]   → Artimex Core Hurston Dynamics Executive Security (#1)
+[17:34:27]   → Overlord Helmet Dust Storm (#1)
+[17:34:28]     [RETRY] 1/2: No text
+[17:34:29]     [RETRY] All 2 attempts failed - empty slot
+[17:34:29]   [EMPTY] Checking for next page...
+[17:34:29] [BUTTON] Brightness: 75.0 → Active
+[17:34:29]   [ACTIVE] More pages available → Continuing
+[17:34:29] 
 → Final button check...
-[16:44:02] [BUTTON] Brightness: 74.7 → Active
-[16:44:02] [ACTIVE] Clicking next page button
-[16:44:02]   Waiting 5s for inventory to load...
-[16:44:07]   Ready for next page
+[17:34:30] [BUTTON] Brightness: 75.0 → Active
+[17:34:30] [ACTIVE] Clicking next page button
+[17:34:30]   Waiting 5s for inventory to load...
+[17:34:35]   Ready for next page
 
-[16:44:07] 
+[17:34:35] 
 ================================================================================
-[16:44:07] PAGE #4
-[16:44:07] ================================================================================
+[17:34:35] PAGE #5
+[17:34:35] ================================================================================
 
-[16:44:07] 
-=== SCANNING BLOCK 7 ===
-[16:44:07]   Block 7: 8 rows, 97px step, drift -0px
-[16:44:08]   → ADP Arms Aqua (#1)
-[16:44:09]   → Morozov-SH Helmet Thule (#1)
-[16:44:11]   → Neoni Jami Helmet (#1)
-[16:44:12]   → Morozov-SH-I Helmet Pyrotechnic Spitfire (#1)
-[16:44:13]   → PAB-1 Core Imperial (#2)
-[16:44:14]   → PAB-1 Core Dark Red (#1)
-[16:44:16]   → Venture Helmet Twilight (#1)
-[16:44:17]   → Artimex Core (#1)
-[16:44:18]   → Day One Shirt Olive (#1)
-[16:44:19]   → Coloma Coat Navy and Sage (#1)
-[16:44:21]   → Horizon Helmet White (#26)
-[16:44:22]   → Artimex Legs Hurston Dynamics Executive Security (#1)
-[16:44:23]   → Morningstar Helmet Earthwork (#1)
-[16:44:24]   → PAB-1 Core Desert (#1)
-[16:44:26]   → G-2 Helmet Executive (#2)
-[16:44:27]   → Balor HCH Helmet Tan (#1)
-[16:44:29]   → Odyssey II Helmet Orange (#1)
-[16:44:30]   → Inquisitor Arms Icefall (#2)
-[16:44:31]   → Voidripper Helmet (#1)
-[16:44:32]   → Balor HCH Helmet Red (#1)
-[16:44:34]   → Morningstar Helmet Olive (#1)
-[16:44:35]   → Inquisitor Core Outcrop (#1)
-[16:44:36]   → Silverton Jacket Blue (#1)
-[16:44:37]   → Oracle Helmet Lichen (#1)
-[16:44:39]   → MacFlex Core "Rust Society" (#1)
-[16:44:40]   → Oracle Helmet Sienna (#1)
-[16:44:41]   → Venture Arms Olive (#1)
-[16:44:43]   → Xanthule Sehya Helmet (#2)
-[16:44:44]   → Argus Helmet Black/Silver/Green (#1)
-[16:44:45]   → Overlord Arms Supernova (#1)
-[16:44:46]   → Novikov Helmet (#1)
-[16:44:48]   → Venture Core Pathfinder (#1)
-[16:44:48]   Items found
-[16:44:48]   Scrollbar detection (distance: 322px)...
-[16:44:48]   Scrollbar found: Y=352, Bottom=485, Height=266px
-[16:44:48]   Dragging from X=1795, Y=352, distance=322px
-[16:44:49]   Scrolled (block 7)
-[16:44:49] 
-=== SCANNING BLOCK 8 ===
-[16:44:49]   Block 8: 8 rows, 97px step, drift -0px
-[16:44:50]   → CBH-3 Helmet Purple (#1)
-[16:44:51]   → TrueDef-Pro Arms Black/Aqua/Silver (#2)
-[16:44:53]   → Arden-SL Helmet (Modified) (#1)
-[16:44:54]   → Nyman Jacket Sienna (#1)
-[16:44:55]   → Burgundy Paisley Bandana (01_01_01) (#1)
-[16:44:57]   → Inquisitor Core Brimstone (#1)
-[16:44:58]   → Horizon Helmet Orange (#1)
-[16:44:59]   → Venture Helmet Pathfinder (#1)
-[16:45:00]   → MacFlex Core Orange (#1)
-[16:45:02]   → Xanthule Sehya Helmet (#3)
-[16:45:03]   → Arden-SL Arms Balefire (#2)
-[16:45:04]   → Morningstar Helmet Roughshod (#1)
-[16:45:06]   → FBL-8a Core Arctic Digital (#1)
-[16:45:07]   → Lynx Arms Blue (#1)
-[16:45:08]   → Zeus Exploration Suit Helmet Solar (#1)
-[16:45:09]   → Overlord Helmet Switchback (#1)
-[16:45:11]   → CBH-3 Helmet Dark Green (#1)
-[16:45:12]   → PAB-1 Core Orange (#1)
-[16:45:13]   → Morningstar Helmet Black (#1)
-[16:45:15]   → FBL-8a Core Justified (#1)
-[16:45:16]   → Giocoso Helmet Obsidian (#1)
-[16:45:17]   → Aztalan Tamarack Helmet (#2)
-[16:45:19]   → Voidripper Sunbeam Helmet (#1)
-[16:45:20]   → Aztalan Galena Helmet (#2)
-[16:45:21]   → Venture Arms Pathfinder (#3)
-[16:45:23]   → ORC-mkX Arms Woodland (#2)
-[16:45:24]   → MacFlex Core White (#1)
-[16:45:25]   → MacFlex Core Grey (#1)
-[16:45:26]   → TrueDef-Pro Core Black/Aqua/Silver (#1)
-[16:45:28]   → Odyssey II Helmet Blue (#1)
-[16:45:29]   → PAB-1 Core Twilight (#1)
-[16:45:30]   → DustUp Core Tactical (#1)
-[16:45:30]   Items found
-[16:45:30]   Scrollbar detection (distance: 322px)...
-[16:45:30]   Scrollbar found: Y=610, Bottom=743, Height=267px
-[16:45:30]   Dragging from X=1795, Y=610, distance=322px
-[16:45:31]   Scrolled (block 8)
-[16:45:31] 
-=== SCANNING BLOCK 9 ===
-[16:45:31]   Block 9: 8 rows, 97px step, drift -0px
-[16:45:32]   → PAB-1 Core Grey (#1)
-[16:45:34]   → Inquisitor Core Outcrop (#2)
-[16:45:35]   → Inquisitor Core (#3)
-[16:45:36]   → ORC-mkV Core Black (#1)
-[16:45:37]   → Inquisitor Arms Base (#2)
-[16:45:39]   → Calico Arms Tactical (#1)
-[16:45:40]   → Citadel-SE Arms White (#1)
-[16:45:41]   → Geist Armor Arms (#1)
-[16:45:42]   → TrueDef-Pro Legs Black/Aqua/Silver (#1)
-[16:45:44]   → ADP Legs Grey (#1)
-[16:45:45]   → Field Recon Suit Legs (#1)
-[16:45:46]   → TrueDef-Pro Arms Black/Aqua/Silver (#3)
-[16:45:47]   → TrueDef-Pro Legs (#1)
-[16:45:49]   → Artimex Legs Canuto (#1)
-[16:45:50]   → Artimex Legs Red Alert (#1)
-[16:45:51]   → Inquisitor Arms Base (#3)
-[16:45:52]     [RETRY] OCR text found but no DB match → max attempts: 5
-[16:45:52]     [RETRY] 1/5: No DB match for 'Aril Legs Modified)'
-[16:45:53]     [RETRY] 2/5: No DB match for 'Aril Legs Modified)'
-[16:45:55]     [RETRY] 3/5: No DB match for 'Aril Legs Modified)'
-[16:45:56]     [RETRY] 4/5: No DB match for 'Arill Legs Modified)'
-[16:45:57]     [FAILED] OCR: 'Aril Legs Modified)' - No DB match after 5 attempts
-[16:45:57]   [EMPTY] Checking for next page...
-[16:45:57] [BUTTON] Brightness: 74.7 → Active
-[16:45:57]   [ACTIVE] More pages available → Continuing
-[16:45:58]   → ORC-mkV Core Black (#2)
-[16:45:59]   → K7 Pants Tan (#2)
-[16:46:01]   → Davin Work Gloves Red (#1)
-[16:46:02]   → Silverton Jacket Brown (#1)
-[16:46:03]   → Slickdry Waders (#1)
-[16:46:04]   → MC-Black Hat (#1)
-[16:46:06]   → Frontier 05 Pants Harvest (#3)
-[16:46:07]   → Sturgis Jacket Original (#1)
-[16:46:08]   → Gale Head Cover Brown (#1)
-[16:46:09]   → Adroit Gloves Olive (#1)
-[16:46:11]   → K7 Pants Olive (#1)
-[16:46:12]   → Inquisitor Core Neon Pink (#1)
-[16:46:13]   → Overlord Arms Riptide (#1)
-[16:46:14]   → TrueDef-Pro Arms Black/Aqua/Silver (#4)
-[16:46:16]   → Deo Shirt Red (#1)
-[16:46:16]   Items found
-[16:46:16] 
+[17:34:35] 
+=== SCANNING BLOCK 1 ===
+[17:34:35]   Block 1: 8 rows, 97px step, drift -0px
+[17:34:36]   → CBH-3 Helmet Red (#1)
+[17:34:37]   → Horde Jacket (#2)
+[17:34:38]   → Adiva Jacket Grey (#1)
+[17:34:39]   → Adiva Jacket (#1)
+[17:34:41]   → K7 Pants Tan (#3)
+[17:34:42]   → Lillo Pants Black (#1)
+[17:34:43]   → Adiva Jacket Grey (#2)
+[17:34:44]   → TrueDef-Pro Core Black/Silver/Blue (#1)
+[17:34:46]   → Artimex Helmet Hurston Dynamics Executive Security (#1)
+[17:34:47]   → Inquisitor Core Roughshod (#1)
+[17:34:48]   → Badami Helmet Graphite (#1)
+[17:34:49]   → K7 Pants Dark Green (#1)
+[17:34:51]   → Inquisitor Arms Raven (#1)
+[17:34:52]   → Xanthule Helmet (#2)
+[17:34:53]   → Overlord Legs Stinger (#1)
+[17:34:54]   → Morozov-SH Arms Terracotta (#1)
+[17:34:56]   → Sangar Helmet Orange/Black (#1)
+[17:34:57]   → Calico Arms Tactical (#2)
+[17:34:58]   → ORC-mkV Arms Dark Green (#1)
+[17:35:00]   → Inquisitor Arms Roughshod (#1)
+[17:35:01]   → CBH-3 Helmet Yellow (#1)
+[17:35:02]   → PAB-1 Legs Seagreen (#1)
+[17:35:04]   → Aves Talon Helmet (#1)
+[17:35:05]   → Morningstar Helmet Dark Green (#1)
+[17:35:06]   → Landlite Boots Orange (#1)
+[17:35:07]   → Artimex Arms Lodestone (#1)
+[17:35:09]   → TrueDef-Pro Arms Black/Gold/Silver (#1)
+[17:35:10]   → Lynx Core Cold Steel (#1)
+[17:35:11]   → Inquisitor Arms Neon Pink (#1)
+[17:35:13]   → ADP Arms Purple (#1)
+[17:35:14]   → Artimex Core Wildwood (#1)
+[17:35:15]   → Badami Helmet Graphite (#2)
+[17:35:15]   Items found
+[17:35:15]   Scrollbar detection (distance: 322px)...
+[17:35:15]   Scrollbar found: Y=352, Bottom=485, Height=266px
+[17:35:15]   Dragging from X=1795, Y=352, distance=322px
+[17:35:16]   Scrolled (block 1)
+[17:35:16] 
+=== SCANNING BLOCK 2 ===
+[17:35:16]   Block 2: 8 rows, 97px step, drift -0px
+[17:35:18]   → Morozov-SH Arms Brushdrift (#1)
+[17:35:19]   → ORC-mkV Core Dark Green (#1)
+[17:35:20]   → Venture Helmet "Rust Society" (#1)
+[17:35:21]   → Lynx Core Sienna (#1)
+[17:35:23]   → Oracle Helmet Seagreen (#1)
+[17:35:24]   → Inquisitor Core Icefall (#1)
+[17:35:25]   → Morozov-SH Arms Spitfire (#1)
+[17:35:26]   → ORC-mkV Legs Imperial (#1)
+[17:35:28]   → Aril Helmet (Modified) (#1)
+[17:35:29]   → ADP Arms Orange (#1)
+[17:35:30]   → Aztalan Arms (#1)
+[17:35:32]   → ADP Arms Violet (#1)
+[17:35:33]   → Overlord Arms Supernova (#2)
+[17:35:34]   → ORC-mkX Arms (XenoThreat v2) (#1)
+[17:35:35]   → ORC-mkV Arms Greycat Edition (#1)
+[17:35:37]   → Inquisitor Arms Black Steel (#1)
+[17:35:38]   → Lynx Arms Yellow (#1)
+[17:35:39]   → ORC-mkV Core (#1)
+[17:35:41]   → Lynx Arms Bloodstorm (#1)
+[17:35:42]   → Lynx Legs Dark Green (#1)
+[17:35:43]   → Oracle Helmet Violet (#1)
+[17:35:44]   → Venture Core Blue (#1)
+[17:35:46]   → PAB-1 Legs Twilight (#1)
+[17:35:47]   → Oracle Helmet Aqua (#1)
+[17:35:48]   → Lynx Arms Yellow (#2)
+[17:35:50]   → Horizon Helmet White (#27)
+[17:35:51]   → Cordimon Jacket Seagreen (#1)
+[17:35:52]   → Razorback Pants Desert (#1)
+[17:35:53]   → Concept Shirt Violet (#1)
+[17:35:55]   → Toughlife Boots Blue (#1)
+[17:35:56]   → Falston Jumpsuit "ASD Edition" (#1)
+[17:35:57]   → Horizon Helmet White (#28)
+[17:35:57]   Items found
+[17:35:57]   Scrollbar detection (distance: 322px)...
+[17:35:57]   Scrollbar found: Y=610, Bottom=743, Height=267px
+[17:35:57]   Dragging from X=1795, Y=610, distance=322px
+[17:35:58]   Scrolled (block 2)
+[17:35:58] 
+=== SCANNING BLOCK 3 ===
+[17:35:58]   Block 3: 8 rows, 97px step, drift -0px
+[17:36:00]   → Horizon Helmet White (#29)
+[17:36:01]   → TrueDef-Pro Arms Black/Pink/Purple (#1)
+[17:36:02]   → Lynx Legs Pariah (#1)
+[17:36:04]   → DustUp Arms Tactical (#1)
+[17:36:05]   → CBH-3 Helmet Executive (#1)
+[17:36:06]   → Venture Core Voyager (#1)
+[17:36:07]   → TrueDef-Pro Arms Silver/Gold/Grey (#2)
+[17:36:09]   → MacFlex Core Dark Green (#1)
+[17:36:10]   → MacFlex Arms Purple (#1)
+[17:36:11]   → Matiese Shoes (#2)
+[17:36:13]   → Inquisitor Core Raven (#1)
+[17:36:14]   → Morningstar Helmet Ignitor (#1)
+[17:36:15]   → Overlord Helmet Supernova (#1)
+[17:36:17]   → Citadel Arms Base (#1)
+[17:36:18]   → Morningstar Helmet Yellow (#1)
+[17:36:19]   → Strata Helmet Onyx (#2)
+[17:36:20]   → Lynx Legs Ferrum (#1)
+[17:36:22]   → Venture Legs Violet (#1)
+[17:36:23]     [RETRY] OCR text found but no DB match → max attempts: 5
+[17:36:23]     [RETRY] 1/5: No DB match for 'Chamar Pants'
+[17:36:24]     [RETRY] 2/5: No DB match for 'Chamar Pants'
+[17:36:25]     [RETRY] 3/5: No DB match for 'Chamar Pants'
+[17:36:26]     [RETRY] 4/5: No DB match for 'Chamar Pants'
+[17:36:28]     [FAILED] OCR: 'Chamar Pants' - No DB match after 5 attempts
+[17:36:28]   [EMPTY] Checking for next page...
+[17:36:28] [BUTTON] Brightness: 75.0 → Active
+[17:36:28]   [ACTIVE] More pages available → Continuing
+[17:36:29]   → ORC-mkX Helmet Twilight (#1)
+[17:36:30]   → Sangar Helmet Grey/Black (#1)
+[17:36:32]   → Morozov-SH-C Helmet Vesper (#1)
+[17:36:33]   → Siebe Helmet Beachhead (#1)
+[17:36:34]   → Balor HCH Helmet Grey (#1)
+[17:36:36]   → Morozov-SH-C Helmet Smokescreen (#1)
+[17:36:37]   → IAE 2953 Hat White (#2)
+[17:36:38]   → IAE 2953 Shirt White (#2)
+[17:36:40]   → Horizon Helmet White (#30)
+[17:36:41]   → Horizon Helmet White (#31)
+[17:36:42]   → K7 Pants Grey (#1)
+[17:36:43]   → PAB-1 Legs Cry-Astro Edition (#1)
+[17:36:45]   → DustUp Core Tactical (#2)
+[17:36:45]   Items found
+[17:36:45] 
 → Scrolling to last row...
-[16:46:16]   Scrolling 40px down (1 row)
-[16:46:16] 
+[17:36:45]   Scrolling 40px down (1 row)
+[17:36:45] 
 === SCANNING LAST ROW (25) ===
-[16:46:16]   Scanning at Y=974 (tile height: 86px)
-[16:46:18]   → Artimex Arms Hurston Dynamics Executive Security (#1)
-[16:46:19]   → Artimex Core Hurston Dynamics Executive Security (#1)
-[16:46:20]   → Overlord Helmet Dust Storm (#1)
-[16:46:22]     [RETRY] 1/2: No text
-[16:46:23]     [RETRY] All 2 attempts failed - empty slot
-[16:46:23]   [EMPTY] Checking for next page...
-[16:46:23] [BUTTON] Brightness: 74.7 → Active
-[16:46:23]   [ACTIVE] More pages available → Continuing
-[16:46:23] 
+[17:36:45]   Scanning at Y=974 (tile height: 86px)
+[17:36:46]   → Artimex Arms Lodestone (#2)
+[17:36:48]   → Pampero Boots Green (#1)
+[17:36:49]     [RETRY] 1/2: No text
+[17:36:50]     [RETRY] All 2 attempts failed - empty slot
+[17:36:50]   [EMPTY] Checking for next page...
+[17:36:50] [BUTTON] Brightness: 75.0 → Active
+[17:36:50]   [ACTIVE] More pages available → Continuing
+[17:36:51]     [RETRY] 1/2: No text
+[17:36:52]     [RETRY] All 2 attempts failed - empty slot
+[17:36:52]   [EMPTY] Checking for next page...
+[17:36:52] [BUTTON] Brightness: 75.0 → Active
+[17:36:52]   [ACTIVE] More pages available → Continuing
+[17:36:52] 
 → Final button check...
-[16:46:23] [BUTTON] Brightness: 74.7 → Active
-[16:46:23] [ACTIVE] Clicking next page button
-[16:46:23]   Waiting 5s for inventory to load...
-[16:46:28]   Ready for next page
+[17:36:52] [BUTTON] Brightness: 75.0 → Active
+[17:36:52] [ACTIVE] Clicking next page button
+[17:36:52]   Waiting 5s for inventory to load...
+[17:36:57]   Ready for next page
 
-[16:46:28] 
+[17:36:57] 
 ================================================================================
-[16:46:28] PAGE #5
-[16:46:28] ================================================================================
+[17:36:57] PAGE #6
+[17:36:57] ================================================================================
 
-[16:46:28] 
-=== SCANNING BLOCK 9 ===
-[16:46:28]   Block 9: 8 rows, 97px step, drift -0px
-[16:46:29]   → CBH-3 Helmet Red (#1)
-[16:46:30]   → Horde Jacket (#2)
-[16:46:31]   → Adiva Jacket Grey (#1)
-[16:46:33]   → Adiva Jacket (#1)
-[16:46:34]   → K7 Pants Tan (#3)
-[16:46:35]   → Lillo Pants Black (#1)
-[16:46:36]   → Adiva Jacket Grey (#2)
-[16:46:37]   → TrueDef-Pro Core Black/Silver/Blue (#1)
-[16:46:39]   → Artimex Helmet Hurston Dynamics Executive Security (#1)
-[16:46:40]   → Inquisitor Core Roughshod (#1)
-[16:46:41]   → Badami Helmet Graphite (#1)
-[16:46:42]   → K7 Pants Dark Green (#1)
-[16:46:44]   → Inquisitor Arms Raven (#1)
-[16:46:45]   → Xanthule Helmet (#2)
-[16:46:46]   → Overlord Legs Stinger (#1)
-[16:46:48]   → Morozov-SH Arms Terracotta (#1)
-[16:46:49]   → Sangar Helmet Orange/Black (#1)
-[16:46:50]   → Calico Arms Tactical (#2)
-[16:46:51]   → ORC-mkV Arms Dark Green (#1)
-[16:46:53]   → Inquisitor Arms Roughshod (#1)
-[16:46:54]   → CBH-3 Helmet Yellow (#1)
-[16:46:55]   → PAB-1 Legs Seagreen (#1)
-[16:46:57]   → Aves Talon Helmet (#1)
-[16:46:58]   → Morningstar Helmet Dark Green (#1)
-[16:46:59]   → Landlite Boots Orange (#1)
-[16:47:00]   → Artimex Arms Lodestone (#1)
-[16:47:02]   → TrueDef-Pro Arms Black/Gold/Silver (#1)
-[16:47:03]   → Lynx Core Cold Steel (#1)
-[16:47:04]   → Inquisitor Arms Neon Pink (#1)
-[16:47:06]   → ADP Arms Purple (#1)
-[16:47:07]   → Artimex Core Wildwood (#1)
-[16:47:08]   → Badami Helmet Graphite (#2)
-[16:47:08]   Items found
-[16:47:08]   Scrollbar detection (distance: 322px)...
-[16:47:08]   Scrollbar found: Y=352, Bottom=485, Height=266px
-[16:47:08]   Dragging from X=1795, Y=352, distance=322px
-[16:47:09]   Scrolled (block 9)
-[16:47:09] 
-=== SCANNING BLOCK 10 ===
-[16:47:09]   Block 10: 8 rows, 97px step, drift -0px
-[16:47:11]   → Morozov-SH Arms Brushdrift (#1)
-[16:47:12]   → ORC-mkV Core Dark Green (#1)
-[16:47:13]   → Venture Helmet "Rust Society" (#1)
-[16:47:14]   → Lynx Core Lichen (#1)
-[16:47:16]   → Oracle Helmet Seagreen (#1)
-[16:47:17]   → Inquisitor Core Icefall (#1)
-[16:47:18]   → Morozov-SH Arms Spitfire (#1)
-[16:47:19]   → ORC-mkV Legs Imperial (#1)
-[16:47:21]   → Aril Helmet (Modified) (#1)
-[16:47:22]   → ADP Arms Orange (#1)
-[16:47:23]   → Aztalan Arms (#1)
-[16:47:25]   → ADP Arms Violet (#1)
-[16:47:26]   → Overlord Arms Supernova (#2)
-[16:47:27]   → ORC-mkX Arms (XenoThreat v2) (#1)
-[16:47:29]   → ORC-mkV Arms Greycat Edition (#1)
-[16:47:30]   → Inquisitor Arms Black Steel (#1)
-[16:47:31]   → Lynx Arms Yellow (#1)
-[16:47:32]   → ORC-mkV Core (#1)
-[16:47:34]   → Lynx Arms Bloodstorm (#1)
-[16:47:35]   → Lynx Legs Dark Green (#1)
-[16:47:36]   → Oracle Helmet Violet (#1)
-[16:47:37]   → Venture Core Blue (#1)
-[16:47:39]   → PAB-1 Legs Twilight (#1)
-[16:47:40]   → Oracle Helmet Aqua (#1)
-[16:47:41]   → Lynx Arms Yellow (#2)
-[16:47:42]   → Horizon Helmet White (#27)
-[16:47:44]   → Cordimon Jacket Seagreen (#1)
-[16:47:45]   → Razorback Pants Desert (#1)
-[16:47:46]   → Concept Shirt Violet (#1)
-[16:47:47]   → Toughlife Boots Blue (#1)
-[16:47:49]   → Falston Jumpsuit "ASD Edition" (#1)
-[16:47:50]   → Horizon Helmet White (#28)
-[16:47:50]   Items found
-[16:47:50]   Scrollbar detection (distance: 322px)...
-[16:47:50]   Scrollbar found: Y=610, Bottom=743, Height=267px
-[16:47:50]   Dragging from X=1795, Y=610, distance=322px
-[16:47:51]   Scrolled (block 10)
-[16:47:51] 
-=== SCANNING BLOCK 11 ===
-[16:47:51]   Block 11: 8 rows, 97px step, drift -0px
-[16:47:53]   → Horizon Helmet White (#29)
-[16:47:54]   → TrueDef-Pro Arms Black/Pink/Purple (#1)
-[16:47:55]   → Lynx Legs Pariah (#1)
-[16:47:56]   → DustUp Arms Tactical (#1)
-[16:47:58]   → CBH-3 Helmet Executive (#1)
-[16:47:59]   → Venture Core Voyager (#1)
-[16:48:00]   → TrueDef-Pro Arms Silver/Gold/Grey (#2)
-[16:48:01]   → MacFlex Core Dark Green (#1)
-[16:48:03]   → MacFlex Arms Purple (#1)
-[16:48:04]   → Matiese Shoes (#2)
-[16:48:05]   → Inquisitor Core Raven (#1)
-[16:48:07]   → Morningstar Helmet Ignitor (#1)
-[16:48:08]   → Overlord Helmet Supernova (#1)
-[16:48:09]   → Citadel Arms Base (#1)
-[16:48:10]   → Morningstar Helmet Yellow (#1)
-[16:48:12]   → Strata Helmet Onyx (#2)
-[16:48:13]   → Lynx Legs Ferrum (#1)
-[16:48:14]   → Venture Legs Violet (#1)
-[16:48:15]     [RETRY] OCR text found but no DB match → max attempts: 5
-[16:48:15]     [RETRY] 1/5: No DB match for 'Chamar Pants'
-[16:48:16]     [RETRY] 2/5: No DB match for 'Chamar Pants'
-[16:48:18]     [RETRY] 3/5: No DB match for 'Chamar Pants'
-[16:48:19]     [RETRY] 4/5: No DB match for 'Chamar Pants'
-[16:48:20]     [FAILED] OCR: 'Chamar Pants' - No DB match after 5 attempts
-[16:48:20]   [EMPTY] Checking for next page...
-[16:48:20] [BUTTON] Brightness: 74.7 → Active
-[16:48:20]   [ACTIVE] More pages available → Continuing
-[16:48:21]   → ORC-mkX Helmet Twilight (#1)
-[16:48:23]   → Sangar Helmet Grey/Black (#1)
-[16:48:24]   → Morozov-SH-C Helmet Vesper (#1)
-[16:48:25]   → Siebe Helmet Beachhead (#1)
-[16:48:27]   → Balor HCH Helmet Grey (#1)
-[16:48:28]   → Morozov-SH-C Helmet Smokescreen (#1)
-[16:48:29]   → IAE 2953 Hat White (#2)
-[16:48:31]   → IAE 2953 Shirt White (#2)
-[16:48:32]   → Horizon Helmet White (#30)
-[16:48:33]   → Horizon Helmet White (#31)
-[16:48:34]   → K7 Pants Grey (#1)
-[16:48:36]   → PAB-1 Legs Cry-Astro Edition (#1)
-[16:48:37]   → DustUp Core Tactical (#2)
-[16:48:37]   Items found
-[16:48:37] 
+[17:36:57] 
+=== SCANNING BLOCK 1 ===
+[17:36:57]   Block 1: 8 rows, 97px step, drift -0px
+[17:36:59]   → Cody Gloves (#1)
+[17:37:00]   → Silverton Jacket Pine (#1)
+[17:37:01]   → Frontier 11 Classic Pine (#1)
+[17:37:02]   → TruBarrier Hazard Suit Slate (#1)
+[17:37:04]   → TruBarrier Hazard Suit Mask Slate (#1)
+[17:37:05]   → ORC-mkX Arms Autumn (#1)
+[17:37:06]   → CBH-3 Helmet Blue (#1)
+[17:37:08]   → Foundation Pants Black (#1)
+[17:37:09]   → MC-Green Hat (#1)
+[17:37:10]   → Paradan Boots (#1)
+[17:37:11]   → Edgewear Pants Sienna (#1)
+[17:37:13]   → Aztalan Tamarack Arms (#1)
+[17:37:14]   → Aves Talon Helmet (#2)
+[17:37:15]   → ORC-mkV Core Violet (#1)
+[17:37:16]   → Strata Helmet Shooting Star (#1)
+[17:37:18]   → Inquisitor Arms Earthwork (#1)
+[17:37:19]   → ORC-mkV Legs Red (#1)
+[17:37:20]   → Morozov-SH-C Helmet Vesper (#2)
+[17:37:22]   → Morozov-SH-I Helmet Pyrotechnic Vesper (#1)
+[17:37:23]   → ORC-mkX Helmet (XenoThreat v2) (#1)
+[17:37:24]   → ADP-mk4 Core Justified (XT) (#2)
+[17:37:25]   → Aves Talon Core (#1)
+[17:37:27]   → FBL-8a Core Justified (#2)
+[17:37:28]   → ORC-mkV Core (Modified) (#1)
+[17:37:29]   → ORC-mkV Legs Grey (#1)
+[17:37:30]   → Inquisitor Legs Imperial (#1)
+[17:37:32]   → PAB-1 Legs Sakura Sun Edition (#1)
+[17:37:33]   → TrueDef-Pro Legs White/Silver/Grey (#1)
+[17:37:34]   → Adroit Gloves Indigo (#1)
+[17:37:36]   → Aves Shrike Arms (#1)
+[17:37:37]   → K7 Pants (#1)
+[17:37:38]   → Stratus Pants Brown (#1)
+[17:37:38]   Items found
+[17:37:38]   Scrollbar detection (distance: 322px)...
+[17:37:38]   Scrollbar found: Y=352, Bottom=485, Height=266px
+[17:37:38]   Dragging from X=1795, Y=352, distance=322px
+[17:37:39]   Scrolled (block 1)
+[17:37:39] 
+=== SCANNING BLOCK 2 ===
+[17:37:39]   Block 2: 8 rows, 97px step, drift -0px
+[17:37:40]   → ADP Core Green (#1)
+[17:37:42]   → ORC-mkX Helmet Singularity (#1)
+[17:37:43]   → Venture Core Aqua (#1)
+[17:37:44]   → Morozov-SH Helmet Aftershock (#1)
+[17:37:45]   → Ponos Boots Imperial (#1)
+[17:37:47]   → PAB-1 Legs (#1)
+[17:37:48]   → Calico Helmet Desert (#1)
+[17:37:49]   → Artimex Arms Canuto (#1)
+[17:37:51]   → Morozov-SH Core Terracotta (#1)
+[17:37:52]   → Silverton Jacket Pine (#2)
+[17:37:53]   → Aves Shrike Core (#1)
+[17:37:54]   → TrueDef-Pro Arms Black/Grey/Red (#1)
+[17:37:56]   → Paladin Helmet Black/Silver (#3)
+[17:37:57]   → ClipVest Work Harness Red (#1)
+[17:37:58]   → IndVest Jacket Aqua (#1)
+[17:37:59]   → Silverton Jacket Pine (#3)
+[17:38:01]   → Taos Balaclava and Goggles (#1)
+[17:38:02]   → Faction Jacket Red (#1)
+[17:38:03]   → Stratus Pants Yellow (#1)
+[17:38:04]   → Lillo Pants Purple (#1)
+[17:38:06]   → G-2 Helmet Yellow (#1)
+[17:38:07]   → Horizon Helmet White (#32)
+[17:38:08]   → Livia Shirt (#1)
+[17:38:10]   → K7 Pants Dark Green (#2)
+[17:38:11]   → LeMarque Pants Grey (#1)
+[17:38:12]   → Union Pants Blue (#1)
+[17:38:13]   → Day One Shirt Olive (#2)
+[17:38:15]   → Enkel Shirt Primrose (#1)
+[17:38:16]   → Davlos Shirt Charcoal (01_01_01) (#1)
+[17:38:17]   → Silverton Pants Jade (#1)
+[17:38:18]   → Deo Shirt Tan (#1)
+[17:38:20]   → Davlos Shirt Charcoal (01_01_01) (#2)
+[17:38:20]   Items found
+[17:38:20]   Scrollbar detection (distance: 322px)...
+[17:38:20]   Scrollbar found: Y=610, Bottom=743, Height=267px
+[17:38:20]   Dragging from X=1795, Y=610, distance=322px
+[17:38:21]   Scrolled (block 2)
+[17:38:21] 
+=== SCANNING BLOCK 3 ===
+[17:38:21]   Block 3: 8 rows, 97px step, drift -0px
+[17:38:22]   → Lillo Pants Red (#1)
+[17:38:23]   → Clempt Pants Sienna (#1)
+[17:38:24]   → Silverton Jacket Brown (#2)
+[17:38:26]   → RangeFinder Jacket Arctic (#1)
+[17:38:27]   → ClipVest Work Harness Yellow (#1)
+[17:38:28]   → Razorback Pants Dark Red (#1)
+[17:38:29]   → Samya Tank Birch (#1)
+[17:38:31]   → Concept Shirt Dark Red (#1)
+[17:38:32]   → Voidripper Sea Shiver Helmet (#1)
+[17:38:33]   → Zeus Exploration Helmet Starscape (#1)
+[17:38:34]   → IndVest Jacket Imperial (#1)
+[17:38:36]   → Loscha Work Vest (#1)
+[17:38:37]   → Carragio Jacket Grey (#1)
+[17:38:38]   → Deo Shirt Orange (#1)
+[17:38:39]   → Tempo Jacket Silver (#1)
+[17:38:41]   → Cliffback T-Shirt Sienna (#1)
+[17:38:42]   → Enkel Shirt Saddle (#3)
+[17:38:43]   → Tuvic Outerwear Jacket Crimson (#2)
+[17:38:44]   → Lillo Pants Violet (#1)
+[17:38:46]   → Hardline Hard Hat White (#1)
+[17:38:47]   → Renegade Cut Vest (Modified 9T) (#1)
+[17:38:48]   → Baru Gloves Viridian (Left Only) (#1)
+[17:38:50]   → Mercury Gloves (Modified 9T) (#1)
+[17:38:51]   → Debnam Gloves Orange (#1)
+[17:38:52]   → Badami Gloves Deadwood (#1)
+[17:38:54]   → Badami Gloves Deadwood (#2)
+[17:38:55]   → Badami Gloves Deadwood (#3)
+[17:38:56]   → Ventra Gloves Black (#1)
+[17:38:57]   → Davin Work Gloves Red (#2)
+[17:38:59]   → Cody Gloves (#2)
+[17:39:00]   → Ixonia Gloves Green (#1)
+[17:39:01]   → Debnam Gloves Olive (#1)
+[17:39:01]   Items found
+[17:39:01] 
 → Scrolling to last row...
-[16:48:37]   Scrolling 40px down (1 row)
-[16:48:37] 
+[17:39:01]   Scrolling 40px down (1 row)
+[17:39:02] 
 === SCANNING LAST ROW (25) ===
-[16:48:37]   Scanning at Y=974 (tile height: 86px)
-[16:48:39]   → Artimex Arms Lodestone (#2)
-[16:48:40]   → Pampero Boots Green (#1)
-[16:48:41]     [RETRY] 1/2: No text
-[16:48:42]     [RETRY] All 2 attempts failed - empty slot
-[16:48:42]   [EMPTY] Checking for next page...
-[16:48:42] [BUTTON] Brightness: 74.7 → Active
-[16:48:42]   [ACTIVE] More pages available → Continuing
-[16:48:43]     [RETRY] 1/2: No text
-[16:48:44]     [RETRY] OCR text found but no DB match → max attempts: 5
-[16:48:44]     [RETRY] 2/5: No DB match for '"'
-[16:48:46]     [RETRY] 3/5: No text
-[16:48:47]     [RETRY] 4/5: No text
-[16:48:48]     [RETRY] All 5 attempts failed - empty slot
-[16:48:48]   [EMPTY] Checking for next page...
-[16:48:48] [BUTTON] Brightness: 74.7 → Active
-[16:48:48]   [ACTIVE] More pages available → Continuing
-[16:48:48] 
+[17:39:02]   Scanning at Y=974 (tile height: 86px)
+[17:39:03]     [RETRY] OCR text found but no DB match → max attempts: 5
+[17:39:03]     [RETRY] 1/5: No DB match for 'Z1uf Gloves'
+[17:39:04]     [RETRY] 2/5: No DB match for 'Z1uf Gloves'
+[17:39:06]     [RETRY] 3/5: No DB match for 'Z1uf Gloves'
+[17:39:07]     [RETRY] 4/5: No DB match for 'Z1uf Gloves'
+[17:39:08]     [FAILED] OCR: 'Z1uf Gloves' - No DB match after 5 attempts
+[17:39:08]   [EMPTY] Checking for next page...
+[17:39:08] [BUTTON] Brightness: 75.0 → Active
+[17:39:08]   [ACTIVE] More pages available → Continuing
+[17:39:09]   → Arcus Gloves Yellow (#1)
+[17:39:11]   → Debnam Gloves Orange (#2)
+[17:39:12]   → Fractus Gloves Maroon (#1)
+[17:39:12] 
 → Final button check...
-[16:48:48] [BUTTON] Brightness: 74.7 → Active
-[16:48:48] [ACTIVE] Clicking next page button
-[16:48:48]   Waiting 5s for inventory to load...
-[16:48:53]   Ready for next page
+[17:39:12] [BUTTON] Brightness: 75.0 → Active
+[17:39:12] [ACTIVE] Clicking next page button
+[17:39:12]   Waiting 5s for inventory to load...
+[17:39:17]   Ready for next page
 
-[16:48:53] 
+[17:39:17] 
 ================================================================================
-[16:48:53] PAGE #6
-[16:48:53] ================================================================================
+[17:39:17] PAGE #7
+[17:39:17] ================================================================================
 
-[16:48:53] 
-=== SCANNING BLOCK 11 ===
-[16:48:53]   Block 11: 8 rows, 97px step, drift -0px
-[16:48:54]   → Cody Gloves (#1)
-[16:48:55]   → Silverton Jacket Pine (#1)
-[16:48:57]   → Frontier 11 Classic Pine (#1)
-[16:48:58]   → TruBarrier Hazard Suit Slate (#1)
-[16:48:59]   → TruBarrier Hazard Suit Mask Slate (#1)
-[16:49:01]   → ORC-mkX Arms Autumn (#1)
-[16:49:02]   → CBH-3 Helmet Blue (#1)
-[16:49:03]   → Foundation Pants Black (#1)
-[16:49:04]   → MC-Green Hat (#1)
-[16:49:06]   → Paradan Boots (#1)
-[16:49:07]   → Edgewear Pants Sienna (#1)
-[16:49:08]   → Aztalan Tamarack Arms (#1)
-[16:49:09]   → Aves Talon Helmet (#2)
-[16:49:10]   → ORC-mkV Core Violet (#1)
-[16:49:12]   → Strata Helmet Shooting Star (#1)
-[16:49:13]   → Inquisitor Arms Earthwork (#1)
-[16:49:14]   → ORC-mkV Legs Red (#1)
-[16:49:15]   → Morozov-SH-C Helmet Vesper (#2)
-[16:49:17]   → Morozov-SH-I Helmet Pyrotechnic Vesper (#1)
-[16:49:18]   → ORC-mkX Helmet (XenoThreat v2) (#1)
-[16:49:19]   → ADP-mk4 Core Justified (XT) (#2)
-[16:49:21]   → Aves Talon Core (#1)
-[16:49:22]   → FBL-8a Core Justified (#2)
-[16:49:23]   → ORC-mkV Core (Modified) (#1)
-[16:49:24]   → ORC-mkV Legs Grey (#1)
-[16:49:25]   → Inquisitor Legs Imperial (#1)
-[16:49:27]   → PAB-1 Legs Sakura Sun Edition (#1)
-[16:49:28]   → TrueDef-Pro Legs White/Silver/Grey (#1)
-[16:49:29]   → Adroit Gloves Indigo (#1)
-[16:49:31]   → Aves Shrike Arms (#1)
-[16:49:32]   → K7 Pants (#1)
-[16:49:33]   → Stratus Pants Brown (#1)
-[16:49:33]   Items found
-[16:49:33]   Scrollbar detection (distance: 322px)...
-[16:49:33]   Scrollbar found: Y=352, Bottom=485, Height=266px
-[16:49:33]   Dragging from X=1795, Y=352, distance=322px
-[16:49:34]   Scrolled (block 11)
-[16:49:34] 
-=== SCANNING BLOCK 12 ===
-[16:49:34]   Block 12: 8 rows, 97px step, drift -0px
-[16:49:35]   → ADP Core Green (#1)
-[16:49:37]   → ORC-mkX Helmet Singularity (#1)
-[16:49:38]   → Venture Core Aqua (#1)
-[16:49:39]   → Morozov-SH Helmet Aftershock (#1)
-[16:49:40]   → Ponos Boots Imperial (#1)
-[16:49:41]   → PAB-1 Legs (#1)
-[16:49:43]   → Calico Helmet Desert (#1)
-[16:49:44]   → Artimex Arms Canuto (#1)
-[16:49:45]   → Morozov-SH Core Terracotta (#1)
-[16:49:47]   → Silverton Jacket Pine (#2)
-[16:49:48]   → Aves Shrike Core (#1)
-[16:49:49]   → TrueDef-Pro Arms Black/Grey/Red (#1)
-[16:49:50]   → Paladin Helmet Black/Silver (#3)
-[16:49:52]   → ClipVest Work Harness Red (#1)
-[16:49:53]   → IndVest Jacket Aqua (#1)
-[16:49:54]   → Silverton Jacket Pine (#3)
-[16:49:55]   → Taos Balaclava and Goggles (#1)
-[16:49:56]   → Faction Jacket Red (#1)
-[16:49:58]   → Stratus Pants Yellow (#1)
-[16:49:59]   → Lillo Pants Purple (#1)
-[16:50:00]   → G-2 Helmet Yellow (#1)
-[16:50:02]   → Horizon Helmet White (#32)
-[16:50:03]   → Livia Shirt (#1)
-[16:50:04]   → K7 Pants Dark Green (#2)
-[16:50:05]   → LeMarque Pants Grey (#1)
-[16:50:06]   → Union Pants Blue (#1)
-[16:50:08]   → Day One Shirt Olive (#2)
-[16:50:09]   → Enkel Shirt Primrose (#1)
-[16:50:10]   → Davlos Shirt Charcoal (01_01_01) (#1)
-[16:50:12]   → Silverton Pants Jade (#1)
-[16:50:13]   → Deo Shirt Tan (#1)
-[16:50:14]   → Davlos Shirt Charcoal (01_01_01) (#2)
-[16:50:14]   Items found
-[16:50:14]   Scrollbar detection (distance: 322px)...
-[16:50:14]   Scrollbar found: Y=610, Bottom=743, Height=267px
-[16:50:14]   Dragging from X=1795, Y=610, distance=322px
-[16:50:15]   Scrolled (block 12)
-[16:50:15] 
-=== SCANNING BLOCK 13 ===
-[16:50:15]   Block 13: 8 rows, 97px step, drift -0px
-[16:50:16]   → Lillo Pants Red (#1)
-[16:50:18]   → Clempt Pants Sienna (#1)
-[16:50:19]   → Silverton Jacket Brown (#2)
-[16:50:20]   → RangeFinder Jacket Arctic (#1)
-[16:50:21]   → ClipVest Work Harness Yellow (#1)
-[16:50:23]   → Razorback Pants Dark Red (#1)
-[16:50:24]   → Samya Tank Birch (#1)
-[16:50:25]   → Concept Shirt Dark Red (#1)
-[16:50:26]   → Voidripper Sea Shiver Helmet (#1)
-[16:50:28]   → Zeus Exploration Helmet Starscape (#1)
-[16:50:29]   → IndVest Jacket Imperial (#1)
-[16:50:30]   → Loscha Work Vest (#1)
-[16:50:31]   → Carragio Jacket Grey (#1)
-[16:50:33]   → Deo Shirt Orange (#1)
-[16:50:34]   → Tempo Jacket Silver (#1)
-[16:50:35]   → Cliffback T-Shirt Sienna (#1)
-[16:50:36]   → Enkel Shirt Saddle (#3)
-[16:50:38]   → Tuvic Outerwear Jacket Crimson (#2)
-[16:50:39]   → Lillo Pants Violet (#1)
-[16:50:40]   → Hardline Hard Hat White (#1)
-[16:50:41]   → Renegade Cut Vest (Modified 9T) (#1)
-[16:50:43]   → Baru Gloves Viridian (Left Only) (#1)
-[16:50:44]   → Mercury Gloves (Modified 9T) (#1)
-[16:50:45]   → Debnam Gloves Orange (#1)
-[16:50:47]   → Badami Gloves Deadwood (#1)
-[16:50:48]   → Badami Gloves Deadwood (#2)
-[16:50:49]   → Badami Gloves Deadwood (#3)
-[16:50:51]   → Ventra Gloves Black (#1)
-[16:50:52]   → Davin Work Gloves Red (#2)
-[16:50:53]   → Cody Gloves (#2)
-[16:50:54]   → Ixonia Gloves Green (#1)
-[16:50:56]   → Debnam Gloves Olive (#1)
-[16:50:56]   Items found
-[16:50:56] 
+[17:39:17] 
+=== SCANNING BLOCK 1 ===
+[17:39:17]   Block 1: 8 rows, 97px step, drift -0px
+[17:39:18]   → Debnam Gloves (Modified 9T) (#1)
+[17:39:20]   → Badami Gloves Deadwood (#4)
+[17:39:21]   → Davin Work Gloves Seagreen (#1)
+[17:39:22]   → Lillo Pants Violet (#2)
+[17:39:23]   → Adiva Jacket Violet (#1)
+[17:39:25]   → Ketchum Beanie Black (#1)
+[17:39:26]   → Sorel Hat Armadillo (#1)
+[17:39:27]   → Calister Jacket Armadillo (#1)
+[17:39:29]   → Clempt Pants Grey (#1)
+[17:39:30]   → WorkLife Pants Black (#5)
+[17:39:31]   → Cumulus Pants Purple (#1)
+[17:39:32]   → Clempt Pants Grey (#2)
+[17:39:33]   → Ardent Boots Imperial (#1)
+[17:39:35]   → Parasite Replica Helmet (#1)
+[17:39:36]   → Oracle Helmet Firebrick (#1)
+[17:39:37]   → Star Kitten Sally Helmet (#1)
+[17:39:39]   → Star Kitten Damon Helmet (#1)
+[17:39:40]   → Morningstar Helmet (Modified) (#1)
+[17:39:41]   → Exo-8 Helmet (Used) (#1)
+[17:39:43]   → Star Kitten Damon Helmet (#2)
+[17:39:44]   → ORC-mkV Core Sakura Sun Edition (#1)
+[17:39:45]   → Inquisitor Core Icefall (#2)
+[17:39:46]   → Inquisitor Arms Neon Pink (#2)
+[17:39:48]   → MacFlex Legs Violet (#1)
+[17:39:49]   → ORC-mkX Helmet (XenoThreat) (#1)
+[17:39:50]   → ORC-mkX Arms (XenoThreat) (#1)
+[17:39:51]   → Inquisitor Legs Base (#3)
+[17:39:53]     [RETRY] OCR text found but no DB match → max attempts: 5
+[17:39:53]     [RETRY] 1/5: No DB match for 'Morozov-SHcore'
+[17:39:54]     [RETRY] 2/5: No DB match for 'Morozov-SHcore'
+[17:39:55]     [RETRY] 3/5: No DB match for 'Morozov-SHcore'
+[17:39:56]     [RETRY] 4/5: No DB match for 'Morozov-SHcore'
+[17:39:58]     [FAILED] OCR: 'Morozov-SHcore' - No DB match after 5 attempts
+[17:39:58]   [EMPTY] Checking for next page...
+[17:39:58] [BUTTON] Brightness: 75.0 → Active
+[17:39:58]   [ACTIVE] More pages available → Continuing
+[17:39:59]   → Aztalan Helmet (#1)
+[17:40:00]   → Adroit Gloves Indigo (#2)
+[17:40:02]   → Venture Helmet Black (#1)
+[17:40:03]   → PAB-1 Legs Aqua (#1)
+[17:40:03]   Items found
+[17:40:03]   Scrollbar detection (distance: 322px)...
+[17:40:03]   Scrollbar found: Y=352, Bottom=485, Height=266px
+[17:40:03]   Dragging from X=1795, Y=352, distance=322px
+[17:40:04]   Scrolled (block 1)
+[17:40:04] 
+=== SCANNING BLOCK 2 ===
+[17:40:04]   Block 2: 8 rows, 97px step, drift -0px
+[17:40:05]   → Balor HCH Helmet Imperial (#1)
+[17:40:07]   → Hardline Hard Hat White (#2)
+[17:40:08]   → Gilick Boots (#1)
+[17:40:09]   → MacFlex Arms Orange (#1)
+[17:40:10]   → ORC-mkV Core Aqua (#1)
+[17:40:12]   → ORC-mkX Arms (XenoThreat) (#2)
+[17:40:13]   → A23 Helmet Woodland (#1)
+[17:40:14]   → Inquisitor Arms Blue (#1)
+[17:40:16]   → TrueDef-Pro Legs Black/Gold/Silver (#1)
+[17:40:17]   → Morozov-SH Arms Brushdrift (#2)
+[17:40:18]   → Inquisitor Arms Roughshod (#2)
+[17:40:19]   → FBL-8a Legs Arctic Digital (#1)
+[17:40:21]     [RETRY] OCR text found but no DB match → max attempts: 5
+[17:40:21]     [RETRY] 1/5: No DB match for '@item Name dmc_gloves 01 0hl 02'
+[17:40:22]     [RETRY] 2/5: No DB match for '@item Name dmc_gloves 01 0hl 02'
+[17:40:24]     [RETRY] 3/5: No DB match for '@item Name dmc_gloves 01 0hl 02'
+[17:40:25]     [RETRY] 4/5: No DB match for '@item Name dmc_gloves 01 0hl 02'
+[17:40:26]     [FAILED] OCR: '@item Name dmc_gloves 01 0hl 02' - No DB match after 5 attempts
+[17:40:26]   [EMPTY] Checking for next page...
+[17:40:26] [BUTTON] Brightness: 75.0 → Active
+[17:40:26]   [ACTIVE] More pages available → Continuing
+[17:40:28]   → Ridgely Jacket Highland (#1)
+[17:40:29]   → Gilick Boots (#2)
+[17:40:30]   → SafeCore Boots Tosca (#1)
+[17:40:31]   → Aranda Shirt Crusader Edition (#1)
+[17:40:33]   → Tuvois Jacket Blue (#1)
+[17:40:34]   → Vivant Shoes Dark Blue (#1)
+[17:40:35]   → Vivant Shoes Grey (#1)
+[17:40:37]   → Prim Shoes Orange (#1)
+[17:40:38]     [RETRY] OCR text found but no DB match → max attempts: 5
+[17:40:38]     [RETRY] 1/5: No DB match for '@item Name dmc_gloves 01 0hl 02'
+[17:40:39]     [RETRY] 2/5: No DB match for '@item Name dmc_gloves 01 0hl 02'
+[17:40:41]     [RETRY] 3/5: No DB match for '@item Name dmc_gloves 01 0hl 02'
+[17:40:42]     [RETRY] 4/5: No DB match for '@item Name dmc_gloves 01 0hl 02'
+[17:40:43]     [FAILED] OCR: '@item Name dmc_gloves 01 0hl 02' - No DB match after 5 attempts
+[17:40:43]   [EMPTY] Checking for next page...
+[17:40:43] [BUTTON] Brightness: 75.0 → Active
+[17:40:43]   [ACTIVE] More pages available → Continuing
+[17:40:45]   → Millrun Waders Calypso (#1)
+[17:40:46]   → Radford Shirt Crusader Edition White Grid (#1)
+[17:40:47]   → Giotto Jacket Crusader Edition Purple Pinstripe (#1)
+[17:40:49]   → Koya Pants White Pinstripe (#1)
+[17:40:50]   → Auditor Pants Grey (#1)
+[17:40:51]   → Koya Pants Dark Blue (#1)
+[17:40:52]   → Prim Shoes Blue (#1)
+[17:40:54]   → Ridgewalker Boots (Modified 9T) (#1)
+[17:40:55]   → Prim Shoes Orange (#2)
+[17:40:56]   → Ivers Boots White (#1)
+[17:40:56]   Items found
+[17:40:56]   Scrollbar detection (distance: 322px)...
+[17:40:56]   Scrollbar found: Y=610, Bottom=743, Height=267px
+[17:40:56]   Dragging from X=1795, Y=610, distance=322px
+[17:40:57]   Scrolled (block 2)
+[17:40:57] 
+=== SCANNING BLOCK 3 ===
+[17:40:57]   Block 3: 8 rows, 97px step, drift -0px
+[17:40:59]   → Ponos Boots Grey (#2)
+[17:41:00]   → Kino Shoes Tan (#1)
+[17:41:01]   → Kamar Jacket Light Blue (#1)
+[17:41:03]   → Aranda Shirt Crusader Edition Purple/Ivory (#1)
+[17:41:04]   → Lillo Pants Blue (#1)
+[17:41:05]   → Waldron Jacket White (#1)
+[17:41:06]   → Lillo Pants (#2)
+[17:41:08]   → Giotto Jacket Crusader Edition Dark Blue (#1)
+[17:41:09]   → De Leon Shoes Black (#1)
+[17:41:10]   → Radford Shirt (#1)
+[17:41:11]   → Giotto Jacket Crusader Edition Dark Blue (#2)
+[17:41:13]   → Bibiana Shirt (#1)
+[17:41:14]   → Bibiana Shirt (#2)
+[17:41:15]   → Lux Pants (#1)
+[17:41:16]   → Lux Pants (#2)
+[17:41:18]   → De Leon Shoes Black (#2)
+[17:41:19]   → Radford Shirt (#2)
+[17:41:20]   → De Leon Shoes Black (#3)
+[17:41:22]   → Pacifica Hat (#1)
+[17:41:23]   → Bibiana Shirt (#3)
+[17:41:24]   → Lux Pants (#3)
+[17:41:25]   → De Leon Shoes Black (#4)
+[17:41:27]   → Morozov-SH Arms Thule (#1)
+[17:41:28]   → Morozov-SH Core Vesper (#1)
+[17:41:29]   → Balor HCH Helmet Crusader Edition (#1)
+[17:41:30]   → ADP Legs Crusader Edition (#1)
+[17:41:32]   → Pembroke Helmet (#1)
+[17:41:33]   → ADP Arms Orange (#2)
+[17:41:34]   → Venture Arms "Rust Society" (#1)
+[17:41:36]   → Morozov-SH-C Helmet Terrene (#1)
+[17:41:37]   → ADP Legs Violet (#1)
+[17:41:38]   → Oracle Helmet Blue (#1)
+[17:41:38]   Items found
+[17:41:38] 
 → Scrolling to last row...
-[16:50:56]   Scrolling 40px down (1 row)
-[16:50:56] 
+[17:41:38]   Scrolling 40px down (1 row)
+[17:41:39] 
 === SCANNING LAST ROW (25) ===
-[16:50:56]   Scanning at Y=974 (tile height: 86px)
-[16:50:58]     [RETRY] OCR text found but no DB match → max attempts: 5
-[16:50:58]     [RETRY] 1/5: No DB match for '21uf Gloves'
-[16:50:59]     [RETRY] 2/5: No DB match for 'Z1uf Gloves'
-[16:51:00]     [RETRY] 3/5: No DB match for 'Z1uf Gloves'
-[16:51:01]     [RETRY] 4/5: No DB match for 'Z1uf Gloves'
-[16:51:03]     [FAILED] OCR: 'ztuf Gloves' - No DB match after 5 attempts
-[16:51:03]   [EMPTY] Checking for next page...
-[16:51:03] [BUTTON] Brightness: 74.7 → Active
-[16:51:03]   [ACTIVE] More pages available → Continuing
-[16:51:04]   → Arcus Gloves Yellow (#1)
-[16:51:05]   → Debnam Gloves Orange (#2)
-[16:51:06]   → Fractus Gloves Maroon (#1)
-[16:51:06] 
+[17:41:39]   Scanning at Y=974 (tile height: 86px)
+[17:41:40]   → Inquisitor Arms Icefall (#3)
+[17:41:41]   → ORC-mkX Helmet Justified (#1)
+[17:41:43]   → ORC-mkV Legs Purple (#1)
+[17:41:44]   → Prim Shoes (#1)
+[17:41:44] 
 → Final button check...
-[16:51:07] [BUTTON] Brightness: 74.7 → Active
-[16:51:07] [ACTIVE] Clicking next page button
-[16:51:07]   Waiting 5s for inventory to load...
-[16:51:12]   Ready for next page
+[17:41:44] [BUTTON] Brightness: 75.0 → Active
+[17:41:44] [ACTIVE] Clicking next page button
+[17:41:44]   Waiting 5s for inventory to load...
+[17:41:49]   Ready for next page
 
-[16:51:12] 
+[17:41:49] 
 ================================================================================
-[16:51:12] PAGE #7
-[16:51:12] ================================================================================
+[17:41:49] PAGE #8
+[17:41:49] ================================================================================
 
-[16:51:12] 
-=== SCANNING BLOCK 13 ===
-[16:51:12]   Block 13: 8 rows, 97px step, drift -0px
-[16:51:13]   → Debnam Gloves (Modified 9T) (#1)
-[16:51:14]   → Badami Gloves Deadwood (#4)
-[16:51:16]   → Davin Work Gloves Seagreen (#1)
-[16:51:17]   → Lillo Pants Violet (#2)
-[16:51:18]   → Adiva Jacket Violet (#1)
-[16:51:19]   → Ketchum Beanie Black (#1)
-[16:51:21]   → Sorel Hat Armadillo (#1)
-[16:51:22]   → Calister Jacket Armadillo (#1)
-[16:51:23]   → Clempt Pants Grey (#1)
-[16:51:24]   → WorkLife Pants Black (#5)
-[16:51:25]   → Cumulus Pants Purple (#1)
-[16:51:27]   → Clempt Pants Grey (#2)
-[16:51:28]   → Ardent Boots Imperial (#1)
-[16:51:29]   → Parasite Replica Helmet (#1)
-[16:51:31]   → Oracle Helmet Rager (#1)
-[16:51:32]   → Star Kitten Sally Helmet (#1)
-[16:51:33]   → Star Kitten Damon Helmet (#1)
-[16:51:34]   → Morningstar Helmet (Modified) (#1)
-[16:51:36]   → Exo-8 Helmet (Used) (#1)
-[16:51:37]   → Star Kitten Damon Helmet (#2)
-[16:51:38]   → ORC-mkV Core Sakura Sun Edition (#1)
-[16:51:40]   → Inquisitor Core Icefall (#2)
-[16:51:41]   → Inquisitor Arms Neon Pink (#2)
-[16:51:42]   → MacFlex Legs Violet (#1)
-[16:51:43]   → ORC-mkX Helmet (XenoThreat) (#1)
-[16:51:45]   → ORC-mkX Arms (XenoThreat) (#1)
-[16:51:46]   → Inquisitor Legs Base (#3)
-[16:51:47]   → Morozov-SH Core (#1)
-[16:51:48]   → Aztalan Helmet (#1)
-[16:51:50]   → Adroit Gloves Indigo (#2)
-[16:51:51]   → Venture Helmet Black (#1)
-[16:51:52]   → PAB-1 Legs Aqua (#1)
-[16:51:52]   Items found
-[16:51:52]   Scrollbar detection (distance: 322px)...
-[16:51:52]   Scrollbar found: Y=352, Bottom=485, Height=266px
-[16:51:52]   Dragging from X=1795, Y=352, distance=322px
-[16:51:53]   Scrolled (block 13)
-[16:51:53] 
-=== SCANNING BLOCK 14 ===
-[16:51:53]   Block 14: 8 rows, 97px step, drift -0px
-[16:51:55]   → Balor HCH Helmet Imperial (#1)
-[16:51:56]   → Hardline Hard Hat White (#2)
-[16:51:57]   → Gilick Boots (#1)
-[16:51:58]   → MacFlex Arms Orange (#1)
-[16:52:00]   → ORC-mkV Core Aqua (#1)
-[16:52:01]   → ORC-mkX Arms (XenoThreat) (#2)
-[16:52:02]   → A23 Helmet Woodland (#1)
-[16:52:04]   → Inquisitor Arms Blue (#1)
-[16:52:05]   → TrueDef-Pro Legs Black/Gold/Silver (#1)
-[16:52:06]   → Morozov-SH Arms Brushdrift (#2)
-[16:52:08]   → Inquisitor Arms Roughshod (#2)
-[16:52:09]   → FBL-8a Legs Arctic Digital (#1)
-[16:52:10]     [RETRY] OCR text found but no DB match → max attempts: 5
-[16:52:10]     [RETRY] 1/5: No DB match for '@item Name dmc_gloves op ol 02'
-[16:52:12]     [RETRY] 2/5: No DB match for '@item Name dmc_gloves 01 oi 02'
-[16:52:13]     [RETRY] 3/5: No DB match for '@item Name dmc_gloves 0il 0h 02'
-[16:52:14]     [RETRY] 4/5: No DB match for '@item Name dmc_gloves 01 oi 02'
-[16:52:16]     [FAILED] OCR: '@item Name dmc_gloves 01 @h 02' - No DB match after 5 attempts
-[16:52:16]   [EMPTY] Checking for next page...
-[16:52:16] [BUTTON] Brightness: 74.7 → Active
-[16:52:16]   [ACTIVE] More pages available → Continuing
-[16:52:17]   → Ridgely Jacket Highland (#1)
-[16:52:18]   → Gilick Boots (#2)
-[16:52:20]   → SafeCore Boots Tosca (#1)
-[16:52:21]   → Aranda Shirt Crusader Edition (#1)
-[16:52:22]   → Tuvois Jacket Blue (#1)
-[16:52:23]   → Vivant Shoes Dark Blue (#1)
-[16:52:25]   → Vivant Shoes Grey (#1)
-[16:52:26]   → Prim Shoes Orange (#1)
-[16:52:27]     [RETRY] OCR text found but no DB match → max attempts: 5
-[16:52:27]     [RETRY] 1/5: No DB match for '@item Name dmc_gloves 01 0h 02'
-[16:52:29]     [RETRY] 2/5: No DB match for '@item Name dmc_gloves oi 0h 02'
-[16:52:30]     [RETRY] 3/5: No DB match for '@item Name dmc_gloves 01 Du 02'
-[16:52:31]     [RETRY] 4/5: No DB match for '@item Name dmc_gloves 01 oi 02'
-[16:52:33]     [FAILED] OCR: '@item Name dmc gloves 0l 0 02' - No DB match after 5 attempts
-[16:52:33]   [EMPTY] Checking for next page...
-[16:52:33] [BUTTON] Brightness: 74.7 → Active
-[16:52:33]   [ACTIVE] More pages available → Continuing
-[16:52:34]   → Millrun Waders Calypso (#1)
-[16:52:35]   → Radford Shirt Crusader Edition White Grid (#1)
-[16:52:37]   → Giotto Jacket Crusader Edition Purple Pinstripe (#1)
-[16:52:38]   → Koya Pants White Pinstripe (#1)
-[16:52:39]   → Auditor Pants Grey (#1)
-[16:52:40]   → Koya Pants Dark Blue (#1)
-[16:52:42]   → Prim Shoes Blue (#1)
-[16:52:43]   → Ridgewalker Boots (Modified 9T) (#1)
-[16:52:44]   → Prim Shoes Orange (#2)
-[16:52:45]   → Ivers Boots White (#1)
-[16:52:45]   Items found
-[16:52:45]   Scrollbar detection (distance: 322px)...
-[16:52:46]   Scrollbar found: Y=610, Bottom=743, Height=267px
-[16:52:46]   Dragging from X=1795, Y=610, distance=322px
-[16:52:47]   Scrolled (block 14)
-[16:52:47] 
-=== SCANNING BLOCK 15 ===
-[16:52:47]   Block 15: 8 rows, 97px step, drift -0px
-[16:52:48]   → Ponos Boots Grey (#2)
-[16:52:49]   → Kino Shoes Tan (#1)
-[16:52:50]   → Kamar Jacket Light Blue (#1)
-[16:52:52]   → Aranda Shirt Crusader Edition Purple/Ivory (#1)
-[16:52:53]   → Lillo Pants Blue (#1)
-[16:52:54]   → Waldron Jacket White (#1)
-[16:52:55]   → Lillo Pants (#2)
-[16:52:57]   → Giotto Jacket Crusader Edition Dark Blue (#1)
-[16:52:58]   → De Leon Shoes Black (#1)
-[16:52:59]   → Radford Shirt (#1)
-[16:53:01]   → Giotto Jacket Crusader Edition Dark Blue (#2)
-[16:53:02]   → Bibiana Shirt (#1)
-[16:53:03]   → Bibiana Shirt (#2)
-[16:53:04]   → Lux Pants (#1)
-[16:53:05]   → Lux Pants (#2)
-[16:53:07]   → De Leon Shoes Black (#2)
-[16:53:08]   → Radford Shirt (#2)
-[16:53:09]   → De Leon Shoes Black (#3)
-[16:53:11]   → Pacifica Hat (#1)
-[16:53:12]   → Bibiana Shirt (#3)
-[16:53:13]   → Lux Pants (#3)
-[16:53:14]   → De Leon Shoes Black (#4)
-[16:53:16]   → Morozov-SH Arms Thule (#1)
-[16:53:17]   → Morozov-SH Core Vesper (#1)
-[16:53:18]   → Balor HCH Helmet Crusader Edition (#1)
-[16:53:19]   → ADP Legs Crusader Edition (#1)
-[16:53:21]   → Pembroke Helmet (#1)
-[16:53:22]   → ADP Arms Orange (#2)
-[16:53:23]   → Venture Arms "Rust Society" (#1)
-[16:53:25]   → Morozov-SH Helmet Terrene (#1)
-[16:53:26]   → ADP Legs Violet (#1)
-[16:53:27]   → Oracle Helmet Blue (#1)
-[16:53:27]   Items found
-[16:53:27] 
+[17:41:49] 
+=== SCANNING BLOCK 1 ===
+[17:41:49]   Block 1: 8 rows, 97px step, drift -0px
+[17:41:50]   → Morningstar Helmet Violet (#1)
+[17:41:52]   → ADP Core (#1)
+[17:41:53]   → Balor HCH Helmet Black (#1)
+[17:41:54]   → ORC-mkX Helmet Arctic (#1)
+[17:41:56]   → ORC-mkX Arms Arctic (#1)
+[17:41:57]   → Defiance Legs (Modified) (#1)
+[17:41:58]   → ORC-mkX Core Arctic (#1)
+[17:41:59]   → Tona Shoes Olive (#1)
+[17:42:01]   → ADP Arms Woodland (#1)
+[17:42:02]   → ADP Arms (Modified) (#1)
+[17:42:03]   → Balor HCH Helmet Grey (#2)
+[17:42:05]   → Oracle Helmet Firebrick (#2)
+[17:42:06]   → Pacifica Hat (#2)
+[17:42:07]   → Adroit Gloves Sage (#1)
+[17:42:08]   → Adroit Gloves Olive (#2)
+[17:42:10]   → Balor HCH Helmet Black (#2)
+[17:42:11]   → Adroit Gloves Indigo (#3)
+[17:42:12]   → ORC-mkX Helmet (XenoThreat v2) (#2)
+[17:42:13]   → Inquisitor Core Black Steel (#1)
+[17:42:15]   → ORC-mkX Core (XenoThreat v2) (#1)
+[17:42:16]     [RETRY] OCR text found but no DB match → max attempts: 5
+[17:42:16]     [RETRY] 1/5: No DB match for 'Snapback Boots'
+[17:42:17]     [RETRY] 2/5: No DB match for 'Snapback Boots'
+[17:42:19]     [RETRY] 3/5: No DB match for 'Snapback Boots'
+[17:42:20]     [RETRY] 4/5: No DB match for 'Snapback Boots'
+[17:42:21]     [FAILED] OCR: 'Snapback Boots' - No DB match after 5 attempts
+[17:42:21]   [EMPTY] Checking for next page...
+[17:42:21] [BUTTON] Brightness: 75.0 → Active
+[17:42:21]   [ACTIVE] More pages available → Continuing
+[17:42:23]   → Balor HCH Helmet Imperial (#2)
+[17:42:24]   → Morozov-SH Arms Thule (#2)
+[17:42:25]   → Morozov-SH Arms Terracotta (#2)
+[17:42:27]   → Inquisitor Arms Brimstone (#1)
+[17:42:28]   → Neoni Tengubi Helmet (#1)
+[17:42:29]   → ADP Arms Green (#1)
+[17:42:31]   → Venture Core White (#1)
+[17:42:32]   → Badami Gloves Deadwood (#5)
+[17:42:33]   → ORC-mkX Core (XenoThreat) (#1)
+[17:42:34]   → ORC-mkV Core Green (#1)
+[17:42:36]   → PAB-1 Core Green (#1)
+[17:42:36]   Items found
+[17:42:36]   Scrollbar detection (distance: 322px)...
+[17:42:36]   Scrollbar found: Y=352, Bottom=485, Height=266px
+[17:42:36]   Dragging from X=1795, Y=352, distance=322px
+[17:42:37]   Scrolled (block 1)
+[17:42:37] 
+=== SCANNING BLOCK 2 ===
+[17:42:37]   Block 2: 8 rows, 97px step, drift -0px
+[17:42:38]   → Aves Shrike Arms (#2)
+[17:42:40]   → Overlord Arms Predator (#2)
+[17:42:41]   → MacFlex Core Twilight (#1)
+[17:42:42]   → Odyssey II Helmet White (#1)
+[17:42:43]   → Aztalan Arms (#2)
+[17:42:45]   → Lynx Arms Lichen (#1)
+[17:42:46]   → ORC-mkX Helmet Autumn (#1)
+[17:42:47]   → Fortifier Helmet Base (#1)
+[17:42:49]   → Argus Helmet Black/White/Violet (#1)
+[17:42:50]   → Morozov-SH Arms Spite (#1)
+[17:42:51]   → Inquisitor Core Earthwork (#1)
+[17:42:52]   → Aztalan Arms (#3)
+[17:42:54]   → Face Melter T-Shirt (#2)
+[17:42:55]   → Lynx Arms (Modified) (#1)
+[17:42:56]   → UrbEx Boots Grey (#2)
+[17:42:58]   → Overlord Arms Stinger (#1)
+[17:42:59]   → Lux Pants (#4)
+[17:43:00]   → Aves Talon Core (#2)
+[17:43:02]   → Ardent Boots White (#1)
+[17:43:03]   → Ridgewalker Boots (Modified 9T) (#2)
+[17:43:04]   → Prim Shoes Twilight (#1)
+[17:43:05]   → Prim Shoes (Modified 9T) (#1)
+[17:43:07]   → Cleo Pants Dark Blue (#1)
+[17:43:08]   → Geist Armor Arms Golden Blossom (#1)
+[17:43:09]   → Geist Armor Core Golden Blossom (#1)
+[17:43:11]   → Geist Armor Helmet Golden Blossom (#1)
+[17:43:12]   → Geist Armor Legs Golden Blossom (#1)
+[17:43:13]   → Odyssey II Helmet Black (#1)
+[17:43:14]   → Lynx Core Ferrum (#1)
+[17:43:16]   → ADP Arms Blue (#1)
+[17:43:17]   → Calico Legs (Modified) (#1)
+[17:43:18]   → MacFlex Core Tan (#1)
+[17:43:18]   Items found
+[17:43:18]   Scrollbar detection (distance: 322px)...
+[17:43:18]   Scrollbar found: Y=610, Bottom=743, Height=267px
+[17:43:18]   Dragging from X=1795, Y=610, distance=322px
+[17:43:19]   Scrolled (block 2)
+[17:43:19] 
+=== SCANNING BLOCK 3 ===
+[17:43:19]   Block 3: 8 rows, 97px step, drift -0px
+[17:43:21]   → Carbide Jacket Sandpiper (#1)
+[17:43:22]   → Landlite Boots Olive (#1)
+[17:43:23]   → Morningstar Helmet Icefall (#1)
+[17:43:24]   → MacFlex Core White (#2)
+[17:43:26]   → MacFlex Arms "Rust Society" (#1)
+[17:43:27]   → Venture Helmet Grey (#1)
+[17:43:28]   → Morozov-SH-I Core Pyrotechnic (#1)
+[17:43:30]   → Lynx Arms Black (#1)
+[17:43:31]   → Zelena Pants Conifer and Bisbee Boots (#1)
+[17:43:32]   → Ridgely Jacket Wavelength (#1)
+[17:43:33]   → Aztalan Tamarack Core (#1)
+[17:43:35]   → ADP-mk4 Core Woodland (#1)
+[17:43:36]   → ORC-mkV Legs Black (#1)
+[17:43:37]   → Morozov-SH-C Helmet Spite (#1)
+[17:43:39]   → Renegade Helmet Desert (#1)
+[17:43:40]   → PAB-1 Arms Desert (#1)
+[17:43:41]   → Nyman Jacket Black (#1)
+[17:43:42]   → ORC-mkX Legs Autumn (#1)
+[17:43:44]   → Pembroke Helmet RSI Ivory Edition (#1)
+[17:43:45]   → Ventra Gloves Blue (#1)
+[17:43:46]   → Ati Jacket Dark Red (#1)
+[17:43:47]   → ORC-mkX Arms Singularity (#1)
+[17:43:49]   → Neoni Jami Helmet (#2)
+[17:43:50]   → Venture Core Seagreen (#1)
+[17:43:51]   → Lynx Core Aqua (#1)
+[17:43:52]   → PAB-1 Core Sakura Sun Edition (#1)
+[17:43:54]   → Venture Core Pathfinder (#2)
+[17:43:55]   → Odyssey II Helmet Tan (#1)
+[17:43:56]   → CBH-3 Helmet Sakura Sun Edition (#1)
+[17:43:58]   → Balor HCH Helmet Yellow (#1)
+[17:43:59]   → TrueDef-Pro Arms Grey/Green (#1)
+[17:44:00]   → ADP Core Violet (#1)
+[17:44:00]   Items found
+[17:44:00] 
 → Scrolling to last row...
-[16:53:27]   Scrolling 40px down (1 row)
-[16:53:28] 
+[17:44:00]   Scrolling 40px down (1 row)
+[17:44:01] 
 === SCANNING LAST ROW (25) ===
-[16:53:28]   Scanning at Y=974 (tile height: 86px)
-[16:53:29]   → Inquisitor Arms Icefall (#3)
-[16:53:30]   → ORC-mkX Helmet Justified (#1)
-[16:53:32]   → ORC-mkV Legs Purple (#1)
-[16:53:33]   → Prim Shoes (#1)
-[16:53:33] 
+[17:44:01]   Scanning at Y=974 (tile height: 86px)
+[17:44:02]   → Venture Arms Voyager (#1)
+[17:44:03]   → Odyssey II Helmet Obsidian (#1)
+[17:44:05]   → Venture Helmet Carrack Edition (#1)
+[17:44:06]   → Arden-SL Core Balefire (#1)
+[17:44:06] 
 → Final button check...
-[16:53:33] [BUTTON] Brightness: 74.6 → Active
-[16:53:33] [ACTIVE] Clicking next page button
-[16:53:33]   Waiting 5s for inventory to load...
-[16:53:38]   Ready for next page
+[17:44:06] [BUTTON] Brightness: 75.0 → Active
+[17:44:06] [ACTIVE] Clicking next page button
+[17:44:06]   Waiting 5s for inventory to load...
+[17:44:11]   Ready for next page
 
-[16:53:38] 
+[17:44:11] 
 ================================================================================
-[16:53:38] PAGE #8
-[16:53:38] ================================================================================
+[17:44:11] PAGE #9
+[17:44:11] ================================================================================
 
-[16:53:38] 
-=== SCANNING BLOCK 15 ===
-[16:53:38]   Block 15: 8 rows, 97px step, drift -0px
-[16:53:39]   → Morningstar Helmet Violet (#1)
-[16:53:40]   → ADP Core (#1)
-[16:53:42]   → Balor HCH Helmet Black (#1)
-[16:53:43]   → ORC-mkX Helmet Arctic (#1)
-[16:53:44]   → ORC-mkX Arms Arctic (#1)
-[16:53:46]   → Defiance Legs (Modified) (#1)
-[16:53:47]   → ORC-mkX Core Arctic (#1)
-[16:53:48]   → Tona Shoes Olive (#1)
-[16:53:50]   → ADP Arms Woodland (#1)
-[16:53:51]   → ADP Arms (Modified) (#1)
-[16:53:52]   → Balor HCH Helmet Grey (#2)
-[16:53:53]   → Oracle Helmet Firebrick (#1)
-[16:53:55]   → Pacifica Hat (#2)
-[16:53:56]   → Adroit Gloves Sage (#1)
-[16:53:57]   → Adroit Gloves Olive (#2)
-[16:53:59]   → Balor HCH Helmet Black (#2)
-[16:54:00]   → Adroit Gloves Indigo (#3)
-[16:54:01]   → ORC-mkX Helmet (XenoThreat v2) (#2)
-[16:54:02]   → Inquisitor Core Black Steel (#1)
-[16:54:04]   → ORC-mkX Core (XenoThreat v2) (#1)
-[16:54:05]     [RETRY] OCR text found but no DB match → max attempts: 5
-[16:54:05]     [RETRY] 1/5: No DB match for 'Snapback Boots'
-[16:54:06]     [RETRY] 2/5: No DB match for 'Snapback Boots'
-[16:54:08]     [RETRY] 3/5: No DB match for 'Snapback Boots'
-[16:54:09]     [RETRY] 4/5: No DB match for 'Snapback Boots'
-[16:54:10]     [FAILED] OCR: 'Snapback Boots' - No DB match after 5 attempts
-[16:54:10]   [EMPTY] Checking for next page...
-[16:54:10] [BUTTON] Brightness: 74.6 → Active
-[16:54:10]   [ACTIVE] More pages available → Continuing
-[16:54:12]   → Balor HCH Helmet Imperial (#2)
-[16:54:13]   → Morozov-SH Arms Thule (#2)
-[16:54:14]   → Morozov-SH Arms Terracotta (#2)
-[16:54:16]   → Inquisitor Arms Brimstone (#1)
-[16:54:17]   → Neoni Tengubi Helmet (#1)
-[16:54:18]   → ADP Arms Green (#1)
-[16:54:19]   → Venture Core White (#1)
-[16:54:21]   → Badami Gloves Deadwood (#5)
-[16:54:22]   → ORC-mkX Core (XenoThreat) (#1)
-[16:54:23]   → ORC-mkV Core Green (#1)
-[16:54:24]   → PAB-1 Core Green (#1)
-[16:54:24]   Items found
-[16:54:24]   Scrollbar detection (distance: 322px)...
-[16:54:24]   Scrollbar found: Y=352, Bottom=485, Height=266px
-[16:54:24]   Dragging from X=1795, Y=352, distance=322px
-[16:54:26]   Scrolled (block 15)
-[16:54:26] 
-=== SCANNING BLOCK 16 ===
-[16:54:26]   Block 16: 8 rows, 97px step, drift -0px
-[16:54:27]   → Aves Shrike Arms (#2)
-[16:54:28]   → Overlord Arms Predator (#2)
-[16:54:29]   → MacFlex Core Twilight (#1)
-[16:54:31]   → Odyssey II Helmet White (#1)
-[16:54:32]   → Aztalan Arms (#2)
-[16:54:33]   → Lynx Arms Lichen (#1)
-[16:54:35]   → ORC-mkX Helmet Autumn (#1)
-[16:54:36]   → Fortifier Helmet Base (#1)
-[16:54:37]   → Argus Helmet Black/White/Violet (#1)
-[16:54:38]   → Morozov-SH Arms Spite (#1)
-[16:54:40]   → Inquisitor Core Earthwork (#1)
-[16:54:41]   → Aztalan Arms (#3)
-[16:54:42]   → Face Melter T-Shirt (#2)
-[16:54:44]   → Lynx Arms (Modified) (#1)
-[16:54:45]   → UrbEx Boots Grey (#2)
-[16:54:46]   → Overlord Arms Stinger (#1)
-[16:54:47]   → Lux Pants (#4)
-[16:54:49]   → Aves Talon Core (#2)
-[16:54:50]   → Ardent Boots White (#1)
-[16:54:51]   → Ridgewalker Boots (Modified 9T) (#2)
-[16:54:52]   → Prim Shoes Twilight (#1)
-[16:54:54]   → Prim Shoes (Modified 9T) (#1)
-[16:54:55]   → Cleo Pants Dark Blue (#1)
-[16:54:56]   → Geist Armor Arms Golden Blossom (#1)
-[16:54:58]   → Geist Armor Core Golden Blossom (#1)
-[16:54:59]   → Geist Armor Helmet Golden Blossom (#1)
-[16:55:00]   → Geist Armor Legs Golden Blossom (#1)
-[16:55:01]   → Odyssey II Helmet Black (#1)
-[16:55:03]   → Lynx Core Ferrum (#1)
-[16:55:04]   → ADP Arms Blue (#1)
-[16:55:05]   → Calico Legs (Modified) (#1)
-[16:55:06]   → MacFlex Core Tan (#1)
-[16:55:06]   Items found
-[16:55:06]   Scrollbar detection (distance: 322px)...
-[16:55:06]   Scrollbar found: Y=610, Bottom=743, Height=267px
-[16:55:06]   Dragging from X=1795, Y=610, distance=322px
-[16:55:07]   Scrolled (block 16)
-[16:55:07] 
-=== SCANNING BLOCK 17 ===
-[16:55:07]   Block 17: 8 rows, 97px step, drift -0px
-[16:55:09]   → Carbide Jacket Sandpiper (#1)
-[16:55:10]   → Landlite Boots Olive (#1)
-[16:55:11]   → Morningstar Helmet Icefall (#1)
-[16:55:12]   → MacFlex Core White (#2)
-[16:55:14]   → MacFlex Arms "Rust Society" (#1)
-[16:55:15]   → Venture Helmet Grey (#1)
-[16:55:16]   → Morozov-SH-I Core Pyrotechnic (#1)
-[16:55:18]   → Lynx Arms Black (#1)
-[16:55:19]   → Zelena Pants Conifer and Bisbee Boots (#1)
-[16:55:20]   → Ridgely Jacket Wavelength (#1)
-[16:55:21]   → Aztalan Tamarack Core (#1)
-[16:55:23]   → ADP-mk4 Core Woodland (#1)
-[16:55:24]   → ORC-mkV Legs Black (#1)
-[16:55:25]   → Morozov-SH-C Helmet Spite (#1)
-[16:55:27]   → Renegade Helmet Desert (#1)
-[16:55:28]   → PAB-1 Arms Desert (#1)
-[16:55:29]   → Nyman Jacket Black (#1)
-[16:55:30]   → ORC-mkX Legs Autumn (#1)
-[16:55:32]   → Pembroke Helmet RSI Ivory Edition (#1)
-[16:55:33]   → Ventra Gloves Blue (#1)
-[16:55:34]   → Ati Jacket Dark Red (#1)
-[16:55:36]   → ORC-mkX Arms Singularity (#1)
-[16:55:37]   → Neoni Jami Helmet (#2)
-[16:55:38]   → Venture Core Seagreen (#1)
-[16:55:39]   → Lynx Core Aqua (#1)
-[16:55:40]   → PAB-1 Core Sakura Sun Edition (#1)
-[16:55:42]   → Venture Core Pathfinder (#2)
-[16:55:43]   → Odyssey II Helmet Tan (#1)
-[16:55:44]   → CBH-3 Helmet Sakura Sun Edition (#1)
-[16:55:46]   → Balor HCH Helmet Yellow (#1)
-[16:55:47]   → TrueDef-Pro Arms Grey/Green (#1)
-[16:55:48]   → ADP Core Violet (#1)
-[16:55:48]   Items found
-[16:55:48] 
-→ Scrolling to last row...
-[16:55:48]   Scrolling 40px down (1 row)
-[16:55:49] 
-=== SCANNING LAST ROW (25) ===
-[16:55:49]   Scanning at Y=974 (tile height: 86px)
-[16:55:50]   → Venture Arms Voyager (#1)
-[16:55:51]   → Odyssey II Helmet Obsidian (#1)
-[16:55:53]   → Venture Helmet Carrack Edition (#1)
-[16:55:54]   → Arden-SL Core Balefire (#1)
-[16:55:54] 
-→ Final button check...
-[16:55:54] [BUTTON] Brightness: 74.6 → Active
-[16:55:54] [ACTIVE] Clicking next page button
-[16:55:54]   Waiting 5s for inventory to load...
-[16:55:59]   Ready for next page
-
-[16:55:59] 
-================================================================================
-[16:55:59] PAGE #9
-[16:55:59] ================================================================================
-
-[16:55:59] 
-=== SCANNING BLOCK 17 ===
-[16:55:59]   Block 17: 8 rows, 97px step, drift -0px
-[16:56:00]   → Arden-SL Helmet Balefire (#1)
-[16:56:01]   → Arden-SL Legs Balefire (#1)
-[16:56:03]   → Arden-SL Arms Balefire (#3)
-[16:56:04]   → Falston Jumpsuit (#3)
-[16:56:05]   → Cuesta Shoes (#1)
-[16:56:07]   → Future Navy Pilot T-Shirt (#1)
-[16:56:08]   → Mirai Racing Helmet (#3)
-[16:56:09]   → Falston Jumpsuit "Red Wind Edition" (#1)
-[16:56:10]   → microTech Hat (#1)
-[16:56:12]   → Lynx Core Black (#1)
-[16:56:13]   → Strata Core microTech Edition (#1)
-[16:56:14]   → Strata Arms microTech Edition (#1)
-[16:56:15]   → Strata Legs microTech Edition (#1)
-[16:56:17]   → Strata Helmet microTech Edition (#1)
-[16:56:18]   → Misfit Jacket Veritas (#1)
-[16:56:19]   → Chrome Dome Head Gear Minefield (#1)
-[16:56:21]   → Grappler Gloves Veritas (#1)
-[16:56:22]   → Bibiana Shirt (#4)
-[16:56:23]   → Navoi Boots and Pants Veritas (#1)
-[16:56:24]   → ADP-mk4 Legs Woodland (#1)
-[16:56:26]   → ADP Core Olive (#1)
-[16:56:27]   → ADP Arms Olive (#1)
-[16:56:28]   → ADP-mk4 Helmet Woodland (#1)
-[16:56:29]   → Odyssey II Helmet Alpha (#1)
-[16:56:31]   → Cumulus Jacket Red (#1)
-[16:56:32]   → Stratus Jacket Maroon (#1)
-[16:56:33]   → Samya Tank Rosewood (#2)
-[16:56:35]   → Tuvic Outerwear Jacket Crimson (#3)
-[16:56:36]   → Alban Shirt Smoke (#1)
-[16:56:37]   → Zelena Pants and Tall Bisbee Boots (#1)
-[16:56:38]   → Strata Helmet Onyx (#3)
-[16:56:40]   → Overlord Legs Supernova (#1)
-[16:56:40]   Items found
-[16:56:40]   Scrollbar detection (distance: 322px)...
-[16:56:40]   Scrollbar found: Y=498, Bottom=777, Height=558px
-[16:56:40]   Dragging from X=1795, Y=498, distance=322px
-[16:56:41]   Scrolled (block 17)
-[16:56:41] 
-=== SCANNING BLOCK 18 ===
-[16:56:41]   Block 18: 8 rows, 97px step, drift -0px
-[16:56:42]   → Grappler Gloves Veritas (#2)
-[16:56:43]   → Bibiana Shirt (#5)
-[16:56:45]   → Navoi Boots and Pants Veritas (#2)
-[16:56:46]   → ADP-mk4 Legs Woodland (#2)
-[16:56:47]   → ADP Core Olive (#2)
-[16:56:48]   → ADP Arms Olive (#2)
-[16:56:50]   → ADP-mk4 Helmet Woodland (#2)
-[16:56:51]   → Odyssey II Helmet Alpha (#2)
-[16:56:52]   → Cumulus Jacket Red (#2)
-[16:56:54]   → Stratus Jacket Maroon (#2)
-[16:56:55]   → Samya Tank Rosewood (#3)
-[16:56:56]   → Tuvic Outerwear Jacket Crimson (#4)
-[16:56:57]   → Alban Shirt Smoke (#2)
-[16:56:59]   → Zelena Pants and Tall Bisbee Boots (#2)
-[16:57:00]   → Strata Helmet Onyx (#4)
-[16:57:01]   → Overlord Legs Supernova (#2)
-[16:57:02]   → Citadel Legs Base (#1)
-[16:57:04]   → Overlord Core Riptide (#1)
-[16:57:05]   → Voidripper Helmet (#2)
-[16:57:06]   → Clash Core (#1)
-[16:57:07]   → Aztalan Helmet (#2)
-[16:57:09]   → Geist Armor Core Desert (#1)
-[16:57:10]   → Geist Armor Arms Desert (#1)
-[16:57:11]   → Geist Armor Legs Desert (#1)
-[16:57:12]   → Wrecker Helmet (#1)
-[16:57:14]   → Artimex Core Red Alert (#1)
-[16:57:15]   → ORC-mkV Legs Red (#2)
-[16:57:16]   → ORC-mkV Arms Red (#1)
-[16:57:17]   → Inquisitor Legs Outcrop (#1)
-[16:57:18]     [RETRY] 1/2: No text
-[16:57:20]     [RETRY] All 2 attempts failed - empty slot
-[16:57:20]   [EMPTY] Checking for next page...
-[16:57:20] [BUTTON] Brightness: 13.7 → Inactive
-[16:57:20]   [INACTIVE] No more pages → Ending scan
-[16:57:20] [END] Button inactive → Scan complete
-[16:57:20] 
+[17:44:11] 
+=== SCANNING BLOCK 1 ===
+[17:44:11]   Block 1: 8 rows, 97px step, drift -0px
+[17:44:12]   → Arden-SL Arms Balefire (#3)
+[17:44:14]   → Arden-SL Legs Balefire (#1)
+[17:44:15]   → Arden-SL Arms Balefire (#4)
+[17:44:16]   → Falston Jumpsuit (#3)
+[17:44:18]   → Cuesta Shoes (#1)
+[17:44:19]   → Future Navy Pilot T-Shirt (#1)
+[17:44:20]   → Mirai Racing Helmet (#3)
+[17:44:22]   → Falston Jumpsuit "Red Wind Edition" (#1)
+[17:44:23]   → microTech Hat (#1)
+[17:44:24]   → Lynx Core Black (#1)
+[17:44:25]   → Strata Core microTech Edition (#1)
+[17:44:27]   → Strata Arms microTech Edition (#1)
+[17:44:28]   → Strata Legs microTech Edition (#1)
+[17:44:29]   → Strata Helmet microTech Edition (#1)
+[17:44:30]   → Misfit Jacket Veritas (#1)
+[17:44:32]   → Chrome Dome Head Gear Minefield (#1)
+[17:44:33]   → Grappler Gloves Veritas (#1)
+[17:44:34]   → Bibiana Shirt (#4)
+[17:44:36]   → Navoi Boots and Pants Veritas (#1)
+[17:44:37]   → ADP-mk4 Legs Woodland (#1)
+[17:44:38]   → ADP Core Olive (#1)
+[17:44:39]   → ADP Arms Olive (#1)
+[17:44:41]   → ADP-mk4 Helmet Woodland (#1)
+[17:44:42]   → Odyssey II Helmet Alpha (#1)
+[17:44:43]   → Cumulus Jacket Red (#1)
+[17:44:44]   → Stratus Jacket Maroon (#1)
+[17:44:46]   → Samya Tank Rosewood (#2)
+[17:44:47]   → Tuvic Outerwear Jacket Crimson (#3)
+[17:44:48]   → Alban Shirt Smoke (#1)
+[17:44:50]   → Zelena Pants and Tall Bisbee Boots (#1)
+[17:44:51]   → Strata Helmet Onyx (#3)
+[17:44:52]   → Overlord Legs Supernova (#1)
+[17:44:52]   Items found
+[17:44:52]   Scrollbar detection (distance: 322px)...
+[17:44:52]   Scrollbar found: Y=498, Bottom=777, Height=558px
+[17:44:52]   Dragging from X=1795, Y=498, distance=322px
+[17:44:53]   Scrolled (block 1)
+[17:44:53] 
+=== SCANNING BLOCK 2 ===
+[17:44:53]   Block 2: 8 rows, 97px step, drift -0px
+[17:44:55]   → Grappler Gloves Veritas (#2)
+[17:44:56]   → Bibiana Shirt (#5)
+[17:44:58]   → Navoi Boots and Pants Veritas (#2)
+[17:44:59]   → ADP-mk4 Legs Woodland (#2)
+[17:45:00]   → ADP Core Olive (#2)
+[17:45:01]   → ADP Arms Olive (#2)
+[17:45:03]   → ADP-mk4 Helmet Woodland (#2)
+[17:45:04]   → Odyssey II Helmet Alpha (#2)
+[17:45:05]   → Cumulus Jacket Red (#2)
+[17:45:06]   → Stratus Jacket Maroon (#2)
+[17:45:08]   → Samya Tank Rosewood (#3)
+[17:45:09]   → Tuvic Outerwear Jacket Crimson (#4)
+[17:45:10]   → Alban Shirt Smoke (#2)
+[17:45:12]   → Zelena Pants and Tall Bisbee Boots (#2)
+[17:45:13]   → Strata Helmet Onyx (#4)
+[17:45:14]   → Overlord Legs Supernova (#2)
+[17:45:16]   → Citadel Legs Base (#1)
+[17:45:17]   → Overlord Core Riptide (#1)
+[17:45:18]   → Voidripper Helmet (#2)
+[17:45:19]   → Clash Core (#1)
+[17:45:21]   → Aztalan Helmet (#2)
+[17:45:22]   → Geist Armor Core Desert (#1)
+[17:45:23]   → Geist Armor Arms Desert (#1)
+[17:45:24]   → Geist Armor Legs Desert (#1)
+[17:45:26]   → Wrecker Helmet (#1)
+[17:45:27]   → Artimex Core Red Alert (#1)
+[17:45:28]   → ORC-mkV Legs Red (#2)
+[17:45:30]   → ORC-mkV Arms Red (#1)
+[17:45:31]   → Inquisitor Legs Outcrop (#1)
+[17:45:32]     [RETRY] 1/2: No text
+[17:45:33]     [RETRY] All 2 attempts failed - empty slot
+[17:45:33]   [EMPTY] Checking for next page...
+[17:45:33] [BUTTON] Brightness: 14.3 → Inactive
+[17:45:33]   [INACTIVE] No more pages → Ending scan
+[17:45:33] [END] Button inactive → Scan complete
+[17:45:33] 
 Scan finished!
-[16:57:20] Mouse stopped
-[16:57:20] 
-[RESULTS] 847 items scanned (640 unique)
-[16:57:20] [RESULTS] Saved to detected_items.txt
-[16:57:20] [NOT DETECTED] 9 new unmatched items (10 total)
-[16:57:20] [NOT DETECTED] Saved to not_detected.md
-[16:57:20] 
+[17:45:33] Mouse stopped
+[17:45:33] 
+[RESULTS] 846 items scanned (637 unique)
+[17:45:33] [RESULTS] Saved to detected_items.txt
+[17:45:33] [NOT DETECTED] 9 new unmatched items (14 total)
+[17:45:33] [NOT DETECTED] Saved to not_detected.md
+[17:45:33] 
 SCAN COMPLETE! See detected_items.txt
-[16:57:20] 
+[17:45:33] 
 Press ENTER for another scan or close the window to exit.

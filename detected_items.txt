@@ -41,11 +41,10 @@
 1, Aranda Shirt Crusader Edition Purple/Ivory
 1, Arcus Gloves Teal
 1, Arcus Gloves Yellow
-3, Arden-SL Arms Balefire
+4, Arden-SL Arms Balefire
 1, Arden-SL Core Balefire
 1, Arden-SL Helmet
 1, Arden-SL Helmet (Modified)
-1, Arden-SL Helmet Balefire
 1, Arden-SL Helmet Rime
 1, Arden-SL Legs Balefire
 2, Ardent Boots
@@ -114,7 +113,7 @@
 1, Burgundy Paisley Bandana (01_01_01)
 1, CBH-3 Helmet Black
 1, CBH-3 Helmet Blue
-1, CBH-3 Helmet Dark Green
+1, CBH-3 Helmet Dark Red
 1, CBH-3 Helmet Executive
 1, CBH-3 Helmet Grey
 1, CBH-3 Helmet Imperial
@@ -299,9 +298,9 @@
 1, Landlite Boots Olive
 1, Landlite Boots Orange
 2, Landlite Boots Tan
-1, LeMarque Pants Blue
 1, LeMarque Pants Grey
 1, LeMarque Pants Imperial
+1, LeMarque Pants Olive
 3, Legion Jacket
 2, Li-Tok Boots Aqua
 1, Li-Tok Boots Red
@@ -330,11 +329,12 @@
 1, Lynx Core Draas
 1, Lynx Core Ferrum
 1, Lynx Core Green
-1, Lynx Core Lichen
+1, Lynx Core Sienna
 1, Lynx Core Violet
 1, Lynx Legs Dark Green
 1, Lynx Legs Draas
 1, Lynx Legs Ferrum
+1, Lynx Legs Orange
 1, Lynx Legs Pariah
 1, MC-Black Hat
 1, MC-Green Hat
@@ -381,14 +381,13 @@
 1, Morozov-SH Arms Spitfire
 2, Morozov-SH Arms Terracotta
 2, Morozov-SH Arms Thule
-1, Morozov-SH Core
 1, Morozov-SH Core Terracotta
 1, Morozov-SH Core Vesper
 1, Morozov-SH Helmet Aftershock
-1, Morozov-SH Helmet Terrene
 1, Morozov-SH Helmet Thule
 1, Morozov-SH-C Helmet Smokescreen
 1, Morozov-SH-C Helmet Spite
+1, Morozov-SH-C Helmet Terrene
 2, Morozov-SH-C Helmet Vesper
 1, Morozov-SH-I Core Pyrotechnic
 1, Morozov-SH-I Helmet Pyrotechnic Spitfire
@@ -449,9 +448,8 @@
 1, Odyssey II Helmet White
 1, Oracle Helmet Aqua
 1, Oracle Helmet Blue
-1, Oracle Helmet Firebrick
+2, Oracle Helmet Firebrick
 1, Oracle Helmet Lichen
-1, Oracle Helmet Rager
 1, Oracle Helmet Red
 1, Oracle Helmet Seagreen
 1, Oracle Helmet Sienna
@@ -616,7 +614,6 @@
 1, Venture Helmet Pathfinder
 1, Venture Helmet Seagreen
 1, Venture Helmet Twilight
-1, Venture Legs Orange
 1, Venture Legs Violet
 1, Vivant Shoes Dark Blue
 1, Vivant Shoes Grey

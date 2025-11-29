@@ -31,6 +31,14 @@ OCR_FIXES = {
     "Argus Helmet Black/White/ Violet": "Argus Helmet Black/White/Violet",
     "Pembroke Helmet RSIIvory Edition": "Pembroke Helmet RSI Ivory Edition",
     "Aztalan Helmet Epoque": "Aztalan Helmet Epoque",  # Falls falsch, hier korrigieren
+    "Aril Legs Modified)": "Aril Legs (Modified)",
+    "Chamar Pants": "Chamar Pants (08_01_01)",
+    "Morozov-SHcore": "Morozov-SH Core",
+    "Ambrus Suit": "Ambrus Suit (01_01_01",
+    "Snapback Boots": "Snapback Boots (04_01_01)",
+    "Z1uf Gloves": "2Tuf Gloves",
+    "ztuf Gloves": "2Tuf Gloves",
+
 
     # === Zahlen-Buchstaben Verwechslungen ===
     "6-2": "G-2",   # 6 ↔ G
